@@ -9,6 +9,7 @@ const forest = "/project-in-the-forest";
 const construction = "/the-construction-process-under-various-conditions";
 const office = "/office";
 const redRoof = "/project-red-roof";
+const technologySection = "/technology-section";
 
 /** Туркомплекс — тільки папка tourism */
 const GALLERY_TOURISM = [
@@ -57,7 +58,8 @@ const GALLERY_CONSTRUCTION_PROCESS = [
 ] as const;
 
 export const IMG = {
-  heroWinterCloseUpExterior: `${tourism}/a-two-story-log-house-near-the-forest-snow-winter—a-close-up-exterior-view.jpg`,
+  heroBearStatueRedRoofPaving: `${redRoof}/a-large-two-story-log-house-with-a-bears-statue-and-a-red-roof-with-paving-stones.jpg`,
+  companyVasynaViewFromTheSky: "/company-vasyna-view-from-the-sky.jpg",
   courtyardSummer: `${abroad}/a-log-house-with-access-to-a-courtyard-featuring-paved-walkways-and-a-lawn-summer.jpg`,
   bearHouse: `${redRoof}/a-large-two-story-log-house-with-a-bears-statue-and-a-red-roof-and-a-small-log-cabin-in-the-back-for-other-purposes.jpg`,
   winterLivingPanorama: `${tourism}/a-two-story-log-house-near-the-forest-snow-winter-view-inside-first-floor-a-living-room-with-large-panoramic-windows.jpg`,
@@ -72,6 +74,16 @@ export const IMG = {
   whiteHouseNight: "/white-log-house-at-night.jpg",
   solarSummer: `${abroad}/a-log-cabin-with-access-to-a-courtyard-featuring-paved-walkways-and-a-lawn-a-view-parallel-to-a-large-window-and-a-roof-with-solar-panels—summer.jpg`,
 } as const;
+
+/** Зображення етапів — лише `public/technology-section/` */
+export const TECHNOLOGY_SECTION_STAGES = [
+  `${technologySection}/technology-stage-1.jpeg`,
+  `${technologySection}/technology-stage-2.jpeg`,
+  `${technologySection}/technology-stage-3.jpg`,
+  `${technologySection}/technology-stage-4.jpg`,
+  `${technologySection}/technology-stage-5.jpg`,
+  `${technologySection}/technology-stage-6.jpg`,
+] as const;
 
 export type PortfolioProject = {
   id: string;

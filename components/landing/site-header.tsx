@@ -5,7 +5,7 @@ import { useCallback, useEffect, useState } from "react";
 
 const links = [
   { href: "#about", label: "Про нас" },
-  { href: "#why", label: "Дикий зруб" },
+  { href: "#why", label: "Дерев'яні будинки" },
   { href: "#technology", label: "Технологія" },
   { href: "#projects", label: "Проєкти" },
   { href: "#process", label: "Процес" },
