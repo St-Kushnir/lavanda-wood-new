@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useCallback, useEffect, useState } from "react";
+import { SITE_CONTACT, SITE_CONTACT_MAILTO_HREF, SITE_CONTACT_TEL_HREF } from "@/lib/site-contact";
 
 const links = [
   { href: "#about", label: "Про нас" },
@@ -11,6 +12,8 @@ const links = [
   { href: "#process", label: "Процес" },
   { href: "#contact", label: "Контакти" },
 ];
+
+const mobileDrawerLinks = links.filter((l) => l.href !== "#contact");
 
 function MenuIcon({ open }: { open: boolean }) {
   return (
@@ -134,7 +137,7 @@ export function SiteHeader() {
           </div>
 
           <nav className="flex flex-1 flex-col gap-1 overflow-y-auto px-4 py-6">
-            {links.map((l) => (
+            {mobileDrawerLinks.map((l) => (
               <Link
                 key={l.href}
                 href={l.href}
@@ -144,6 +147,27 @@ export function SiteHeader() {
                 {l.label}
               </Link>
             ))}
+            <div className="mt-6 border-t border-white/10 px-3 pt-6">
+              <p className="text-sm font-medium text-[#EAE7E1]">{SITE_CONTACT.personName}</p>
+              <p className="mt-2">
+                <a
+                  href={SITE_CONTACT_TEL_HREF}
+                  className="text-sm text-[#C6A36D] underline-offset-2 hover:underline"
+                  onClick={closeMenu}
+                >
+                  {SITE_CONTACT.phoneDisplay}
+                </a>
+              </p>
+              <p className="mt-1.5">
+                <a
+                  href={SITE_CONTACT_MAILTO_HREF}
+                  className="break-all text-sm text-[#C6A36D] underline-offset-2 hover:underline"
+                  onClick={closeMenu}
+                >
+                  {SITE_CONTACT.email}
+                </a>
+              </p>
+            </div>
           </nav>
 
           <div className="shrink-0 border-t border-white/8 p-5">

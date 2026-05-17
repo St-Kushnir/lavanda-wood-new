@@ -1,76 +1,25 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { ConsultationCtaButton } from "@/components/landing/consultation-cta-button";
 import { IMG } from "@/lib/site-media";
 
-const heroBackgrounds = {
-  paving: {
-    src: IMG.heroBearStatueRedRoofPaving,
-    alt: "Великий двоповерховий зруб із червоною покрівлею, скульптурою ведмедя та бруківкою на подвір'ї",
-  },
-  cabinBack: {
-    src: IMG.bearHouse,
-    alt: "Великий двоповерховий зруб із червоною покрівлею та скульптурою ведмедя; менший зруб на задньому плані",
-  },
-} as const;
-
-type HeroBgKey = keyof typeof heroBackgrounds;
+const heroAlt = "Великий двоповерховий зруб із червоною покрівлею, скульптурою ведмедя та бруківкою на подвір'ї";
 
 export function HeroSection() {
-  const [bgKey, setBgKey] = useState<HeroBgKey>("paving");
-  const bg = heroBackgrounds[bgKey];
-
   return (
     <section className="relative min-h-[100svh] w-full overflow-hidden">
       <Image
-        key={bg.src}
-        src={bg.src}
-        alt={bg.alt}
+        src={IMG.heroBearStatueRedRoofPaving}
+        alt={heroAlt}
         fill
         priority
-        className="object-cover object-center"
+        className="object-cover object-[50%_18%]"
         sizes="100vw"
       />
-      <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/25 to-black/15" />
-      <div className="absolute inset-0 bg-gradient-to-t from-[#0F0F0F] via-transparent to-black/30" />
+      <div className="to-black/1 absolute inset-0 bg-gradient-to-r from-black/45 via-black/25 sm:via-black/25" />
+      <div className="absolute inset-0 bg-gradient-to-t from-[#0F0F0F] via-transparent to-black/10" />
 
-      {/* Тимчасовий перемикач фону для узгодження з клієнтом — прибрати після вибору */}
-      <div
-        className="absolute bottom-24 right-5 z-20 flex flex-col items-end gap-1.5 sm:bottom-28 sm:right-8 md:bottom-32"
-        role="group"
-        aria-label="Тимчасовий вибір фонового фото героя"
-      >
-        <div className="flex overflow-hidden rounded border border-white/20 bg-black/50 p-0.5 text-[11px] backdrop-blur-sm">
-          <button
-            type="button"
-            onClick={() => setBgKey("paving")}
-            className={[
-              "px-2.5 py-1 transition sm:px-3",
-              bgKey === "paving"
-                ? "bg-[#C6A36D]/25 text-[#C6A36D]"
-                : "text-[#EAE7E1]/70 hover:bg-white/5 hover:text-[#EAE7E1]",
-            ].join(" ")}
-          >
-            темна
-          </button>
-          <button
-            type="button"
-            onClick={() => setBgKey("cabinBack")}
-            className={[
-              "px-2.5 py-1 transition sm:px-3",
-              bgKey === "cabinBack"
-                ? "bg-[#C6A36D]/25 text-[#C6A36D]"
-                : "text-[#EAE7E1]/70 hover:bg-white/5 hover:text-[#EAE7E1]",
-            ].join(" ")}
-          >
-            світла
-          </button>
-        </div>
-      </div>
-
-      <div className="reveal-item relative z-10 mx-auto flex min-h-[100svh] max-w-[1440px] flex-col justify-end px-5 pt-28 sm:px-8 pb-32 md:justify-center md:pb-20">
+      <div className="reveal-item relative z-10 mx-auto flex min-h-[100svh] max-w-[1440px] flex-col justify-end px-5 pb-32 pt-28 sm:px-8 md:justify-center md:pb-20">
         <div className="mb-5 sm:mb-6 md:mb-8">
           <Image
             src="/herb-2.png"
@@ -88,8 +37,9 @@ export function HeroSection() {
           LAVANDA
         </h1>
         <p className="mt-6 max-w-xl font-sans text-base leading-relaxed text-[#EAE7E1]/85 sm:text-lg">
-          Будівництво будинків із дикого зрубу за канадською технологією. Преміальні резиденції з натурального дерева в
-          Україні та Європі.
+          Будівництво деревʼяних будинків преміум-класу за канадською технологією.
+          <br />
+          Цільний дикий зруб, натуральні матеріали та удосконалена архітектура, яка живе десятиліттями.
         </p>
         {/* <div className="mt-4 max-w-md">
           <MediaPlaceholder
@@ -99,16 +49,10 @@ export function HeroSection() {
           />
         </div> */}
         <div className="mt-10 flex flex-wrap gap-4">
-          <Link
-            href="#contact"
-            className="inline-flex items-center justify-center border border-[#C6A36D] bg-[#C6A36D] px-8 py-3.5 text-sm font-medium uppercase tracking-[0.2em] text-[#0F0F0F] transition hover:bg-[#d4b07e]"
-          >
-            Отримати консультацію
-          </Link>
+          <ConsultationCtaButton className="inline-flex items-center justify-center border border-[#C6A36D] bg-[#C6A36D] px-8 py-3.5 text-sm font-medium uppercase tracking-[0.2em] text-[#0F0F0F] transition hover:bg-[#d4b07e]" />
           <Link
             href="#projects"
-            className="inline-flex items-center justify-center border border-white/25 bg-transparent px-8 py-3.5 text-sm font-medium uppercase tracking-[0.2em] text-[#EAE7E1] transition hover:border-[#C6A36D]/50 hover:text-[#C6A36D]"
-          >
+            className="inline-flex items-center justify-center border border-white/25 bg-transparent px-8 py-3.5 text-sm font-medium uppercase tracking-[0.2em] text-[#EAE7E1] transition hover:border-[#C6A36D]/50 hover:text-[#C6A36D]">
             Переглянути проєкти
           </Link>
         </div>

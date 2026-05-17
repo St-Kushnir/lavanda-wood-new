@@ -58,7 +58,7 @@ const GALLERY_CONSTRUCTION_PROCESS = [
 ] as const;
 
 export const IMG = {
-  heroBearStatueRedRoofPaving: `${redRoof}/a-large-two-story-log-house-with-a-bears-statue-and-a-red-roof-with-paving-stones.jpg`,
+  heroBearStatueRedRoofPaving: `${redRoof}/a-large-two-story-log-house-with-a-bears-statue-and-a-red-roof-with-paving-stones-day.jpg`,
   companyVasynaViewFromTheSky: "/company-vasyna-view-from-the-sky.jpg",
   courtyardSummer: `${abroad}/a-log-house-with-access-to-a-courtyard-featuring-paved-walkways-and-a-lawn-summer.jpg`,
   bearHouse: `${redRoof}/a-large-two-story-log-house-with-a-bears-statue-and-a-red-roof-and-a-small-log-cabin-in-the-back-for-other-purposes.jpg`,

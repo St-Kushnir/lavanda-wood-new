@@ -1,38 +1,42 @@
-import Image from "next/image";
 import Link from "next/link";
+import { YouTubePosterEmbed } from "@/components/landing/youtube-poster-embed";
 import { IMG } from "@/lib/site-media";
+
+const INTERNATIONAL_YOUTUBE_ID = "oN_kgiI8yOA";
 
 export function InternationalSection() {
   return (
-    <section
-      id="international"
-      className="relative min-h-[min(88vh,820px)] w-full scroll-mt-20 overflow-hidden sm:min-h-[min(90vh,880px)]"
-    >
-      <Image
-        src={IMG.officeGermany1}
-        alt="Офіс Lavanda в Німеччині"
-        fill
-        className="object-cover object-center"
-        sizes="100vw"
-      />
-      <div className="absolute inset-0 bg-gradient-to-r from-black/20 via-black/10 to-black/15" />
-      <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-black/5 to-black/20" />
-
-      <div className="relative z-10 mx-auto flex min-h-[min(88vh,820px)] max-w-[1440px] flex-col justify-center px-5 py-20 sm:min-h-[min(90vh,880px)] sm:px-8 sm:py-28">
-        <div
-          className="reveal-item max-w-3xl rounded-lg px-6 py-8 sm:px-8 sm:py-10"
-          style={{ backgroundColor: "rgba(15, 15, 15, 0.88)" }}
-        >
+    <section id="international" className="scroll-mt-20 bg-[#121212] py-20 sm:py-28">
+      <div className="mx-auto max-w-[1440px] px-5 sm:px-8">
+        <div className="reveal-item max-w-3xl">
           <h2 className="font-serif text-3xl font-normal leading-tight tracking-tight text-[#EAE7E1] sm:text-4xl md:text-5xl">
             Ми працюємо в Україні та Європі
           </h2>
-          <p className="mt-6 max-w-2xl font-sans text-sm leading-relaxed text-[#EAE7E1]/90 sm:text-base">
-            Через компанію в Німеччині —{" "}
-            <Link href="https://holzbaurustikal.de/" className="text-[#C6A36D] underline-offset-4 hover:underline">
+          <p className="mt-6 max-w-2xl font-sans text-sm leading-relaxed text-[#EAE7E1]/85 sm:text-base">
+            Ми — міжнародна будівельна компанія, що працює в Україні та Європі, з представництвом у Німеччині:{" "}
+            <Link
+              href="https://holzbaurustikal.de/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-lg font-bold text-[#C6A36D] underline-offset-4 hover:underline">
               HolzbauRustikal
             </Link>{" "}
-            — реалізуємо проєкти для європейського ринку. Це підсилює довіру та статус бренду.
+            <br /><br />
+            Наша діяльність базується на поєднанні української майстерності та європейських стандартів будівництва.
+            <br />
+            Ми реалізуємо проєкти різного рівня складності на європейському ринку <br />— від приватних будинків із цільного
+            дерева до комплексних архітектурних рішень під ключ.
           </p>
+        </div>
+
+        <div className="reveal-item mt-10 sm:mt-12 lg:mt-14">
+          <YouTubePosterEmbed
+            videoId={INTERNATIONAL_YOUTUBE_ID}
+            title="LAVANDA — міжнародна присутність (YouTube)"
+            posterSrc={IMG.officeGermany1}
+            posterAlt="Офіс Lavanda в Німеччині"
+            posterImageClassName="scale-[1.09] object-[50%_26%]"
+          />
         </div>
       </div>
     </section>

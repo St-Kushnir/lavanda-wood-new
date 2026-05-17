@@ -1,6 +1,7 @@
 import Image from "next/image";
-import Link from "next/link";
+import { ConsultationCtaButton } from "@/components/landing/consultation-cta-button";
 import { IMG } from "@/lib/site-media";
+import { SITE_CONTACT, SITE_CONTACT_MAILTO_HREF, SITE_CONTACT_TEL_HREF } from "@/lib/site-contact";
 
 export function CtaSection() {
   return (
@@ -19,14 +20,24 @@ export function CtaSection() {
           Let&apos;s build your log home
         </h2>
         <p className="mt-4 max-w-md font-sans text-sm text-[#EAE7E1]/70">
-          Українською: збудуємо ваш дім із дикого зрубу — від концепції до ключів.
+          Збудуємо ваш дім із дикого зрубу — від концепції до ключів.
         </p>
-        <Link
-          href="https://lavanda-wood.com/"
-          className="mt-10 inline-flex border border-[#C6A36D] bg-[#C6A36D] px-10 py-4 text-sm font-medium uppercase tracking-[0.25em] text-[#0F0F0F] transition hover:bg-[#d4b07e]"
-        >
-          Отримати консультацію
-        </Link>
+
+        <div className="mt-10 max-w-md space-y-2 font-sans text-sm text-[#EAE7E1]/85 sm:text-base">
+          <p className="font-medium text-[#EAE7E1]">{SITE_CONTACT.personName}</p>
+          <p>
+            <a href={SITE_CONTACT_TEL_HREF} className="text-[#C6A36D] underline-offset-4 hover:underline">
+              {SITE_CONTACT.phoneDisplay}
+            </a>
+          </p>
+          <p>
+            <a href={SITE_CONTACT_MAILTO_HREF} className="text-[#C6A36D] underline-offset-4 hover:underline">
+              {SITE_CONTACT.email}
+            </a>
+          </p>
+        </div>
+
+        <ConsultationCtaButton className="mt-10 inline-flex border border-[#C6A36D] bg-[#C6A36D] px-10 py-4 text-sm font-medium uppercase tracking-[0.25em] text-[#0F0F0F] transition hover:bg-[#d4b07e]" />
       </div>
     </section>
   );
