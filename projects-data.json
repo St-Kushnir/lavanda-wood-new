@@ -1,0 +1,1438 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "name-ua": "Будинок із брусу «Лаузіц»",
+      "name-en": "Lausitz Log House",
+      "description-ua": "Наш дерев'яний будинок «Лаузіц» спроєктований у стилі класичного бунгало. Одноповерхова зрубова хатина пропонує багато простору для затишного життя та гарного самопочуття. Тут також є можливість облаштувати весь будинок безбар'єрним, що є надзвичайно важливим фактором для пенсіонерів або людей з інвалідністю. Планування можна легко адаптувати до ваших побажань. Родзинкою цієї моделі є затишна крита тераса, де ви можете з комфортом проводити час у будь-який момент.",
+      "description-en": "Our log house 'Lausitz' is designed in the style of a classic bungalow. The single-storey log home nevertheless offers plenty of space to live and feel comfortable. It is also possible to make the entire house barrier-free, which is an essential factor for pensioners or people with disabilities. The floor plan can easily be adapted to your wishes. The highlight of this model is undoubtedly the covered terrace, where you can make yourself comfortable at any time.",
+      "parameters": {
+        "dimensions": "12.00 m x 8.00 m",
+        "total-living-space": "81 m²",
+        "rooms-on-the-ground-floor": "4",
+        "roof-pitch": "22 °"
+      },
+      "tags": [
+        "barrier-free",
+        "bungalow",
+        "single-storey",
+        "holiday-home",
+        "single-house",
+        "terrace",
+        "residential-building"
+      ],
+      "images": [
+        "/projects-gallery/project-1/image-1.jpg",
+        "/projects-gallery/project-1/image-2.jpg",
+        "/projects-gallery/project-1/image-3.jpg",
+        "/projects-gallery/project-1/image-4.jpg",
+        "/projects-gallery/project-1/image-5.jpg"
+      ],
+      "schema-img": [
+        "/projects-gallery/project-1/schema-1.jpg"
+      ],
+      "original-url": "https://holzbaurustikal.de/blockbohlenhaus-lausitz/",
+      "categories": [
+        "log-houses"
+      ]
+    },
+    {
+      "id": 2,
+      "name-ua": "Будинок Post & Beam «Лаузіц»",
+      "name-en": "Lausitz Post & Beam House",
+      "description-ua": "Наш будинок «Лаузіц», спроектований за технологією Post & Beam, виконаний у стилі класичного бунгало. Цей одноповерховий каркасний будинок із стійками та балками з масивних натуральних колод пропонує достатньо простору для проживання та комфорту. Крім того, тут є можливість облаштувати весь будинок безбар'єрним, що вкрай важливо для пенсіонерів або людей з інвалідністю. План поверху можна легко адаптувати до ваших побажань. Головною родзинкою цієї моделі, безсумнівно, є затишна крита тераса, на якій ви можете комфортно влаштуватися в будь-який час.",
+      "description-en": "Our Post & Beam 'Lausitz' is designed in the style of a classic bungalow. This single-storey, post-and-beam framed log house nevertheless offers plenty of space for living and relaxing. It is also possible to design the entire house to be barrier-free, which is essential for pensioners or people with disabilities. The floor plan can easily be adapted to suit your requirements. The highlight of this model is undoubtedly the covered terrace, where you can make yourself comfortable at any time.",
+      "parameters": {
+        "dimensions": "12,00 m x 8,00 m",
+        "total-living-space": "81 m²",
+        "rooms-on-the-ground-floor": "4",
+        "roof-pitch": "22 °"
+      },
+      "tags": [
+        "barrier-free",
+        "bungalow",
+        "single-storey",
+        "holiday-home",
+        "single-house",
+        "terrace",
+        "residential-building"
+      ],
+      "images": [
+        "/projects-gallery/project-2/image-1.jpg",
+        "/projects-gallery/project-2/image-2.jpg",
+        "/projects-gallery/project-2/image-3.jpg",
+        "/projects-gallery/project-2/image-4.jpg",
+        "/projects-gallery/project-2/image-5.jpg",
+        "/projects-gallery/project-2/image-6.jpg",
+        "/projects-gallery/project-2/image-7.jpg",
+        "/projects-gallery/project-2/image-8.jpg",
+        "/projects-gallery/project-2/image-9.jpg",
+        "/projects-gallery/project-2/image-10.jpg",
+        "/projects-gallery/project-2/image-11.jpg"
+      ],
+      "schema-img": [
+        "/projects-gallery/project-2/schema-1.jpg"
+      ],
+      "original-url": "https://holzbaurustikal.de/post-and-beam-lausitz/",
+      "categories": [
+        "post-and-beam"
+      ]
+    },
+    {
+      "id": 3,
+      "name-ua": "Будинок із натурального дерева «Остзеє»",
+      "name-en": "Ostsee Natural Log House",
+      "description-ua": "Уявіть, що ви проводите зимову відпустку в цьому чудовому бунгало з колод біля води або в горах. Це було б ідеальне місце, щоб відпочити та насолодитися краєвидами. Модель зрубу «Остзеє» (Балтійське море) — це затишний будинок із натуральних колод у сільському стилі, виконаний у вигляді типового бунгало. Цей будинок із житловою площею 43 м² є однією з наших найменших моделей, але все ж має багато чого запропонувати щодо можливостей внутрішнього оздоблення. Велика вітальня та їдальня з кухонним куточком і великими вікнами відкриває чудовий вид на околиці та запрошує до спільних трапез і відпочинку в сільській та затишній атмосфері. Невелика сауна відокремлює спальню від ванної кімнати, що ще більше підвищує цінність нерухомості в зимовий сезон. Як будинок для відпочинку біля води або в горах, наша модель «Остзеє» — ідеальне місце для відпочинку та насолоди мальовничими краєвидами.",
+      "description-en": "Imagine spending your winter holiday in this beautiful log cabin bungalow by the water or in the mountains. It would be the perfect place to relax and enjoy the scenery. The 'Ostsee' (Baltic Sea) log cabin model is a rustic, natural log house in the style of a typical bungalow. With 43 m² of living space, this log cabin is one of our smallest models, yet it still has plenty to offer in terms of interior design possibilities. The large living and dining room, featuring a kitchenette and large windows, offers a lovely view of the surroundings and invites you to dine and relax together in a rustic and cosy atmosphere. A small sauna separates the bedroom from the bathroom, further enhancing the property’s appeal during the winter season. As a holiday log cabin by the water or in the mountains, our 'Ostsee' model is the perfect place to relax and enjoy the beautiful scenery.",
+      "parameters": {
+        "dimensions": "7.44 x 7.32 m",
+        "total-living-space": "43 m²",
+        "roof-pitch": "9 °"
+      },
+      "tags": [
+        "log-cabin",
+        "bungalow",
+        "single-storey",
+        "holiday-home",
+        "flat-roof",
+        "garden-house",
+        "terrace",
+        "bestsellers"
+      ],
+      "images": [
+        "/projects-gallery/project-3/image-1.jpg",
+        "/projects-gallery/project-3/image-2.jpg",
+        "/projects-gallery/project-3/image-3.jpg",
+        "/projects-gallery/project-3/image-4.jpg",
+        "/projects-gallery/project-3/image-5.jpg",
+        "/projects-gallery/project-3/image-6.jpg",
+        "/projects-gallery/project-3/image-7.jpg",
+        "/projects-gallery/project-3/image-8.jpg"
+      ],
+      "schema-img": [
+        "/projects-gallery/project-3/schema-1.jpg"
+      ],
+      "original-url": "https://holzbaurustikal.de/naturstammhaus-ostsee/",
+      "categories": [
+        "log-houses",
+        "log-cabin-bungalows",
+        "holiday-log-cabins"
+      ]
+    },
+    {
+      "id": 4,
+      "name-ua": "Будинок із натурального дерева «Оттава»",
+      "name-en": "Ottawa Natural Log House",
+      "description-ua": "Якщо ви шукаєте затишну невеличку хатинку з колод, куди можна відправитися на вихідні, то наш будиночок «Оттава» — саме те, що вам потрібно! Ця компактна, але комфортна хатинка з натуральних колод ідеально підійде тим, хто любить проводити час на природі. Використовувати «Оттаву» як мисливський чи рибальський будиночок або як садову хатинку — вирішувати вам. Наприкінці довгого дня, коли ви повернетеся з озера або закінчите садові роботи, ви зможете відпочити у затишній вітальні або на критій веранді біля входу. На горищі є місце для спальні, якщо ви захочете залишитися на ніч. Тож якщо ви шукаєте ідеальне місце для свого другого дому, обов’язково зверніть увагу на наш будиночок «Оттава»!",
+      "description-en": "If you’re looking for a cosy little log cabin to retreat to at the weekend, our small Ottawa log cabin is just the thing for you! This compact yet comfortable cabin, built from natural logs, is perfect for anyone who enjoys spending time outdoors. Whether you want to use Ottawa as a hunting and fishing cabin or as a garden shed is entirely up to you. At the end of a long day, whether you’ve just returned from the lake or finished your gardening, you can relax in the living area or on the covered veranda by the entrance. The loft offers space for a bedroom should you wish to stay overnight. So, if you’re looking for the perfect spot for your second home, you should definitely take a look at our Ottawa log cabin!",
+      "parameters": {
+        "dimensions": "7.60 m x 5.40 m",
+        "ground-floor-approx": "39 m²",
+        "attic-approx": "17 m²",
+        "total-living-space": "49 m²",
+        "roof-pitch": "35 °",
+        "wall": "Natural trunk approx",
+        "diameter": "300 mm"
+      },
+      "tags": [
+        "barrier-free",
+        "log-cabin",
+        "attic",
+        "single-house",
+        "holiday-home",
+        "garden-house",
+        "gable-roof",
+        "terrace"
+      ],
+      "images": [
+        "/projects-gallery/project-4/image-1.jpg",
+        "/projects-gallery/project-4/image-2.jpg",
+        "/projects-gallery/project-4/image-3.jpg",
+        "/projects-gallery/project-4/image-4.jpg",
+        "/projects-gallery/project-4/image-5.jpg",
+        "/projects-gallery/project-4/image-6.jpg",
+        "/projects-gallery/project-4/image-7.jpg"
+      ],
+      "schema-img": [
+        "/projects-gallery/project-4/schema-1.jpg",
+        "/projects-gallery/project-4/schema-2.jpg"
+      ],
+      "original-url": "https://holzbaurustikal.de/naturstammhaus-ottawa/",
+      "categories": [
+        "holiday-log-cabins",
+        "log-houses"
+      ]
+    },
+    {
+      "id": 5,
+      "name-ua": "Будинок із натурального дерева «Нідерлаузіц»",
+      "name-en": "Niederlausitz Natural Log House",
+      "description-ua": "Модель «Нідерлаузіц» — це затишний будинок із натуральних колод, спроєктований спеціально для туристичного комплексу на озері Гребендорфер у південному Бранденбурзі (озерний край Нижня Лужиця). Невеликий зруб пропонує простору вітальню та їдальню, а також дві спальні, де можуть комфортно відпочити до чотирьох осіб. Родзинкою є крита тераса, де приємно розслабитися з келихом вина. Великі вікна від кухні та вітальні до тераси забезпечують гарне освітлення житлової зони. Звісно, і в цій моделі можна адаптувати планування кімнат. Будинок також може слугувати комфортним житлом для пенсіонерів, оскільки всі кімнати розташовані на одному рівні, а конструкція дозволяє виконати безбар'єрне будівництво. Кожен будинок Holzbau Rustikal — унікальний, тому планування можна повністю налаштувати під ваші побажання.",
+      "description-en": "The Niederlausitz model is a small natural log house designed specifically for a holiday resort on Lake Gräbendorfer in southern Brandenburg (Lower Lusatian Lake District). The compact log cabin offers a spacious living and dining area plus 2 bedrooms — room for up to 4 people. The highlight is the covered terrace, perfect for relaxing with a glass of wine. Large windows from the kitchen and living area to the terrace provide excellent natural light in the living space. Of course, the room layout can also be adapted for this model. It could equally serve as a small home for retirees, as all rooms are on one level and the house can be built barrier-free. Every Holzbau Rustikal log home is unique; the floor plan can be individually adapted to your wishes.",
+      "parameters": {
+        "dimensions": "8,92 m x 7,92 m",
+        "total-living-space": "54 m²",
+        "roof-pitch": "32 °",
+        "wall": "Natural trunk approx",
+        "diameter": "300 mm"
+      },
+      "tags": [
+        "barrier-free",
+        "bungalow",
+        "single-storey",
+        "holiday-home",
+        "single-house",
+        "terrace",
+        "residential-building",
+        "log-cabin"
+      ],
+      "images": [
+        "/projects-gallery/project-5/image-1.jpg",
+        "/projects-gallery/project-5/image-2.jpg",
+        "/projects-gallery/project-5/image-3.jpg",
+        "/projects-gallery/project-5/image-4.jpg"
+      ],
+      "schema-img": [
+        "/projects-gallery/project-5/schema-1.jpg"
+      ],
+      "original-url": "https://holzbaurustikal.de/naturstammhaus-niederlausitz/",
+      "categories": [
+        "log-houses",
+        "holiday-log-cabins"
+      ]
+    },
+    {
+      "id": 6,
+      "name-ua": "Будинок із натурального дерева «Гавель»",
+      "name-en": "Havel Natural Log House",
+      "description-ua": "Наш зруб Havel — затишний будинок із натуральних колод, ідеальний як дача або будинок для відпочинку. Повітряний простір із галереєю на другому поверсі створює елегантне враження й візуально збільшує житлову зону. Великі вікна на фронтонах пропускають денне світло та забезпечують природне освітлення. Вітальня на першому поверсі поєднує зону відпочинку та їдальню й дає багато місця для вечорів із родиною та друзями. Зруб Havel оснащений критою верандою та широкими навісами даху, що захищають стіни й вікна від дощу та сонця. Ви полюбите проводити час у цьому гарному зрубі. Кожен будинок Holzbau Rustikal — унікальний; планування можна індивідуально адаптувати під ваші побажання.",
+      "description-en": "Our Havel log house is a rustic natural log home that is perfect as a weekend retreat or holiday home. The open space with a gallery on the upper floor creates an elegant impression and makes the living area feel much larger. Large windows on the gable ends bring daylight into the house and provide natural lighting. The ground-floor living area combines living and dining rooms and offers plenty of space for convivial evenings with family and friends. Our Havel weekend log cabin is also equipped with a covered veranda and wide roof overhangs that protect the walls and windows from rain and sun. You will love spending time in this beautiful log home. Every Holzbau Rustikal log home is unique; the floor plan can be individually adapted to your wishes.",
+      "parameters": {
+        "dimensions": "8,30 m x 8,30 m",
+        "ground-floor-approx": "57 m²",
+        "attic-approx": "29 m²",
+        "total-living-space": "86 m²",
+        "roof-pitch": "32 °",
+        "wall": "Natural trunk approx",
+        "diameter": "300 mm"
+      },
+      "tags": [
+        "holiday-home",
+        "gable-roof",
+        "pitched-roof",
+        "single-house",
+        "terrace",
+        "residential-building",
+        "two-storey",
+        "log-cabin"
+      ],
+      "images": [
+        "/projects-gallery/project-6/image-1.jpg",
+        "/projects-gallery/project-6/image-2.jpg",
+        "/projects-gallery/project-6/image-3.jpg",
+        "/projects-gallery/project-6/image-4.jpg"
+      ],
+      "schema-img": [
+        "/projects-gallery/project-6/schema-1.jpg",
+        "/projects-gallery/project-6/schema-2.jpg"
+      ],
+      "original-url": "https://holzbaurustikal.de/naturstammhaus-havel/",
+      "categories": [
+        "log-houses",
+        "holiday-log-cabins"
+      ]
+    },
+    {
+      "id": 7,
+      "name-ua": "Будинок із натурального дерева «Гранзе»",
+      "name-en": "Gransee Natural Log House",
+      "description-ua": "Модель Gransee — компактніший і доступніший варіант, який чудово підходить як житло для пенсіонерів або як будинок для відпочинку та вихідних. Велика крита тераса на фронтоні дає багато простору для різних активностей: сніданок на світанку чи невимушений вечірній барбекю з родиною та друзями. У референсному об’єкті за бажанням замовника встановлені блакитні вікна, що гармонійно контрастують із деревом. Вертикальне з’єднання колод виконане сходинками — це підкреслює затишний характер зрубу. Звісно, у вашому будинку ці деталі можна адаптувати за власним смаком. Кожен будинок Holzbau Rustikal — унікальний; планування можна індивідуально адаптувати під ваші побажання.",
+      "description-en": "The Gransee model is a smaller and more affordable design that is ideal as a home for retirees or as a holiday and weekend retreat. The large covered terrace on the gable end offers plenty of space for all kinds of activities: breakfast at sunrise or a relaxed barbecue evening with family and friends. On our reference project, blue windows were installed at the client’s request, creating an attractive contrast with the wood. The log corner joints were stepped on this house, emphasising its rustic charm. Of course, you can customise these details for your own home. Every Holzbau Rustikal log home is unique; the floor plan can be individually adapted to your wishes.",
+      "parameters": {
+        "dimensions": "11,00 m x 8,00 m",
+        "total-living-space": "ca. 72 m²",
+        "rooms-on-the-ground-floor": "5",
+        "roof-pitch": "25 °",
+        "wall": "Natural trunk approx",
+        "diameter": "380 mm"
+      },
+      "tags": [
+        "bungalow",
+        "single-storey",
+        "holiday-home",
+        "single-house",
+        "terrace",
+        "bestsellers",
+        "residential-building",
+        "log-cabin"
+      ],
+      "images": [
+        "/projects-gallery/project-7/image-1.jpg",
+        "/projects-gallery/project-7/image-2.jpg",
+        "/projects-gallery/project-7/image-3.jpg",
+        "/projects-gallery/project-7/image-4.jpg",
+        "/projects-gallery/project-7/image-5.jpg",
+        "/projects-gallery/project-7/image-6.jpg",
+        "/projects-gallery/project-7/image-7.jpg",
+        "/projects-gallery/project-7/image-8.jpg",
+        "/projects-gallery/project-7/image-9.jpg"
+      ],
+      "schema-img": [
+        "/projects-gallery/project-7/schema-1.jpg"
+      ],
+      "original-url": "https://holzbaurustikal.de/naturstammhaus-gransee/",
+      "categories": [
+        "log-houses",
+        "log-cabin-bungalows",
+        "holiday-log-cabins",
+        "residential-log-houses"
+      ]
+    },
+    {
+      "id": 8,
+      "name-ua": "Будинок із натурального дерева «Лужиця»",
+      "name-en": "Lausitz Natural Log House",
+      "description-ua": "Модель «Лужиця» спроєктована в стилі класичного бунгало. Одноповерховий будинок із натуральних колод пропонує простір для комфортного життя та відпочинку. Увесь об’єкт можна реалізувати безбар’єрно — це важливо для пенсіонерів і людей з обмеженими можливостями. План поверху легко адаптувати під ваші побажання. Родзинкою моделі є крита тераса, де затишно проводити час у будь-яку пору. Кожен будинок Holzbau Rustikal — унікальний; планування можна індивідуально адаптувати під ваші побажання.",
+      "description-en": "Our Lausitz model is designed in the style of a classic bungalow. The single-storey natural log house still offers plenty of space for living and wellbeing. The entire home can also be built barrier-free — an essential point for retirees and people with disabilities. The floor plan can easily be adapted to your wishes. The highlight of this model is undoubtedly the covered terrace, where you can make yourself comfortable at any time. Every Holzbau Rustikal log home is unique; the floor plan can be individually adapted to your wishes.",
+      "parameters": {
+        "dimensions": "12,00 m x 8,00 m",
+        "total-living-space": "81 m²",
+        "rooms-on-the-ground-floor": "4",
+        "roof-pitch": "22 °",
+        "wall": "Natural trunk approx",
+        "diameter": "380 mm"
+      },
+      "tags": [
+        "barrier-free",
+        "bungalow",
+        "single-storey",
+        "holiday-home",
+        "single-house",
+        "terrace",
+        "residential-building",
+        "log-cabin"
+      ],
+      "images": [
+        "/projects-gallery/project-8/image-1.jpg",
+        "/projects-gallery/project-8/image-2.jpg",
+        "/projects-gallery/project-8/image-3.jpg",
+        "/projects-gallery/project-8/image-4.jpg",
+        "/projects-gallery/project-8/image-5.jpg",
+        "/projects-gallery/project-8/image-6.jpg",
+        "/projects-gallery/project-8/image-7.jpg",
+        "/projects-gallery/project-8/image-8.jpg",
+        "/projects-gallery/project-8/image-9.jpg",
+        "/projects-gallery/project-8/image-10.jpg",
+        "/projects-gallery/project-8/image-11.jpg",
+        "/projects-gallery/project-8/image-12.jpg",
+        "/projects-gallery/project-8/image-13.jpg",
+        "/projects-gallery/project-8/image-14.jpg"
+      ],
+      "schema-img": [
+        "/projects-gallery/project-8/schema-1.jpg"
+      ],
+      "original-url": "https://holzbaurustikal.de/naturstammhaus-lausitz/",
+      "categories": [
+        "log-houses",
+        "log-cabin-bungalows",
+        "holiday-log-cabins",
+        "residential-log-houses"
+      ]
+    },
+    {
+      "id": 9,
+      "name-ua": "Будинок із натурального дерева «Шпревалд»",
+      "name-en": "Spreewald Natural Log House",
+      "description-ua": "Модель «Шпревалд» — будинок із натуральних колод із дуже великою верандою на фасаді. Двоповерховий зруб пропонує близько 96 м² житлової площі — достатньо для сім’ї з дітьми. Великі вікна забезпечують природне освітлення, а широкі навіси даху по боках захищають стіни та вікна від погодних впливів. Ідеально підходить для невеликої сім’ї або як будинок для відпочинку. Кожен будинок Holzbau Rustikal — унікальний; планування можна індивідуально адаптувати під ваші побажання.",
+      "description-en": "Our Spreewald model is a natural log house with a very large veranda on the front. The two-storey log home offers around 96 m² of living space — enough for a family with children. Large windows provide natural daylight, and wide roof overhangs on the sides protect the walls and windows from the weather. It is ideal for a small family or as a holiday home. Every Holzbau Rustikal log home is unique; the floor plan can be individually adapted to your wishes.",
+      "parameters": {
+        "dimensions": "9,20 m x 7,10 m",
+        "ground-floor-approx": "62 m²",
+        "attic-approx": "34 m²",
+        "total-living-space": "96 m²",
+        "rooms-on-the-ground-floor": "2",
+        "roof-pitch": "32 °",
+        "wall": "Natural trunk approx",
+        "diameter": "380 mm"
+      },
+      "tags": [
+        "holiday-home",
+        "single-house",
+        "terrace",
+        "residential-building",
+        "two-storey",
+        "log-cabin"
+      ],
+      "images": [
+        "/projects-gallery/project-9/image-1.jpg",
+        "/projects-gallery/project-9/image-2.jpg",
+        "/projects-gallery/project-9/image-3.jpg",
+        "/projects-gallery/project-9/image-4.jpg",
+        "/projects-gallery/project-9/image-5.jpg",
+        "/projects-gallery/project-9/image-6.jpg",
+        "/projects-gallery/project-9/image-7.jpg",
+        "/projects-gallery/project-9/image-8.jpg",
+        "/projects-gallery/project-9/image-9.jpg",
+        "/projects-gallery/project-9/image-10.jpg",
+        "/projects-gallery/project-9/image-11.jpg",
+        "/projects-gallery/project-9/image-12.jpg"
+      ],
+      "schema-img": [
+        "/projects-gallery/project-9/schema-1.jpg",
+        "/projects-gallery/project-9/schema-2.jpg"
+      ],
+      "original-url": "https://holzbaurustikal.de/naturstammhaus-spreewald/",
+      "categories": [
+        "log-houses",
+        "holiday-log-cabins"
+      ]
+    },
+    {
+      "id": 10,
+      "name-ua": "Будинок із натурального дерева «Цоссен»",
+      "name-en": "Zossen Natural Log House",
+      "description-ua": "Модель «Цоссен» особливо підходить для невеликих сімей і пенсіонерів; її також можна використовувати як будинок для відпочинку чи вихідних. Двоповерховий зруб має простору вітальню та кухню в стилі галерейної квартири — близько третини площі залишається відкритим повітряним простором. Це дає свободу в оформленні та відчуття простору. Ванна, спальня та дитяча кімнати — на першому поверсі; горище підходить для хобі або гостьової кімнати. Фронтони та вхід мають навіс даху й захищені від погоди. Кожен будинок Holzbau Rustikal — унікальний; планування можна індивідуально адаптувати під ваші побажання.",
+      "description-en": "The Zossen model is especially suitable for small families and retirees; it also works well as a holiday or weekend home. The two-storey log house features a generous living and kitchen area in a gallery style, with about one third of the floor area left as open void. This gives you creative freedom when furnishing and a sense of spacious living. Bathroom, bedroom and children’s room are on the ground floor; the upper floor offers space for a hobby or guest room. The gable ends and entrance have extended roof overhangs and are protected from the weather. Every Holzbau Rustikal log home is unique; the floor plan can be individually adapted to your wishes.",
+      "parameters": {
+        "dimensions": "11,90 m x 7,90 m",
+        "ground-floor-approx": "76 m²",
+        "attic-approx": "47 m²",
+        "total-living-space": "123 m²",
+        "rooms-on-the-ground-floor": "5",
+        "roof-pitch": "25 °",
+        "wall": "Natural trunk approx",
+        "diameter": "380 mm"
+      },
+      "tags": [
+        "single-family-home",
+        "holiday-home",
+        "single-house",
+        "bestsellers",
+        "residential-building",
+        "two-storey",
+        "log-cabin"
+      ],
+      "images": [
+        "/projects-gallery/project-10/image-1.jpg",
+        "/projects-gallery/project-10/image-2.jpg",
+        "/projects-gallery/project-10/image-3.jpg",
+        "/projects-gallery/project-10/image-4.jpg",
+        "/projects-gallery/project-10/image-5.jpg",
+        "/projects-gallery/project-10/image-6.jpg",
+        "/projects-gallery/project-10/image-7.jpg",
+        "/projects-gallery/project-10/image-8.jpg",
+        "/projects-gallery/project-10/image-9.jpg",
+        "/projects-gallery/project-10/image-10.jpg"
+      ],
+      "schema-img": [
+        "/projects-gallery/project-10/schema-1.jpg",
+        "/projects-gallery/project-10/schema-2.jpg"
+      ],
+      "original-url": "https://holzbaurustikal.de/naturstammhaus-zossen/",
+      "categories": [
+        "log-houses",
+        "residential-log-houses",
+        "holiday-log-cabins"
+      ]
+    },
+    {
+      "id": 11,
+      "name-ua": "Будинок із натурального дерева на озері Констанц",
+      "name-en": "Natural log house Lake Constance",
+      "description-ua": "Наша модель зрубу «Бодензеє» ідеально підходить для орендодавців, які спеціалізуються на апартаментах для відпочинку. Обидві квартири абсолютно ідентичні та пропонують площу близько 75 м² кожна, чого достатньо для комфортного відпочинку. Бунгало розташоване на одному рівні, тому може бути побудоване безбар'єрно. Криті тераси на внутрішньому дворі запрошують до релаксації та спільних трапез на свіжому повітрі. Традиційний зруб з натуральних колод із пологим вальмовим дахом чудово вписується в сільські курортні регіони та особливо підходить для місцевостей із сильним вітром. Крім того, вальмовий дах завдяки своїй великій площі може бути використаний для сонячних батарей. Широкі звіси даху також захищають будинок від атмосферних впливів.",
+      "description-en": "Our log house model 'Bodensee' is ideal for landlords specializing in holiday apartments. Both apartments are absolutely identical and offer an area of approx. 75 m² each, which is sufficient for a relaxing holiday. The bungalow is single-storey, so it can be built barrier-free. Covered terraces on the inner courtyard invite you to relax and dine together in the fresh air. The traditional natural log house with a flat hip roof blends perfectly into rural holiday regions and is particularly suitable for areas with strong wind loads. In addition, the hip roof, due to its large area, can be used for solar panels. The wide roof overhangs also protect the house from the weather influences.",
+      "parameters": {
+        "dimensions": "18,14 m x 9,85 m",
+        "total-living-space": "151 m²",
+        "roof-pitch": "20 °",
+        "wall": "Natural trunk approx",
+        "diameter": "380 mm"
+      },
+      "tags": [
+        "barrier-free",
+        "bungalow",
+        "single-storey",
+        "holiday-home",
+        "multi-family-home",
+        "terrace",
+        "hip-roof",
+        "residential-building",
+        "log-cabin"
+      ],
+      "images": [
+        "/projects-gallery/project-11/image-1.jpg",
+        "/projects-gallery/project-11/image-2.jpg",
+        "/projects-gallery/project-11/image-3.jpg",
+        "/projects-gallery/project-11/image-4.jpg",
+        "/projects-gallery/project-11/image-5.jpg",
+        "/projects-gallery/project-11/image-6.jpg",
+        "/projects-gallery/project-11/image-7.jpg",
+        "/projects-gallery/project-11/image-8.jpg",
+        "/projects-gallery/project-11/image-9.jpg",
+        "/projects-gallery/project-11/image-10.jpg",
+        "/projects-gallery/project-11/image-11.jpg",
+        "/projects-gallery/project-11/image-12.jpg",
+        "/projects-gallery/project-11/image-13.jpg",
+        "/projects-gallery/project-11/image-14.jpg",
+        "/projects-gallery/project-11/image-15.jpg",
+        "/projects-gallery/project-11/image-16.jpg",
+        "/projects-gallery/project-11/image-17.jpg",
+        "/projects-gallery/project-11/image-18.jpg",
+        "/projects-gallery/project-11/image-19.jpg",
+        "/projects-gallery/project-11/image-20.jpg"
+      ],
+      "schema-img": [
+        "/projects-gallery/project-11/schema-1.jpg"
+      ],
+      "original-url": "https://holzbaurustikal.de/naturstammhaus-bodensee/",
+      "categories": [
+        "log-houses",
+        "log-cabin-bungalows",
+        "holiday-log-cabins",
+        "residential-log-houses"
+      ]
+    },
+    {
+      "id": 12,
+      "name-ua": "Будинок із натурального дерева «Пассау»",
+      "name-en": "Passau Natural Log House",
+      "description-ua": "Наша модель зрубу «Пассау», натхненна мальовничим містом на Дунаї, поєднує найкраще з традиційного дерев'яного будівництва та сучасного дизайну. Будинок, спроектований для розташування на схилі, максимально збільшує використання простору та водночас дарує відчуття зв'язку з навколишнім середовищем. * Підвал: У підвалі знаходиться просторий гараж на два автомобілі, а також додаткові приміщення для господарських робіт та зберігання. * Перший поверх: Перший поверх вражає відкритим плануванням, що створює гармонійний простір для життя, прийому їжі та приготування їжі. Офіс та комора плавно інтегровані в планування. * Мансардний поверх: Мансардний поверх зі спальнею, дитячою кімнатою, гардеробною та кімнатою для хобі пропонує багато вільного простору для особистого розвитку. Особливості: Можливість зовнішніх сходів забезпечує гнучкий доступ до будинку та додає вже вражаючому дизайну додатковий індивідуальний штрих. * Загальний вигляд: З загальною житловою площею близько 120 м² зруб «Пассау» є ідеальним місцем для тих, хто цінує життя на природі в поєднанні з сучасним комфортом.",
+      "description-en": "Our log house model 'Passau', inspired by the picturesque city on the Danube, combines the best of traditional timber construction and modern design. The house, designed for a hillside location, maximizes space utilization while simultaneously offering a feeling of connection to the environment. * Basement: In the basement, you will find a spacious garage that offers space for two vehicles, as well as additional rooms for housework and storage. * Ground floor: The ground floor impresses with its open-plan design, which makes living, dining, and cooking a harmonious experience. The office and pantry are seamlessly integrated into the floor plan. * Attic floor: The attic floor with a bedroom, children's room, dressing room, and hobby room offers plenty of free space for personal development. Special features: The possibility of an external staircase provides flexible access to the house and adds an additional personal touch to the already impressive design. * Overall impression: With a total living area of approx. 120 m², the 'Passau' log house is the ideal place for anyone who appreciates natural living combined with modern comfort.",
+      "parameters": {
+        "dimensions": "9,98 m x 8,48 m",
+        "total-living-space": "121 m²",
+        "ground-floor-approx": "66,5 m²",
+        "attic-approx": "54,5 m²",
+        "basement-approx": "89 m²",
+        "roof-pitch": "32 °",
+        "wall": "Natural trunk approx",
+        "diameter": "380 mm"
+      },
+      "tags": [
+        "balcony",
+        "three-storey",
+        "single-family-home",
+        "terrace"
+      ],
+      "images": [
+        "/projects-gallery/project-12/image-1.jpg",
+        "/projects-gallery/project-12/image-2.jpg",
+        "/projects-gallery/project-12/image-3.jpg",
+        "/projects-gallery/project-12/image-4.jpg",
+        "/projects-gallery/project-12/image-5.jpg",
+        "/projects-gallery/project-12/image-6.jpg",
+        "/projects-gallery/project-12/image-7.jpg",
+        "/projects-gallery/project-12/image-8.jpg",
+        "/projects-gallery/project-12/image-9.jpg"
+      ],
+      "schema-img": [
+        "/projects-gallery/project-12/schema-1.jpg",
+        "/projects-gallery/project-12/schema-2.jpg",
+        "/projects-gallery/project-12/schema-3.jpg"
+      ],
+      "original-url": "https://holzbaurustikal.de/naturstammhaus-passau/",
+      "categories": [
+        "log-houses",
+        "residential-log-houses"
+      ]
+    },
+    {
+      "id": 13,
+      "name-ua": "Будинок із натурального дерева «Бранденбург»",
+      "name-en": "Brandenburg Natural Log House",
+      "description-ua": "Наша модель зрубу «Бранденбург» — це будинок із натуральних колод із першим поверхом. Затишний зруб може використовуватися як житловий будинок або будинок для відпочинку та ідеально підходить для молодих сімей або пенсіонерів. Можливе безбар'єрне облаштування. На першому поверсі є п'ять кімнат: простора вітальня з відкритою (американською) кухнею, спальня, дитяча або гостьова кімната, а також ванна кімната та гардеробна або господарська зона. Родзинкою є окрема тераса, де можна затишно поснідати або влаштувати спільне барбекю. Завдяки продуманому розташуванню, на терасу можна вийти як зі спальні та дитячої кімнати, так і з вітальні. Вхідна зона захищена від негоди подовженими звісами даху.",
+      "description-en": "Our log house model 'Brandenburg' is a natural log house with a ground floor. The cozy log cabin can be used as a residential house or holiday home and is ideal for young families or retirees. Barrier-free furnishing is possible. On the ground floor there are five rooms: a spacious living room with an open (American) kitchen, a bedroom, a children's or guest room, as well as a bathroom and a dressing room or utility area. A highlight is the free-standing terrace, where you can make yourself comfortable for breakfast or a shared barbecue. Due to its well-thought-out location, it can be accessed from both the bedroom and children's room as well as from the living area. The entrance area is protected from the weather by extended roof overhangs.",
+      "parameters": {
+        "dimensions": "13,70 m x 13,20 m",
+        "total-living-space": "125 m²",
+        "rooms-on-the-ground-floor": "6",
+        "roof-pitch": "25 °",
+        "wall": "Natural trunk approx",
+        "diameter": "380 mm"
+      },
+      "tags": [
+        "barrier-free",
+        "single-storey",
+        "holiday-home",
+        "residential-building",
+        "terrace",
+        "log-cabin"
+      ],
+      "images": [
+        "/projects-gallery/project-13/image-1.jpg",
+        "/projects-gallery/project-13/image-2.jpg",
+        "/projects-gallery/project-13/image-3.jpg",
+        "/projects-gallery/project-13/image-4.jpg",
+        "/projects-gallery/project-13/image-5.jpg"
+      ],
+      "schema-img": [
+        "/projects-gallery/project-13/schema-1.jpg"
+      ],
+      "original-url": "https://holzbaurustikal.de/naturstammhaus-brandenburg/",
+      "categories": [
+        "log-houses"
+      ]
+    },
+    {
+      "id": 14,
+      "name-ua": "Будинок із натурального дерева «Оберлаузіц»",
+      "name-en": "Oberlausitz Natural Log House",
+      "description-ua": "Подовжений зруб-бунгало «Оберлаузіц» — це сучасний будинок із натуральних колод із багатьма приміщеннями. Затишний сімейний будинок може використовуватися як житловий або здаватися в оренду як будинок для відпочинку; він чудово підходить для невеликих сімей, пенсіонерів або пар. На просторому першому поверсі є кілька кімнат: велика вітальня з відкритою (американською) кухнею та велика спальня. Дві додаткові кімнати можна використовувати як дитячу, гостьову або кімнату для хобі залежно від потреб. Також є велика ванна кімната, другий туалет та невелика господарська кімната. Велика крита тераса на садовій стороні будинку запрошує до барбекю, засмагання та відпочинку. Вхідна зона з невеликими сходами також захищена від вітру та дощу подовженими звісами даху.",
+      "description-en": "The elongated log cabin bungalow 'Oberlausitz' is a modern natural log house with many rooms. The cozy single-family home can be used as a residential building or rented out as a holiday home and is ideally suited for smaller families, retirees, or couples. On the large ground floor, there are several rooms: a large living area with an open (American) kitchen and a large bedroom. Two additional rooms can be used as a children's room, guest room, or hobby room depending on requirements. In addition, there is a large bathroom, a second toilet, and a small utility room. The large covered terrace on the garden side of the house invites you to barbecue, sunbathe, and relax. The entrance area with its small staircase is also protected from wind and rain by extended roof overhangs.",
+      "parameters": {
+        "dimensions": "14,95 m x 9,69 m",
+        "total-living-space": "125 m²",
+        "rooms-on-the-ground-floor": "7",
+        "roof-pitch": "25 °",
+        "wall": "Natural trunk approx",
+        "diameter": "380 mm"
+      },
+      "tags": [
+        "barrier-free",
+        "bungalow",
+        "single-family-home",
+        "single-storey",
+        "terrace",
+        "residential-building",
+        "log-cabin"
+      ],
+      "images": [
+        "/projects-gallery/project-14/image-1.jpg",
+        "/projects-gallery/project-14/image-2.jpg",
+        "/projects-gallery/project-14/image-3.jpg"
+      ],
+      "schema-img": [
+        "/projects-gallery/project-14/schema-1.jpg"
+      ],
+      "original-url": "https://holzbaurustikal.de/naturstammhaus-oberlausitz/",
+      "categories": [
+        "log-houses",
+        "residential-log-houses"
+      ]
+    },
+    {
+      "id": 15,
+      "name-ua": "Будинок із натурального дерева «Альтенбург»",
+      "name-en": "Altenburg Natural Log House",
+      "description-ua": "Зруб «Альтенбург» унікальним чином поєднує традиційний шарм зрубів у канадському стилі з сучасними вимогами до житла. Карпорт із натуральних колод, розташований з торця будинку, не лише завершує гармонійний загальний вигляд, а й пропонує додаткову практичну користь. Завдяки унікальним фронтонним вікнам зі зламаним скосом, денне світло заливає мансардний поверх, створюючи світлу, привітну атмосферу та пропонуючи фантастичний вид на навколишній ландшафт. На першому поверсі ви знайдете відкриту зону вітальні та їдальні, кухню, господарське приміщення, комору та туалет. Мансардний поверх вміщує спальню, ванну кімнату, сауну, гостьову кімнату, гостьовий туалет та невелику комору, яка ідеально підходить як гардеробна. З загальною житловою площею близько 130 м² зруб «Альтенбург» пропонує більше ніж достатньо місця для комфортного життя в гармонії з природою.",
+      "description-en": "The 'Altenburg' log house uniquely combines the traditional charm of Canadian-style natural log houses with modern living requirements. A carport made of natural logs located at the front of the house not only completes the harmonious overall picture but also offers additional practical benefits. Thanks to the unique gable windows with a broken slope, daylight floods the attic floor, ensuring a bright, friendly atmosphere and offering a fantastic view of the surrounding landscape. On the ground floor, you will find an open living and dining area, a kitchen, a utility room, a pantry, and a toilet. The attic floor houses a bedroom, a bathroom, a sauna, a guest room, a guest toilet, and a small storage room, which is ideal as a walk-in closet. With a total living area of approx. 130 m², the 'Altenburg' log house offers more than enough space for comfortable and nature-connected living.",
+      "parameters": {
+        "dimensions": "10,00 m x 8,50 m",
+        "total-living-space": "ca. 130 m²",
+        "ground-floor-approx": "67,25 m²",
+        "attic-approx": "63,52 m²",
+        "roof-pitch": "32 °",
+        "wall": "Natural trunk approx",
+        "diameter": "380 mm"
+      },
+      "tags": [
+        "single-family-home",
+        "residential-building",
+        "two-storey"
+      ],
+      "images": [
+        "/projects-gallery/project-15/image-1.jpg",
+        "/projects-gallery/project-15/image-2.jpg",
+        "/projects-gallery/project-15/image-3.jpg",
+        "/projects-gallery/project-15/image-4.jpg",
+        "/projects-gallery/project-15/image-5.jpg",
+        "/projects-gallery/project-15/image-6.jpg",
+        "/projects-gallery/project-15/image-7.jpg"
+      ],
+      "schema-img": [
+        "/projects-gallery/project-15/schema-1.jpg",
+        "/projects-gallery/project-15/schema-2.jpg"
+      ],
+      "original-url": "https://holzbaurustikal.de/naturstammhaus-altenburg/",
+      "categories": [
+        "log-houses",
+        "residential-log-houses"
+      ]
+    },
+    {
+      "id": 16,
+      "name-ua": "Будинок із натурального дерева «Потсдам»",
+      "name-en": "Potsdam Natural Log House",
+      "description-ua": "Наш зруб «Потсдам» — це ідеальний симбіоз традиційного будівництва та сучасного житлового комфорту. З загальною житловою площею 126 м², розділеною на просторий перший поверх та чарівний мансардний поверх, цей будинок пропонує багато місця для індивідуального життя в гармонії з природою. Конструкція з масивних натуральних колод діаметром близько 380 мм надає будинку не лише вражаючого вигляду, а й забезпечує високу стабільність та довговічність. Елегантна конструкція даху та простора крита тераса, що охоплює дві сторони будинку, дарують унікальне відчуття комфорту.",
+      "description-en": "Our 'Potsdam' natural log house is a perfect symbiosis of traditional construction and modern living comfort. With a total living area of 126 m², divided into a spacious ground floor and a charming attic floor, this house offers plenty of space for individual and nature-connected living. The construction of solid natural logs with a diameter of approx. 380 mm not only gives the house an impressive appearance but also ensures high stability and durability. The elegant roof construction and the spacious, covered terrace, which extends over two sides of the house, offer a unique living experience.",
+      "parameters": {
+        "dimensions": "12,15 m x 10,10 m",
+        "total-living-space": "126 m²",
+        "ground-floor-approx": "104 m²",
+        "attic-approx": "22 m²",
+        "rooms-on-the-ground-floor": "5",
+        "roof-pitch": "25 °",
+        "wall": "Natural trunk approx",
+        "diameter": "380 mm"
+      },
+      "tags": [
+        "attic",
+        "single-storey",
+        "terrace",
+        "bestsellers",
+        "hip-roof"
+      ],
+      "images": [
+        "/projects-gallery/project-16/image-1.jpg",
+        "/projects-gallery/project-16/image-2.jpg",
+        "/projects-gallery/project-16/image-3.jpg",
+        "/projects-gallery/project-16/image-4.jpg",
+        "/projects-gallery/project-16/image-5.jpg",
+        "/projects-gallery/project-16/image-6.jpg",
+        "/projects-gallery/project-16/image-7.jpg",
+        "/projects-gallery/project-16/image-8.jpg",
+        "/projects-gallery/project-16/image-9.jpg",
+        "/projects-gallery/project-16/image-10.jpg",
+        "/projects-gallery/project-16/image-11.jpg",
+        "/projects-gallery/project-16/image-12.jpg",
+        "/projects-gallery/project-16/image-13.jpg",
+        "/projects-gallery/project-16/image-14.jpg"
+      ],
+      "schema-img": [
+        "/projects-gallery/project-16/schema-1.jpg",
+        "/projects-gallery/project-16/schema-2.jpg"
+      ],
+      "original-url": "https://holzbaurustikal.de/naturstammhaus-potsdam/",
+      "categories": [
+        "log-houses",
+        "log-cabin-bungalows",
+        "residential-log-houses"
+      ]
+    },
+    {
+      "id": 17,
+      "name-ua": "Будинок із натурального дерева «Вольфсбург»",
+      "name-en": "Wolfsburg Natural Log House",
+      "description-ua": "Зруб «Вольфсбург» представляє унікальне поєднання традиційного шарму та сучасного житлового комфорту в одноповерховому будинку з натуральних колод. Цей сімейний будинок пропонує на загальній площі близько 182 м² достатньо місця для безбар'єрного життя. Відкрита концепція простору включає простору вітальню та кухонну зону, спальні, а також додаткові приміщення, такі як офіс, гостьова або дитяча кімната, господарське приміщення та гардеробна. Завдяки широким звісам даху будинок оптимально захищений від негоди, а крита тераса запрошує до відпочинку на свіжому повітрі. Карпорт із натуральних колод гармонійно вписується в загальний вигляд будинку та забезпечує захист для вашого автомобіля.",
+      "description-en": "The 'Wolfsburg' log house presents a unique combination of traditional charm and modern living comfort in a single-storey natural log house. This single-family home offers ample space for barrier-free living on a total area of approx. 182.00 m². The open space concept of the house includes a spacious living and kitchen area, bedrooms, as well as further rooms such as an office, guest or children's room, utility room, and dressing room. Thanks to extensive roof overhangs, the house is optimally protected from the elements, while a covered terrace invites you to relax outdoors. A natural log carport blends seamlessly into the overall appearance of the house and offers protection for your vehicle.",
+      "parameters": {
+        "dimensions": "14,50 m x 12,00 m",
+        "total-living-space": "ca. 147 m²",
+        "total-area": "ca. 182 m²",
+        "roof-pitch": "22°",
+        "wall": "Natural trunk approx",
+        "diameter": "380 mm"
+      },
+      "tags": [
+        "barrier-free",
+        "bungalow",
+        "single-family-home",
+        "single-storey",
+        "terrace",
+        "residential-building"
+      ],
+      "images": [
+        "/projects-gallery/project-17/image-1.jpg",
+        "/projects-gallery/project-17/image-2.jpg",
+        "/projects-gallery/project-17/image-3.jpg",
+        "/projects-gallery/project-17/image-4.jpg",
+        "/projects-gallery/project-17/image-5.jpg"
+      ],
+      "schema-img": [
+        "/projects-gallery/project-17/schema-1.jpg"
+      ],
+      "original-url": "https://holzbaurustikal.de/naturstammhaus-wolfsburg/",
+      "categories": [
+        "log-houses",
+        "residential-log-houses"
+      ]
+    },
+    {
+      "id": 18,
+      "name-ua": "Будинок із натурального дерева «Гамбург»",
+      "name-en": "Hamburg Natural Log House",
+      "description-ua": "Модель «Гамбург» — це одноповерховий зруб із натуральних колод, який можна легко облаштувати безбар'єрним. Особливістю цієї моделі є три фронтони (щипці), причому передній фронтон виступає вперед, утворюючи місце для критої тераси та вхідної зони. Ще одна тераса розташована на задній стороні зрубу, де можна насолоджуватися тишею і спокоєм для сонячних ванн, обідів та відпочинку. Для цього зрубу розроблено другу версію планування, де у передньому фронтоні додано більше вікон, завдяки чому приміщення наповнюються природним денним світлом.",
+      "description-en": "The 'Hamburg' model is a single-storey natural log house that can easily be made barrier-free. A special feature of this model is the three gables, with the front gable projecting forward to create space for a covered terrace and the entrance area. Another terrace is located on the back of the log cabin, providing the necessary peace and seclusion for sunbathing, dining, and relaxing. We have already designed a second layout variant for this log house, which introduces additional windows in the front gable to let in more daylight and naturally brighten the rooms.",
+      "parameters": {
+        "dimensions": "17,26 m x 12,54 m",
+        "total-living-space": "ca. 131 m²",
+        "roof-pitch": "25 °",
+        "wall": "Natural trunk approx",
+        "diameter": "380 mm"
+      },
+      "tags": [
+        "barrier-free",
+        "bungalow",
+        "single-family-home",
+        "single-storey",
+        "gable-roof",
+        "terrace",
+        "bestsellers",
+        "residential-building"
+      ],
+      "categories": [
+        "log-houses",
+        "log-cabin-bungalows"
+      ],
+      "images": [
+        "/projects-gallery/project-18/image-1.jpg",
+        "/projects-gallery/project-18/image-2.jpg",
+        "/projects-gallery/project-18/image-3.jpg",
+        "/projects-gallery/project-18/image-4.jpg",
+        "/projects-gallery/project-18/image-5.jpg",
+        "/projects-gallery/project-18/image-6.jpg",
+        "/projects-gallery/project-18/image-7.jpg",
+        "/projects-gallery/project-18/image-8.jpg",
+        "/projects-gallery/project-18/image-9.png",
+        "/projects-gallery/project-18/image-10.jpg",
+        "/projects-gallery/project-18/image-11.jpg",
+        "/projects-gallery/project-18/image-12.jpg",
+        "/projects-gallery/project-18/image-13.jpg",
+        "/projects-gallery/project-18/image-14.jpg"
+      ],
+      "schema-img": [
+        "/projects-gallery/project-18/schema-1.jpg"
+      ],
+      "original-url": "https://holzbaurustikal.de/naturstammhaus-hamburg/"
+    },
+    {
+      "id": 19,
+      "name-ua": "Будинок із натурального дерева «Грюнгайде»",
+      "name-en": "Grünheide Natural Log House",
+      "description-ua": "Цей зруб злегка нагадує відкритий стиль канадських дерев'яних будинків. Будинок має трохи підняту веранду, яка, як це прийнято в багатьох регіонах Канади, звернена до вулиці та тягнеться по всій ширині будинку. Веранда повністю закрита виступаючим дахом з торцевої сторони, що захищає вхідну зону та садові меблі від сонця, дощу та снігу. Внутрішній простір спланований дуже відкрито, створюючи плавні переходи між окремими зонами вітальні та кухні. Ще однією привабливою особливістю є елегантні мансардні вікна (люкарни) з обох боків будинку, які забезпечують природне освітлення мансардного поверху та відкривають чудовий вид на вашу ділянку.",
+      "description-en": "This log house is slightly inspired by the open style of Canadian timber homes. The house features a slightly elevated veranda that, as is common in many regions of Canada, faces the street and extends across the entire width of the house. The veranda is completely covered by the projecting roof on the gable side, protecting both the entrance area and terrace furniture from sun, rain, and snow. The interior is designed with a very open-plan concept, providing seamless transitions between the living and kitchen areas. Another characteristic and attractive feature is the elegant dormer windows on both sides of the house, which provide natural lighting for the attic floor and offer a beautiful view of your property.",
+      "parameters": {
+        "dimensions": "9,50 m x 11,10 m",
+        "total-living-space": "ca. 155 m²",
+        "ground-floor-approx": "ca. 82 m²",
+        "attic-approx": "ca. 73 m²",
+        "rooms-on-the-ground-floor": "5",
+        "rooms-in-the-attic": "5",
+        "roof-pitch": "32 °",
+        "wall": "Natural trunk approx",
+        "diameter": "380 mm"
+      },
+      "tags": [
+        "dormer",
+        "gable-roof",
+        "multi-family-home",
+        "terrace",
+        "residential-building",
+        "two-storey"
+      ],
+      "categories": [
+        "log-houses",
+        "residential-log-houses"
+      ],
+      "images": [
+        "/projects-gallery/project-19/image-1.jpg",
+        "/projects-gallery/project-19/image-2.jpg",
+        "/projects-gallery/project-19/image-3.jpg"
+      ],
+      "schema-img": [
+        "/projects-gallery/project-19/schema-1.jpg",
+        "/projects-gallery/project-19/schema-2.jpg"
+      ],
+      "original-url": "https://holzbaurustikal.de/naturstammhaus-gruenheide/"
+    },
+    {
+      "id": 20,
+      "name-ua": "Будинок із натурального дерева «Лейпциг»",
+      "name-en": "Leipzig Natural Log House",
+      "description-ua": "Зруб «Лейпциг» пропонує простору та гостинну атмосферу. Загальна житлова площа 167 м² забезпечує достатньо місця для всей родини. На першому поверсі розташована затишна вітальня, сучасна кухня, ванна кімната, практична гардеробна та господарське приміщення з додатковим туалетом. Рустикальні сходи з натуральних колод ведуть із великої вітальні на мансардний поверх. Там розміщені дитяча кімната, додаткова ванна кімната, кімната для хобі та гардеробна. Конструкція відрізняється високою гнучкістю: ви можете додати карпорт, тераси або балкони відповідно до ваших побажань.",
+      "description-en": "The Leipzig log house offers a spacious and welcoming atmosphere. With a total living area of 167 m², there is plenty of space for the whole family. The ground floor houses a cozy living room, a modern kitchen, a bathroom, a practical dressing room, and a utility room with an additional toilet. A rustic log staircase built by us leads from the spacious living room to the attic floor, where you will find children's rooms, another bathroom, a hobby room, and a dressing room. This model offers high flexibility, allowing you to add a carport, terraces, or balconies according to your individual wishes.",
+      "parameters": {
+        "dimensions": "10,60 m x 11,90 m",
+        "total-living-space": "167 m²",
+        "ground-floor-approx": "ca. 99 m²",
+        "attic-approx": "ca. 68 m²",
+        "roof-pitch": "30 °",
+        "wall": "Natural trunk approx",
+        "diameter": "380 mm"
+      },
+      "tags": [
+        "single-family-home",
+        "two-storey"
+      ],
+      "categories": [
+        "log-houses",
+        "residential-log-houses"
+      ],
+      "images": [
+        "/projects-gallery/project-20/image-1.jpg",
+        "/projects-gallery/project-20/image-2.jpg",
+        "/projects-gallery/project-20/image-3.jpg",
+        "/projects-gallery/project-20/image-4.jpg",
+        "/projects-gallery/project-20/image-5.jpg",
+        "/projects-gallery/project-20/image-6.jpg",
+        "/projects-gallery/project-20/image-7.jpg",
+        "/projects-gallery/project-20/image-8.jpg"
+      ],
+      "schema-img": [
+        "/projects-gallery/project-20/schema-1.jpg",
+        "/projects-gallery/project-20/schema-2.jpg"
+      ],
+      "original-url": "https://holzbaurustikal.de/naturstammhaus-leipzig/"
+    },
+    {
+      "id": 21,
+      "name-ua": "Будинок із натурального дерева «Каменц»",
+      "name-en": "Kamenz Natural Log House",
+      "description-ua": "Наша модель зрубу «Каменц» — це компактний будинок із натуральних колод із сучасним фасадом. Цей двоповерховий будинок має перший та мансардний поверхи з дуже просторим плануванням. Затишний зруб чудово підходить як житловий будинок для малих та великих сімей з трьома або чотирма дітьми. На першому поверсі розташована велика житлова зона з кухнею, гостьова кімната, спальня, а також туалет та невелика гардеробна. На мансардному поверсі заплановані ще три кімнати для дітей, гостей або під хобі, а також головна ванна кімната. На критій терасі в передній частині будинку можна встановити камін, що створить затишну атмосферу та забезпечить тепло прохолодними вечорами. Чотири великі вікна на фронтонній стороні забезпечують чудове природне освітлення.",
+      "description-en": "Our 'Kamenz' log house model is a compact natural log house with a modern facade. This two-storey log house features a ground and attic floor with a very generously designed layout. The cozy log cabin is ideal as a residential home for smaller and larger families with three or four children. The ground floor houses a large living area with a kitchen, a guest room, a bedroom, a toilet, and a small dressing room. The attic floor features three additional rooms for children, guests, or hobbies, as well as the main bathroom. A fireplace can be built on the covered terrace at the front of the house to ensure a cozy atmosphere and sufficient warmth on cool evenings. Four large windows on the gable side support natural room lighting.",
+      "parameters": {
+        "dimensions": "14,80 m x 9,70 m",
+        "total-living-space": "ca. 192 m²",
+        "ground-floor-approx": "ca. 123 m²",
+        "attic-approx": "ca. 69 m²",
+        "roof-pitch": "30 °",
+        "wall": "Natural trunk approx",
+        "diameter": "380 mm"
+      },
+      "tags": [
+        "single-family-home",
+        "multi-family-home",
+        "gable-roof",
+        "terrace",
+        "residential-building",
+        "two-storey"
+      ],
+      "categories": [
+        "log-houses",
+        "residential-log-houses"
+      ],
+      "images": [
+        "/projects-gallery/project-21/image-1.jpg",
+        "/projects-gallery/project-21/image-2.jpg",
+        "/projects-gallery/project-21/image-3.jpg",
+        "/projects-gallery/project-21/image-4.jpg",
+        "/projects-gallery/project-21/image-5.jpg",
+        "/projects-gallery/project-21/image-6.jpg",
+        "/projects-gallery/project-21/image-7.jpg",
+        "/projects-gallery/project-21/image-8.jpg",
+        "/projects-gallery/project-21/image-9.jpg"
+      ],
+      "schema-img": [
+        "/projects-gallery/project-21/schema-1.jpg",
+        "/projects-gallery/project-21/schema-2.jpg"
+      ],
+      "original-url": "https://holzbaurustikal.de/naturstammhaus-kamenz/"
+    },
+    {
+      "id": 22,
+      "name-ua": "Будинок із натурального дерева «Шпандау»",
+      "name-en": "Spandau Natural Log House",
+      "description-ua": "Зруб «Шпандау» поєднує в собі простору концепцію приміщень, практичність та рустикальний шарм. Вперше побудований поблизу Берліна, цей будинок вражає житловою площею близько 194 м². На першому поверсі розташована затишна зона вітальні та їдальні, спальня та ванна кімната. Два вбудовані гаражі забезпечують зручне місце для зберігання автомобілів. Особливістю є велика тераса з боку двору, де виступаючі колоди закруглені для гармонійного вигляду. Рустикальні дерев'яні сходи ведуть на мансардний поверх, який вражає своїм відкритим плануванням та просторою галерею, що може використовуватися як кімната для хобі або гостей. Скошені вікна на фронтоні створюють унікальне відчуття простору та особливе світлове настрій.",
+      "description-en": "The 'Spandau' log house combines a generous space concept with practical functions and rustic charm. First built near Berlin, this house impresses with approx. 194 m² of living space and a well-thought-out layout. The ground floor houses a cozy living and dining area, a bedroom, and a bathroom. Two integrated garages provide practical storage space for vehicles. A special feature is the large terrace on the courtyard side, where the projecting logs are rounded to create a harmonious overall appearance. A rustic wooden staircase leads to the attic floor, which features a spacious, open gallery that can optionally be used as a hobby or guest room. Angled windows on the gable side ensure a unique sense of space and a special lighting mood.",
+      "parameters": {
+        "dimensions": "13,40 m x 13,38 m",
+        "total-living-space": "ca. 194 m²",
+        "ground-floor-approx": "114,00 m²",
+        "attic-approx": "80 m²",
+        "roof-pitch": "22 °",
+        "wall": "Natural trunk approx",
+        "diameter": "380 mm"
+      },
+      "tags": [
+        "single-family-home",
+        "terrace",
+        "two-storey",
+        "garage"
+      ],
+      "categories": [
+        "log-houses",
+        "residential-log-houses"
+      ],
+      "images": [
+        "/projects-gallery/project-22/image-1.jpg",
+        "/projects-gallery/project-22/image-2.jpg",
+        "/projects-gallery/project-22/image-3.jpg",
+        "/projects-gallery/project-22/image-4.jpg",
+        "/projects-gallery/project-22/image-5.jpg",
+        "/projects-gallery/project-22/image-6.jpg",
+        "/projects-gallery/project-22/image-7.jpg",
+        "/projects-gallery/project-22/image-8.jpg",
+        "/projects-gallery/project-22/image-9.jpg",
+        "/projects-gallery/project-22/image-10.jpg",
+        "/projects-gallery/project-22/image-11.jpg",
+        "/projects-gallery/project-22/image-12.jpg"
+      ],
+      "schema-img": [
+        "/projects-gallery/project-22/schema-1.jpg",
+        "/projects-gallery/project-22/schema-2.jpg"
+      ],
+      "original-url": "https://holzbaurustikal.de/naturstammhaus-spandau/"
+    },
+    {
+      "id": 23,
+      "name-ua": "Будинок із натурального дерева «Монреаль»",
+      "name-en": "Montreal Natural Log House",
+      "description-ua": "Зруб «Монреаль» вражає своїм величним, репрезентативним дизайном та просторою житловою площею, яка пропонує багато місця та свободи для молодих і літніх людей. У цьому будинку кожен член сім'ї може облаштувати свій власний куточок, але тут також є чудові місця для спільного проведення часу. Особливо виділяється велика тераса, захищена від дощу та сонця виступаючим дахом. Будинок «Монреаль» оснащений широкими звісами даху на всіх інших сторонах, що захищає стіни та вікна від негоди. Закруглені кутові з'єднання колод та вишукана мансардна люкарна стильно доповнюють загальний дизайн цього сучасного зрубу.",
+      "description-en": "The 'Montreal' log house impresses with its majestic, representative design and a spacious living area that offers plenty of room and freedom for all generations. In this log house, every family member can set up their own private area, but there are also wonderful places to spend quality time together. The large terrace is a particular highlight, protected from rain and sun by the overhanging roof. The 'Montreal' house is equipped with wide roof overhangs on all other sides to protect the walls and windows from the weather. Rounded corner joints and an elegant dormer window stylishly complement the overall design of this modern log house.",
+      "parameters": {
+        "dimensions": "12,30 m x 11,10 m",
+        "total-living-space": "189 m²",
+        "ground-floor-approx": "ca. 82 m²",
+        "attic-approx": "ca. 107 m²",
+        "rooms-on-the-ground-floor": "4",
+        "rooms-in-the-attic": "6",
+        "roof-pitch": "32 °",
+        "wall": "Natural trunk approx",
+        "diameter": "380 mm"
+      },
+      "tags": [
+        "single-family-home",
+        "terrace",
+        "residential-building",
+        "two-storey",
+        "dormer"
+      ],
+      "categories": [
+        "log-houses",
+        "residential-log-houses"
+      ],
+      "images": [
+        "/projects-gallery/project-23/image-1.jpg",
+        "/projects-gallery/project-23/image-2.jpg",
+        "/projects-gallery/project-23/image-3.jpg",
+        "/projects-gallery/project-23/image-4.jpg",
+        "/projects-gallery/project-23/image-5.jpg",
+        "/projects-gallery/project-23/image-6.jpg",
+        "/projects-gallery/project-23/image-7.jpg",
+        "/projects-gallery/project-23/image-8.jpg",
+        "/projects-gallery/project-23/image-9.jpg",
+        "/projects-gallery/project-23/image-10.jpg",
+        "/projects-gallery/project-23/image-11.jpg",
+        "/projects-gallery/project-23/image-12.jpg",
+        "/projects-gallery/project-23/image-13.jpg",
+        "/projects-gallery/project-23/image-14.jpg",
+        "/projects-gallery/project-23/image-15.jpg",
+        "/projects-gallery/project-23/image-16.jpg",
+        "/projects-gallery/project-23/image-17.jpg"
+      ],
+      "schema-img": [
+        "/projects-gallery/project-23/schema-1.jpg",
+        "/projects-gallery/project-23/schema-2.jpg"
+      ],
+      "original-url": "https://holzbaurustikal.de/naturstammhaus-montreal/"
+    },
+    {
+      "id": 24,
+      "name-ua": "Будинок із натурального дерева «Дрезден»",
+      "name-en": "Dresden Natural Log House",
+      "description-ua": "Наша модель зрубу «Дрезден» — це просторий двоповерховий будинок із натуральних колод загальною площею понад 200 м², який чудово підходить для великих сімей. На першому поверсі знаходиться простора вітальня та кухня, спальня, а також господарське приміщення. На мансардному поверсі запланована додаткова житлова зона з двома ванними кімнатами та трьома кімнатами для дітей чи інших членів сім'ї. Будинок має двосхилий дах із широкими звісами. Справжньою перлиною є піднята та крита тераса (веранда) з каміном, що дарує романтичні та затишні години навіть у холодну пору року. Ще однією окрасою будинку є великий балкон на фронтонній стороні, що виходить у сад.",
+      "description-en": "Our 'Dresden' log house model is a spacious two-storey natural log house with a ground and attic floor and over 200 m² of living space. This generous log home is ideal for large families. The ground floor houses a spacious living and kitchen area, a bedroom, and a utility room. The attic floor features another living area with two bathrooms and three rooms for children or other family members. The log house has a gable roof with wide roof overhangs. A real highlight is the elevated and covered terrace (veranda) with a fireplace, which ensures romantic and cozy hours even in the cold season. Another crown jewel of the house is the large balcony on the gable side, extending across the entire width of the house and facing the garden.",
+      "parameters": {
+        "dimensions": "13,75 m x 10,50 m",
+        "total-living-space": "206 m²",
+        "ground-floor-approx": "115 m²",
+        "attic-approx": "91 m²",
+        "rooms-on-the-ground-floor": "5",
+        "rooms-in-the-attic": "5",
+        "roof-pitch": "32 °",
+        "wall": "Natural trunk approx",
+        "diameter": "380 mm"
+      },
+      "tags": [
+        "balcony",
+        "single-family-home",
+        "holiday-home",
+        "gable-roof",
+        "multi-family-home",
+        "terrace",
+        "residential-building",
+        "two-storey"
+      ],
+      "categories": [
+        "log-houses",
+        "residential-log-houses"
+      ],
+      "images": [
+        "/projects-gallery/project-24/image-1.jpg",
+        "/projects-gallery/project-24/image-2.jpg",
+        "/projects-gallery/project-24/image-3.jpg",
+        "/projects-gallery/project-24/image-4.jpg",
+        "/projects-gallery/project-24/image-5.jpg",
+        "/projects-gallery/project-24/image-6.jpg",
+        "/projects-gallery/project-24/image-7.jpg",
+        "/projects-gallery/project-24/image-8.jpg",
+        "/projects-gallery/project-24/image-9.jpg",
+        "/projects-gallery/project-24/image-10.jpg",
+        "/projects-gallery/project-24/image-11.jpg",
+        "/projects-gallery/project-24/image-12.jpg",
+        "/projects-gallery/project-24/image-13.jpg",
+        "/projects-gallery/project-24/image-14.jpg",
+        "/projects-gallery/project-24/image-15.jpg"
+      ],
+      "schema-img": [
+        "/projects-gallery/project-24/schema-1.jpg",
+        "/projects-gallery/project-24/schema-2.jpg"
+      ],
+      "original-url": "https://holzbaurustikal.de/naturstammhaus-dresden/"
+    },
+    {
+      "id": 25,
+      "name-ua": "Будинок із натурального дерева «Уккермарк»",
+      "name-en": "Uckermark Natural Log House",
+      "description-ua": "Зруб «Уккермарк» пропонує набагато більше житлової площі, ніж здається на перший погляд. Цей великий двоповерховий будинок із натуральних колод забезпечує надзвичайний комфорт на двох рівнях. Наше планування демонструє чудове рішення для великої родини: велика зона вітальні та кухні на першому поверсі, загалом чотири дитячі кімнати, дві ванни, спальня та гардеробна. Двосхилий дах із широкими звісами захищає всі сторони будинку від дощу та сонця. На задній стороні вбудована велика двосхила люкарна (мансардне вікно) з чотирма вікнами, які наповнюють будинок світлом протягом усього дня та дарують чудовий краєвид. Крита тераса пропонує безліч варіантів для облаштування та відпочинку в колі родини та друзів.",
+      "description-en": "The 'Uckermark' log house offers significantly more living space than it seems at first glance. This large two-storey natural log house provides exceptional comfort on two levels. Our floor plan shows a layout tailored for large families: a large living and cooking area on the ground floor, a total of four children's rooms, two bathrooms, a master bedroom, and a dressing room. The gable roof with its wide roof overhangs covers all sides, offering protection from rain and sun. On the back, a large gable dormer with four windows let in plenty of daylight and offers a beautiful view over your property. The covered terrace offers many design options and space for family and friends.",
+      "parameters": {
+        "dimensions": "13,30 m x 11,30 m",
+        "total-living-space": "ca. 214 m²",
+        "ground-floor-approx": "ca. 125 m²",
+        "attic-approx": "ca. 89 m²",
+        "rooms-on-the-ground-floor": "5",
+        "rooms-in-the-attic": "5",
+        "roof-pitch": "35 °",
+        "wall": "Natural trunk approx",
+        "diameter": "380 mm"
+      },
+      "tags": [
+        "dormer",
+        "single-family-home",
+        "gable-roof",
+        "multi-family-home",
+        "terrace",
+        "residential-building",
+        "two-storey"
+      ],
+      "categories": [
+        "log-houses",
+        "residential-log-houses"
+      ],
+      "images": [
+        "/projects-gallery/project-25/image-1.jpg",
+        "/projects-gallery/project-25/image-2.jpg",
+        "/projects-gallery/project-25/image-3.jpg",
+        "/projects-gallery/project-25/image-4.jpg",
+        "/projects-gallery/project-25/image-5.jpg",
+        "/projects-gallery/project-25/image-6.jpg",
+        "/projects-gallery/project-25/image-7.jpg",
+        "/projects-gallery/project-25/image-8.jpg",
+        "/projects-gallery/project-25/image-9.jpg",
+        "/projects-gallery/project-25/image-10.jpg"
+      ],
+      "schema-img": [
+        "/projects-gallery/project-25/schema-1.jpg",
+        "/projects-gallery/project-25/schema-2.jpg"
+      ],
+      "original-url": "https://holzbaurustikal.de/naturstammhaus-uckermark/"
+    },
+    {
+      "id": 26,
+      "name-ua": "Будинок із натурального дерева «Лаванда»",
+      "name-en": "Lavanda Natural Log House",
+      "description-ua": "Наша модель «Лаванда» поєднує в собі романтику Дикого Заходу з сучасним і екологічним будівельним мистецтвом. Будинок побудований з масивних натуральних колод, а його планування та велика кругова веранда (тераса) нагадують ковбойські ранчо Середнього Заходу. У цьому референс-об'єкті колоди були використані разом із комлевою частиною (із збереженням природної структури коріння), що підкреслює автентичний, первісний характер зрубу. Особливістю, яку важко помітити неозброєним оком, є водостічні труби, приховано вмонтовані всередині зовнішніх опорних стовпів. Наш зруб «Лаванда» ідеально підходить для мальовничого розташування серед природи, наприклад, як житловий будинок або котедж на кінному ранчо чи фермі.",
+      "description-en": "Our 'Lavanda' model combines Wild West romance with modern, sustainable building craftsmanship. The log house is built from massive natural trunks, and its floor plan and large wrap-around veranda (terrace) are reminiscent of the classic ranch log houses of the American Midwest. In this reference property, the logs were incorporated with their natural root flares to emphasize the rustic, primal character of the home. A special feature that isn't easily noticed is that the downpipes are concealed inside the outer supporting logs, keeping them out of sight. Our 'Lavanda' log house is ideal for an idyllic location in nature, for example as a family home or holiday lodge on an equestrian estate or farm.",
+      "parameters": {
+        "dimensions": "13,10 m x 10,20 m",
+        "total-living-space": "236 m²",
+        "ground-floor-approx": "ca. 128 m²",
+        "attic-approx": "ca. 108 m²",
+        "rooms-on-the-ground-floor": "4",
+        "rooms-in-the-attic": "4",
+        "roof-pitch": "32 °",
+        "wall": "Natural trunk with root flares approx",
+        "diameter": "380 mm"
+      },
+      "tags": [
+        "dormer",
+        "single-family-home",
+        "gable-roof",
+        "multi-family-home",
+        "terrace",
+        "residential-building",
+        "two-storey"
+      ],
+      "categories": [
+        "log-houses",
+        "residential-log-houses"
+      ],
+      "images": [
+        "/projects-gallery/project-26/image-1.jpg",
+        "/projects-gallery/project-26/image-2.jpg",
+        "/projects-gallery/project-26/image-3.jpg",
+        "/projects-gallery/project-26/image-4.jpg",
+        "/projects-gallery/project-26/image-5.jpg",
+        "/projects-gallery/project-26/image-6.jpg",
+        "/projects-gallery/project-26/image-7.jpg",
+        "/projects-gallery/project-26/image-8.jpg",
+        "/projects-gallery/project-26/image-9.jpg",
+        "/projects-gallery/project-26/image-10.jpg",
+        "/projects-gallery/project-26/image-11.jpg",
+        "/projects-gallery/project-26/image-12.jpg",
+        "/projects-gallery/project-26/image-13.jpg",
+        "/projects-gallery/project-26/image-14.jpg",
+        "/projects-gallery/project-26/image-15.jpg"
+      ],
+      "schema-img": [
+        "/projects-gallery/project-26/schema-1.jpg",
+        "/projects-gallery/project-26/schema-2.jpg"
+      ],
+      "original-url": "https://holzbaurustikal.de/naturstammhaus-lavanda/"
+    },
+    {
+      "id": 27,
+      "name-ua": "Будинок із натурального дерева «Рюген»",
+      "name-en": "Rügen Natural Log House",
+      "description-ua": "Наш зруб «Рюген» названий так не випадково, адже найбільший і найнаселеніший острів Німеччини є одним із найпопулярніших місць для сімейного відпочинку. Цей великий будинок із натуральних колод ідеально спроектований для сімей з кількома дітьми. Дитячі кімнати на першому поверсі пропонують багато місця для ігор та розваг, тоді як на верхньому поверсі розташована комфортна спальня батьків із гардеробною зоною та велика кімната для хобі, яка слугує оазою спокою. З елегантної галереї другого поверху відкривається прямий вид на вітальню першого поверху, а великі скляні елементи наповнюють мансарду природним світлом. З вітальні першого поверху можна вийти на затишну криту терасу у внутрішньому дворі, яка чудово підходить для сімейних сніданків або барбекю.",
+      "description-en": "Our 'Rügen' log house is named after Germany's largest and most populous island, which is one of the favorite holiday destinations for families. Just like the Baltic Sea island, this large natural log house is ideal for families with several children. The children's rooms on the ground floor offer plenty of space for playing, while the upper floor houses a comfortable bedroom with a dressing area and a large hobby room serving as a peaceful retreat for parents. From the elegant gallery on the upper floor, you have a direct view of the living area on the ground floor. Large windows and glass elements flood the upper floor with natural light. The ground-floor living area leads directly onto the covered terrace on the inner courtyard side, perfect for shared breakfasts or barbecue evenings.",
+      "parameters": {
+        "dimensions": "14,60 m x 10,27 m",
+        "total-living-space": "215 m²",
+        "ground-floor-approx": "ca. 126 m²",
+        "attic-approx": "ca. 89 m²",
+        "roof-pitch": "32 °",
+        "wall": "Natural trunk approx",
+        "diameter": "380 mm"
+      },
+      "tags": [
+        "single-family-home",
+        "gable-roof",
+        "terrace",
+        "residential-building",
+        "two-storey"
+      ],
+      "categories": [
+        "log-houses",
+        "residential-log-houses"
+      ],
+      "images": [
+        "/projects-gallery/project-27/image-1.jpg",
+        "/projects-gallery/project-27/image-2.jpg",
+        "/projects-gallery/project-27/image-3.jpg",
+        "/projects-gallery/project-27/image-4.jpg",
+        "/projects-gallery/project-27/image-5.jpg",
+        "/projects-gallery/project-27/image-6.jpg",
+        "/projects-gallery/project-27/image-7.jpg",
+        "/projects-gallery/project-27/image-8.jpg",
+        "/projects-gallery/project-27/image-9.jpg",
+        "/projects-gallery/project-27/image-10.jpg",
+        "/projects-gallery/project-27/image-11.jpg",
+        "/projects-gallery/project-27/image-12.jpg"
+      ],
+      "schema-img": [
+        "/projects-gallery/project-27/schema-1.jpg",
+        "/projects-gallery/project-27/schema-2.jpg"
+      ],
+      "original-url": "https://holzbaurustikal.de/naturstammhaus-ruegen/"
+    },
+    {
+      "id": 28,
+      "name-ua": "Будинок із натурального дерева «Луккау»",
+      "name-en": "Luckau Natural Log House",
+      "description-ua": "Наша модель зрубу «Луккау» вражає своїми великими розмірами. На загальній площі 220 м² цей будинок пропонує простору вітальню, окрему кухню, спальню, кабінет, а також гардеробну та господарське приміщення. Визначною характеристикою цього зрубу є великі фронтонні вікна з обох боків, які пропускають багато природного світла. Крім того, ви зможете насолоджуватися величезною, повністю критою терасою, що тягнеться по всій ширині будинку і пропонує багато місця для відпочинку на свіжому повітрі. З кутом нахилу даху 22° цей зруб є не лише практичним, але й надзвичайно естетичним.",
+      "description-en": "Our 'Luckau' log house model impresses with its generous dimensions. On a total floor area of 220 m², it offers a large living area, a separate kitchen, bedrooms, a study, as well as a dressing room and a utility room. A prominent feature of this log house is the large gable windows on both sides, which let in plenty of natural light. Enjoy a huge, completely covered terrace that extends across the entire width of the house and offers plenty of space for outdoor activities. With a roof pitch of 22°, this log cabin is not only highly functional but also aesthetically appealing.",
+      "parameters": {
+        "dimensions": "11,14 m x 15,40 m",
+        "total-living-space": "220 m²",
+        "roof-pitch": "22°",
+        "wall": "Natural trunk approx",
+        "diameter": "380 mm"
+      },
+      "tags": [
+        "single-family-home",
+        "terrace",
+        "residential-building",
+        "single-storey"
+      ],
+      "categories": [
+        "log-houses"
+      ],
+      "images": [
+        "/projects-gallery/project-28/image-1.jpg",
+        "/projects-gallery/project-28/image-2.jpg",
+        "/projects-gallery/project-28/image-3.jpg",
+        "/projects-gallery/project-28/image-4.jpg",
+        "/projects-gallery/project-28/image-5.jpg",
+        "/projects-gallery/project-28/image-6.jpg",
+        "/projects-gallery/project-28/image-7.jpg"
+      ],
+      "schema-img": [
+        "/projects-gallery/project-28/schema-1.jpg"
+      ],
+      "original-url": "https://holzbaurustikal.de/naturstammhaus-luckau/"
+    },
+    {
+      "id": 29,
+      "name-ua": "Будинок із натурального дерева «Шенеберг»",
+      "name-en": "Schöneberg Natural Log House",
+      "description-ua": "Наш референс-об'єкт моделі «Шенеберг» був збудований в Австрії на крутому схилі. Цей триповерховий зруб зведений на масивному бетонному фундаменті з житловим цокольним поверхом (напівпідвалом). Над частиною цокольної плити розташована простора тераса, з якої відкривається захоплюючий вид на навколишні гори та ландшафт. Ще кращий огляд забезпечують два балкони на фронтонних сторонах будинку. В інтер'єрі замовник віддав перевагу натуральному дереву, що створює вишуканий стиль. Сюди належать і виготовлені нами рустикальні сходи з цільних колод. Окрасою верхнього поверху стала фінська сауна. Також передбачено практичний карпорт із колод із додатковим приміщенням для зберігання.",
+      "description-en": "Our reference property for the 'Schöneberg' model was built in Austria. Due to its location on a steep slope, the three-storey log house was built on a massive concrete foundation with a walk-out basement (lower floor). Over a part of the basement ceiling, there is a large terrace offering an impressive view of the surrounding mountain landscape. An even better view is provided by the two balconies on the gable sides of the house. In the interior, the builder preferred everything to be crafted from wood, styled with great taste. This includes a rustic log staircase leading to the upper floor, where a Finnish sauna stands as another highlight. Practical elements were also considered, such as a log carport with a storage room.",
+      "parameters": {
+        "dimensions": "12,20 m x 11,90 m",
+        "total-living-space": "217 m²",
+        "ground-floor-approx": "ca. 94 m²",
+        "attic-approx": "ca. 79 m²",
+        "basement-approx": "ca. 44 m²",
+        "rooms-on-the-ground-floor": "2",
+        "rooms-in-the-attic": "6",
+        "rooms-in-the-basement": "3",
+        "roof-pitch": "25°",
+        "wall": "Natural trunk approx",
+        "diameter": "380 mm"
+      },
+      "tags": [
+        "balcony",
+        "three-storey",
+        "multi-family-home",
+        "terrace",
+        "basement",
+        "residential-building"
+      ],
+      "categories": [
+        "log-houses",
+        "residential-log-houses"
+      ],
+      "images": [
+        "/projects-gallery/project-29/image-1.jpg",
+        "/projects-gallery/project-29/image-2.jpg",
+        "/projects-gallery/project-29/image-3.jpg",
+        "/projects-gallery/project-29/image-4.jpg",
+        "/projects-gallery/project-29/image-5.jpg",
+        "/projects-gallery/project-29/image-6.jpg",
+        "/projects-gallery/project-29/image-7.jpg",
+        "/projects-gallery/project-29/image-8.jpg",
+        "/projects-gallery/project-29/image-9.jpg",
+        "/projects-gallery/project-29/image-10.jpg",
+        "/projects-gallery/project-29/image-11.jpg",
+        "/projects-gallery/project-29/image-12.jpg",
+        "/projects-gallery/project-29/image-13.jpg",
+        "/projects-gallery/project-29/image-14.jpg",
+        "/projects-gallery/project-29/image-15.jpg",
+        "/projects-gallery/project-29/image-16.jpg"
+      ],
+      "schema-img": [
+        "/projects-gallery/project-29/schema-1.jpg",
+        "/projects-gallery/project-29/schema-2.jpg",
+        "/projects-gallery/project-29/schema-3.jpg"
+      ],
+      "original-url": "https://holzbaurustikal.de/naturstammhaus-schoeneberg/"
+    },
+    {
+      "id": 30,
+      "name-ua": "Будинок із натурального дерева «Ельба»",
+      "name-en": "Elbe Natural Log House",
+      "description-ua": "Зруб «Ельба» — це двоповерховий будинок із натуральних колод із трьома фронтонами та просторою терасою. Завдяки своїй величезній житловій площей (планування якої може бути повністю індивідуальним) будинок ідеально підходить для великих сімей. Виступаючий фронтон на передній стороні захищає меншу терасу та вхідну зону від дощу та сильного сонця. Велика тераса на задній стороні є відкритою та пропонує багато місця для відпочинку. Особливим елементом дизайну є невелика люкарна на задньому схилі даху. Корисна практична особливість цього зрубу — невисокі антресолі/горища (Kriechböden) на верхньому поверсі, які забезпечують чудові місця для зберігання іграшок чи речей, допомагаючи підтримувати порядок у дитячих кімнатах.",
+      "description-en": "The 'Elbe' log house is a two-storey natural log home with three gables and a spacious terrace. Thanks to its enormous living area (the layout of which can be customized), this log house is ideal for large families. The projecting front gable protects a smaller terrace and the entrance area from rain and direct sun. The large terrace on the back is open and offers plenty of space for leisure and relaxation. A special eye-catcher is the small dormer on the back roof, which increases the attic space and offers a wonderful view. A practical feature is the low crawl spaces/lofts in the upper floor, providing ample storage space to keep children's rooms organized.",
+      "parameters": {
+        "dimensions": "17,26 m x 12,54 m",
+        "total-living-space": "245 m²",
+        "ground-floor-approx": "131 m²",
+        "attic-approx": "114 m²",
+        "roof-pitch": "32 °",
+        "wall": "Natural trunk approx",
+        "diameter": "380 mm"
+      },
+      "tags": [
+        "multi-family-home",
+        "terrace",
+        "residential-building",
+        "two-storey"
+      ],
+      "categories": [
+        "log-houses",
+        "residential-log-houses"
+      ],
+      "images": [
+        "/projects-gallery/project-30/image-1.jpg",
+        "/projects-gallery/project-30/image-2.jpg",
+        "/projects-gallery/project-30/image-3.jpg"
+      ],
+      "schema-img": [
+        "/projects-gallery/project-30/schema-1.jpg",
+        "/projects-gallery/project-30/schema-2.jpg"
+      ],
+      "original-url": "https://holzbaurustikal.de/naturstammhaus-elbe/"
+    },
+    {
+      "id": 31,
+      "name-ua": "Будинок із натурального дерева «Хемніц»",
+      "name-en": "Chemnitz Natural Log House",
+      "description-ua": "Двоповерховий зруб «Хемніц» поєднує в собі просторе проживання з неперевершеним шармом будинків із цільних колод. Завдяки широким звісам даху будинок пропонує оптимальний захист стін від негоди, а продумана крита тераса та великий балкон забезпечують прекрасні зони для відпочинку на свіжому повітрі. Відкрите планування вітальні, їдальні та кухні на першому поверсі створює теплу сімейну атмосферу, в той час як окремі кімнати (гостьова, кабінет та господарське приміщення) забезпечують додатковий комфорт. На другому поверсі розміщені спальня з виходом на балкон, дві дитячі кімнати та простора ванна кімната. Загальна площа 255 м² дарує свободу та простір для життя.",
+      "description-en": "The two-storey 'Chemnitz' log house combines generous living with the unique charm of natural log houses. With its wide roof overhangs, the house offers optimal weather protection, while the cleverly covered terrace and balcony create wonderful outdoor spaces. The open-plan layout of the living, dining, and kitchen area on the ground floor creates a welcoming family atmosphere, while separate rooms like the guest and utility rooms offer additional comfort. The attic floor houses the master bedroom with balcony access, two children's rooms, and a spacious bathroom. With a total living area of 255 m², the 'Chemnitz' log house offers plenty of space for comfortable, nature-connected living.",
+      "parameters": {
+        "dimensions": "17,25 m x 10,50 m",
+        "total-living-space": "255 m²",
+        "ground-floor-approx": "ca. 153 m²",
+        "attic-approx": "ca. 102 m²",
+        "roof-pitch": "36 °",
+        "wall": "Natural trunk approx",
+        "diameter": "380 mm"
+      },
+      "tags": [
+        "balcony",
+        "single-family-home",
+        "multi-family-home",
+        "terrace",
+        "two-storey"
+      ],
+      "categories": [
+        "log-houses",
+        "residential-log-houses"
+      ],
+      "images": [
+        "/projects-gallery/project-31/image-1.jpg",
+        "/projects-gallery/project-31/image-2.jpg",
+        "/projects-gallery/project-31/image-3.jpg",
+        "/projects-gallery/project-31/image-4.jpg",
+        "/projects-gallery/project-31/image-5.jpg",
+        "/projects-gallery/project-31/image-6.jpg",
+        "/projects-gallery/project-31/image-7.jpg",
+        "/projects-gallery/project-31/image-8.jpg",
+        "/projects-gallery/project-31/image-9.jpg",
+        "/projects-gallery/project-31/image-10.jpg",
+        "/projects-gallery/project-31/image-11.jpg",
+        "/projects-gallery/project-31/image-12.jpg",
+        "/projects-gallery/project-31/image-13.jpg",
+        "/projects-gallery/project-31/image-14.jpg",
+        "/projects-gallery/project-31/image-15.jpg"
+      ],
+      "schema-img": [
+        "/projects-gallery/project-31/schema-1.jpg",
+        "/projects-gallery/project-31/schema-2.jpg"
+      ],
+      "original-url": "https://holzbaurustikal.de/naturstammhaus-chemnitz/"
+    },
+    {
+      "id": 32,
+      "name-ua": "Будинок із натурального дерева «Берлін»",
+      "name-en": "Berlin Natural Log House",
+      "description-ua": "Наша модель зрубу «Берлін» складається з двох поверхів загальною площею майже 250 квадратних метрів. Вона пропонує винятковий комфорт та гнучкість планування для кількох поколінь або великих родин. На першому поверсі розміщена простора зона кухні-вітальні та їдальні відкритого планування. Велика крита тераса на тильній стороні будинку забезпечує вдосталь місця для меблів, гриля та рослин. Численні середні та невеликі кімнати другого поверху ідеально підходять під спальні та дитячі кімнати, а також гардеробні чи кабінет. Плоска покрівля з кутом нахилу всього 9° має безліч переваг: вона дешевша у зведенні, а також ідеально підходить як основа для зеленого даху або встановлення високоефективних сонячних та фотоелектричних систем.",
+      "description-en": "Our 'Berlin' log house model consists of two storeys with a total area of almost 250 square meters. It offers multi-generational or large families immense comfort and design options. On the ground floor, there is a generous, open-plan living, dining, and kitchen area. A large, covered terrace on the back of the house provides ample space for outdoor furniture, a barbecue, and decoration. The numerous medium and smaller rooms on the upper floor can be used as bedrooms, children's rooms, walk-in closets, or a home office. The flat roof with a pitch of just 9° brings a series of advantages: it is cost-effective to construct, and its large area is perfect for a rooftop garden or the installation of solar thermal and photovoltaic systems.",
+      "parameters": {
+        "dimensions": "14,00 m x 12,10 m",
+        "total-living-space": "249 m²",
+        "ground-floor-approx": "ca. 112 m²",
+        "attic-approx": "ca. 137 m²",
+        "roof-pitch": "9 °",
+        "wall": "Natural trunk approx",
+        "diameter": "380 mm"
+      },
+      "tags": [
+        "flat-roof",
+        "multi-family-home",
+        "terrace",
+        "residential-building",
+        "two-storey"
+      ],
+      "categories": [
+        "log-houses",
+        "residential-log-houses"
+      ],
+      "images": [
+        "/projects-gallery/project-32/image-1.jpg",
+        "/projects-gallery/project-32/image-2.jpg",
+        "/projects-gallery/project-32/image-3.jpg",
+        "/projects-gallery/project-32/image-4.jpg",
+        "/projects-gallery/project-32/image-5.jpg",
+        "/projects-gallery/project-32/image-6.jpg",
+        "/projects-gallery/project-32/image-7.jpg",
+        "/projects-gallery/project-32/image-8.jpg",
+        "/projects-gallery/project-32/image-9.jpg",
+        "/projects-gallery/project-32/image-10.jpg",
+        "/projects-gallery/project-32/image-11.jpg",
+        "/projects-gallery/project-32/image-12.jpg",
+        "/projects-gallery/project-32/image-13.jpg",
+        "/projects-gallery/project-32/image-14.jpg",
+        "/projects-gallery/project-32/image-15.jpg",
+        "/projects-gallery/project-32/image-16.jpg"
+      ],
+      "schema-img": [
+        "/projects-gallery/project-32/schema-1.jpg",
+        "/projects-gallery/project-32/schema-2.jpg"
+      ],
+      "original-url": "https://holzbaurustikal.de/naturstammhaus-berlin/"
+    }
+  ]
+}

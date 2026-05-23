@@ -39,6 +39,21 @@ body.no-scroll {
   overflow: hidden;
 }
 
+@keyframes pulse-fade {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(0.98);
+  }
+  50% {
+    opacity: 0.75;
+    transform: scale(1.02);
+  }
+}
+
+.animate-pulse-fade {
+  animation: pulse-fade 1.8s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
 /* Lightbox (tresmont-new gallery / style.css) */
 .lightbox {
   position: fixed;

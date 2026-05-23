@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useCallback, useEffect, useState } from "react";
 import { SITE_CONTACT, SITE_CONTACT_MAILTO_HREF, SITE_CONTACT_TEL_HREF } from "@/lib/site-contact";
+import { useLanguage } from "@/components/language-provider";
 
 const links = [
   { href: "#about", label: "Про нас" },
@@ -42,6 +43,7 @@ function MenuIcon({ open }: { open: boolean }) {
 
 export function SiteHeader() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const { locale, setLocale } = useLanguage();
 
   const closeMenu = useCallback(() => setMenuOpen(false), []);
 
@@ -78,7 +80,28 @@ export function SiteHeader() {
           ))}
         </nav>
 
-        <div className="hidden md:block">
+        <div className="hidden md:flex items-center gap-6">
+          {/* Language Selector */}
+          <div className="flex items-center gap-3 text-xs font-semibold tracking-widest text-[#8B7355]">
+            <button
+              onClick={() => setLocale("ua")}
+              className={`transition duration-300 hover:text-[#EAE7E1] ${
+                locale === "ua" ? "text-[#C6A36D] font-bold" : "opacity-60"
+              }`}
+            >
+              UA
+            </button>
+            <span className="opacity-20">|</span>
+            <button
+              onClick={() => setLocale("en")}
+              className={`transition duration-300 hover:text-[#EAE7E1] ${
+                locale === "en" ? "text-[#C6A36D] font-bold" : "opacity-60"
+              }`}
+            >
+              EN
+            </button>
+          </div>
+
           <Link
             href="#contact"
             className="rounded-sm border border-[#C6A36D]/60 bg-[#C6A36D]/10 px-4 py-2 text-xs font-medium uppercase tracking-wider text-[#C6A36D] transition hover:bg-[#C6A36D]/20"
@@ -126,6 +149,27 @@ export function SiteHeader() {
           ].join(" ")}
         >
           <div className="flex h-16 shrink-0 items-center justify-between border-b border-white/8 px-5">
+            {/* Mobile Language Selector */}
+            <div className="flex items-center gap-3 text-xs font-semibold tracking-widest text-[#8B7355]">
+              <button
+                onClick={() => { setLocale("ua"); closeMenu(); }}
+                className={`transition duration-300 hover:text-[#EAE7E1] ${
+                  locale === "ua" ? "text-[#C6A36D] font-bold" : "opacity-60"
+                }`}
+              >
+                UA
+              </button>
+              <span className="opacity-20">|</span>
+              <button
+                onClick={() => { setLocale("en"); closeMenu(); }}
+                className={`transition duration-300 hover:text-[#EAE7E1] ${
+                  locale === "en" ? "text-[#C6A36D] font-bold" : "opacity-60"
+                }`}
+              >
+                EN
+              </button>
+            </div>
+
             <button
               type="button"
               className="ml-auto rounded-sm p-2 text-[#EAE7E1]/70 transition hover:bg-white/5 hover:text-[#EAE7E1]"

@@ -1,0 +1,170 @@
+{
+  "categories": {
+    "log-houses": {
+      "ua": "Дерев'яні будинки",
+      "en": "Log houses"
+    },
+    "post-and-beam": {
+      "ua": "Колонна-балкова конструкція",
+      "en": "Post and Beam"
+    },
+    "log-cabin-bungalows": {
+      "ua": "Зрубні бунгало",
+      "en": "Log cabin bungalows"
+    },
+    "holiday-log-cabins": {
+      "ua": "Зруби для відпочинку",
+      "en": "Holiday log cabins"
+    },
+    "residential-log-houses": {
+      "ua": "Житлові зруби",
+      "en": "Residential log houses"
+    }
+  },
+
+  "tags": {
+    "barrier-free": {
+      "ua": "Безбар'єрний",
+      "en": "Barrier-free"
+    },
+    "bungalow": {
+      "ua": "Бунгало",
+      "en": "Bungalow"
+    },
+    "single-storey": {
+      "ua": "Одноповерховий",
+      "en": "Single-storey"
+    },
+    "holiday-home": {
+      "ua": "Будинок для відпочинку",
+      "en": "Holiday home"
+    },
+    "single-house": {
+      "ua": "Окремий будинок",
+      "en": "Single house"
+    },
+    "terrace": {
+      "ua": "Тераса",
+      "en": "Terrace"
+    },
+    "residential-building": {
+      "ua": "Житловий будинок",
+      "en": "Residential building"
+    },
+    "log-cabin": {
+      "ua": "Зруб",
+      "en": "Log cabin"
+    },
+    "flat-roof": {
+      "ua": "Плоска покрівля",
+      "en": "Flat roof"
+    },
+    "garden-house": {
+      "ua": "Садова хатина",
+      "en": "Garden house"
+    },
+    "attic": {
+      "ua": "Мансарда",
+      "en": "Attic"
+    },
+    "gable-roof": {
+      "ua": "Двосхилий дах",
+      "en": "Gable roof"
+    },
+    "bestsellers": {
+      "ua": "Найпопулярніші",
+      "en": "Bestsellers"
+    },
+    "two-storey": {
+      "ua": "Двоповерховий",
+      "en": "Two-storey"
+    },
+    "pitched-roof": {
+      "ua": "Скатний дах",
+      "en": "Pitched roof"
+    },
+    "single-family-home": {
+      "ua": "Окремий сімейний будинок",
+      "en": "Single-family home"
+    },
+    "multi-family-home": {
+      "ua": "Багатоквартирний будинок",
+      "en": "Multi-family home"
+    },
+    "hip-roof": {
+      "ua": "Вальмовий дах",
+      "en": "Hip roof"
+    },
+    "balcony": {
+      "ua": "Балкон",
+      "en": "Balcony"
+    },
+    "three-storey": {
+      "ua": "Триповерховий",
+      "en": "Three-storey"
+    },
+    "dormer": {
+      "ua": "Люкарна",
+      "en": "Dormer"
+    },
+    "garage": {
+      "ua": "Гараж",
+      "en": "Garage"
+    },
+    "basement": {
+      "ua": "Цокольний поверх / Підвал",
+      "en": "Basement"
+    }
+  },
+
+  "parameters": {
+    "dimensions": {
+      "ua": "Розміри",
+      "en": "Dimensions"
+    },
+    "total-living-space": {
+      "ua": "Загальна житлова площа",
+      "en": "Total living space"
+    },
+    "total-area": {
+      "ua": "Загальна площа",
+      "en": "Total area"
+    },
+    "ground-floor-approx": {
+      "ua": "Площа першого поверху (прибл.)",
+      "en": "Ground floor area (approx.)"
+    },
+    "attic-approx": {
+      "ua": "Площа мансардного поверху (прибл.)",
+      "en": "Attic area (approx.)"
+    },
+    "basement-approx": {
+      "ua": "Площа цокольного поверху (прибл.)",
+      "en": "Basement area (approx.)"
+    },
+    "rooms-on-the-ground-floor": {
+      "ua": "Кімнат на першому поверсі",
+      "en": "Rooms on the ground floor"
+    },
+    "rooms-in-the-attic": {
+      "ua": "Кімнат на мансардному поверсі",
+      "en": "Rooms in the attic"
+    },
+    "rooms-in-the-basement": {
+      "ua": "Кімнат у цокольному поверсі",
+      "en": "Rooms in the basement"
+    },
+    "roof-pitch": {
+      "ua": "Кут нахилу даху",
+      "en": "Roof pitch"
+    },
+    "wall": {
+      "ua": "Стіни",
+      "en": "Walls"
+    },
+    "diameter": {
+      "ua": "Діаметр колоди",
+      "en": "Log diameter"
+    }
+  }
+}

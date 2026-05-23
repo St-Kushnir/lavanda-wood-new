@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
+import { LanguageProvider } from "@/components/language-provider";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -27,7 +28,9 @@ export default function RootLayout({
   return (
     <html lang="uk" className="scroll-smooth">
       <body className={`${inter.variable} ${playfair.variable} bg-[#0F0F0F] font-sans text-[#EAE7E1] antialiased`}>
-        {children}
+        <LanguageProvider>
+          {children}
+        </LanguageProvider>
       </body>
     </html>
   );
