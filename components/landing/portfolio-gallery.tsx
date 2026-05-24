@@ -74,11 +74,13 @@ function ArrowIcon({ dir }: { dir: "prev" | "next" }) {
   );
 }
 
+const PROJECTS_PAGE_SIZE = 6;
+
 export function PortfolioGallery() {
   const { locale } = useLanguage();
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
   const [activeTag, setActiveTag] = useState<string | null>(null);
-  const [visibleCount, setVisibleCount] = useState<number>(8);
+  const [visibleCount, setVisibleCount] = useState<number>(PROJECTS_PAGE_SIZE);
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [activeSlideIndex, setActiveSlideIndex] = useState<number>(0);
   const [zoomedImgIndex, setZoomedImgIndex] = useState<number | null>(null);
@@ -126,7 +128,7 @@ export function PortfolioGallery() {
 
   // Reset pagination on filter change
   useEffect(() => {
-    setVisibleCount(8);
+    setVisibleCount(PROJECTS_PAGE_SIZE);
   }, [activeCategory, activeTag]);
 
   const displayedProjects = useMemo(() => {
@@ -134,7 +136,7 @@ export function PortfolioGallery() {
   }, [filteredProjects, visibleCount]);
 
   const handleLoadMore = useCallback(() => {
-    setVisibleCount((prev) => Math.min(prev + 8, filteredProjects.length));
+    setVisibleCount((prev) => Math.min(prev + PROJECTS_PAGE_SIZE, filteredProjects.length));
   }, [filteredProjects.length]);
 
   const handleCategoryClick = useCallback((slug: string | null) => {
@@ -238,16 +240,15 @@ export function PortfolioGallery() {
                   className="group relative aspect-[4/5] overflow-hidden bg-[#141414] rounded-sm sm:aspect-[3/4] shadow-md ring-1 ring-white/5 hover:ring-white/10 transition-all duration-500"
                 >
                   <div className="absolute inset-0 z-0">
-                    <Image
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
                       src={coverImage}
                       alt={projectTitle}
-                      fill
                       loading="lazy"
-                      className="object-cover will-change-transform transition duration-700 group-hover:scale-[1.03]"
-                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      className="absolute inset-y-0 left-1/2 -translate-x-1/2 h-full w-auto max-w-none object-cover will-change-transform transition duration-700 group-hover:scale-[1.03]"
                     />
-                    {/* Dark gradient overlay to ensure readable text */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/35 to-transparent opacity-90 transition duration-500 group-hover:opacity-95" />
+                    {/* Dark gradient overlay stretched horizontally along the bottom to ensure text readability */}
+                    <div className="absolute inset-0 bg-[radial-gradient(180%_65%_at_bottom_left,rgba(0,0,0,0.95)_0%,rgba(0,0,0,0.75)_30%,rgba(0,0,0,0.25)_60%,rgba(0,0,0,0)_100%)] opacity-95 transition duration-500 group-hover:opacity-100" />
                   </div>
 
                   {/* Content Overlay */}
@@ -1028,7 +1029,7 @@ function LightboxGallery({ images, initialIndex, onClose }: LightboxGalleryProps
         <img
           src={images[currentIndex]}
           alt="High resolution zoom view"
-          className="max-w-[95vw] max-h-[92vh] object-contain select-none bg-white p-2 border border-white/10 shadow-2xl rounded-sm"
+          className="max-w-[95vw] max-h-[92vh] object-contain select-none shadow-2xl"
           draggable={false}
         />
       </div>
