@@ -81,7 +81,7 @@ export function PortfolioGallery() {
   const [visibleCount, setVisibleCount] = useState<number>(8);
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [activeSlideIndex, setActiveSlideIndex] = useState<number>(0);
-  const [zoomedImgSrc, setZoomedImgSrc] = useState<string | null>(null);
+  const [zoomedImgIndex, setZoomedImgIndex] = useState<number | null>(null);
   const [mounted, setMounted] = useState(false);
   const [filtersOpen, setFiltersOpen] = useState(false);
 
@@ -475,7 +475,7 @@ export function PortfolioGallery() {
               onClose={handleCloseProject}
               activeSlideIndex={activeSlideIndex}
               setActiveSlideIndex={setActiveSlideIndex}
-              onZoomImage={(src) => setZoomedImgSrc(src)}
+              onZoomImage={(index) => setZoomedImgIndex(index)}
               onFilterCategory={(slug) => {
                 setActiveCategory(slug);
                 handleCloseProject();
@@ -491,11 +491,12 @@ export function PortfolioGallery() {
         : null}
 
       {/* Portal: Full size Lightbox Zoom */}
-      {mounted && zoomedImgSrc
+      {mounted && zoomedImgIndex !== null && selectedProject
         ? createPortal(
-            <LightboxSingle
-              src={zoomedImgSrc}
-              onClose={() => setZoomedImgSrc(null)}
+            <LightboxGallery
+              images={[...(selectedProject.images || []), ...(selectedProject["schema-img"] || [])]}
+              initialIndex={zoomedImgIndex}
+              onClose={() => setZoomedImgIndex(null)}
             />,
             document.body
           )
@@ -557,7 +558,7 @@ interface ProjectDetailModalProps {
   onClose: () => void;
   activeSlideIndex: number;
   setActiveSlideIndex: (i: number) => void;
-  onZoomImage: (src: string) => void;
+  onZoomImage: (index: number) => void;
   onFilterCategory: (slug: string) => void;
   onFilterTag: (slug: string) => void;
   activeTag: string | null;
@@ -642,7 +643,7 @@ function ProjectDetailModal({
                 alt={`${projectTitle} — ${activeSlideIndex + 1}`}
                 fill
                 className="object-cover cursor-zoom-in transition-all duration-500"
-                onClick={() => onZoomImage(project.images[activeSlideIndex])}
+                onClick={() => onZoomImage(activeSlideIndex)}
                 sizes="(max-width: 1024px) 100vw, 60vw"
               />
             ) : (
@@ -805,7 +806,7 @@ function ProjectDetailModal({
                   {project["schema-img"].map((schemaUrl, index) => (
                     <div
                       key={index}
-                      onClick={() => onZoomImage(schemaUrl)}
+                      onClick={() => onZoomImage((project.images?.length || 0) + index)}
                       className="group relative aspect-[4/3] rounded-sm border border-white/10 bg-white p-3 transition-all duration-300 cursor-zoom-in flex items-center justify-center overflow-hidden"
                     >
                       <div className="relative w-full h-full">
@@ -855,18 +856,34 @@ function ProjectDetailModal({
 // ----------------------------------------------------
 // LIGHTBOX COMPONENT FOR FULL-SIZE IMAGE INSPECTION
 // ----------------------------------------------------
-interface LightboxSingleProps {
-  src: string;
+interface LightboxGalleryProps {
+  images: string[];
+  initialIndex: number;
   onClose: () => void;
 }
 
-function LightboxSingle({ src, onClose }: LightboxSingleProps) {
+function LightboxGallery({ images, initialIndex, onClose }: LightboxGalleryProps) {
+  const [currentIndex, setCurrentIndex] = useState(initialIndex);
   const [scale, setScale] = useState(1);
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const isDraggingRef = useRef(false);
   const dragStartRef = useRef({ x: 0, y: 0 });
   const positionStartRef = useRef({ x: 0, y: 0 });
   const containerRef = useRef<HTMLDivElement>(null);
+
+  // Reset scale and position when changing images
+  useEffect(() => {
+    setScale(1);
+    setPosition({ x: 0, y: 0 });
+  }, [currentIndex]);
+
+  const handlePrev = useCallback(() => {
+    setCurrentIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
+  }, [images.length]);
+
+  const handleNext = useCallback(() => {
+    setCurrentIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+  }, [images.length]);
 
   // Disable body scroll when lightbox is open
   useEffect(() => {
@@ -878,14 +895,16 @@ function LightboxSingle({ src, onClose }: LightboxSingleProps) {
     };
   }, []);
 
-  // Keyboard support: Escape closes zoom
+  // Keyboard support: Escape closes zoom, Arrows navigate
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === "Escape") onClose();
+      if (e.key === "ArrowLeft") handlePrev();
+      if (e.key === "ArrowRight") handleNext();
     };
     document.addEventListener("keydown", handleKeyDown);
     return () => document.removeEventListener("keydown", handleKeyDown);
-  }, [onClose]);
+  }, [onClose, handlePrev, handleNext]);
 
   // Handle Wheel Zoom
   const handleWheel = useCallback((e: React.WheelEvent) => {
@@ -963,6 +982,41 @@ function LightboxSingle({ src, onClose }: LightboxSingleProps) {
         <CloseIcon />
       </button>
 
+      {/* Navigation Arrows */}
+      {images.length > 1 && (
+        <>
+          <button
+            type="button"
+            onClick={(e) => {
+              e.stopPropagation();
+              handlePrev();
+            }}
+            className="absolute left-6 top-1/2 -translate-y-1/2 z-20 p-3 rounded-full bg-black/40 hover:bg-black/80 text-[#EAE7E1] hover:text-white border border-white/5 transition-all duration-300"
+            aria-label="Попередній кадр"
+          >
+            <ArrowIcon dir="prev" />
+          </button>
+          <button
+            type="button"
+            onClick={(e) => {
+              e.stopPropagation();
+              handleNext();
+            }}
+            className="absolute right-6 top-1/2 -translate-y-1/2 z-20 p-3 rounded-full bg-black/40 hover:bg-black/80 text-[#EAE7E1] hover:text-white border border-white/5 transition-all duration-300"
+            aria-label="Наступний кадр"
+          >
+            <ArrowIcon dir="next" />
+          </button>
+        </>
+      )}
+
+      {/* Image Counter */}
+      {images.length > 1 && (
+        <div className="absolute top-6 left-6 z-20 px-3 py-1 bg-black/60 border border-white/10 rounded-sm text-xs font-medium tracking-widest text-[#EAE7E1]/80">
+          {currentIndex + 1} / {images.length}
+        </div>
+      )}
+
       {/* Display Single Image with Transforms */}
       <div
         className="relative max-w-full max-h-full transition-transform duration-100 ease-out z-10"
@@ -972,7 +1026,7 @@ function LightboxSingle({ src, onClose }: LightboxSingleProps) {
       >
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src={src}
+          src={images[currentIndex]}
           alt="High resolution zoom view"
           className="max-w-[95vw] max-h-[92vh] object-contain select-none bg-white p-2 border border-white/10 shadow-2xl rounded-sm"
           draggable={false}
