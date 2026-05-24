@@ -1,18 +1,13 @@
 import type { Metadata } from "next";
-import { Inter, Playfair_Display } from "next/font/google";
+import "@fontsource/inter/400.css";
+import "@fontsource/inter/500.css";
+import "@fontsource/inter/600.css";
+import "@fontsource/inter/700.css";
+import "@fontsource/playfair-display/400.css";
+import "@fontsource/playfair-display/500.css";
+import "@fontsource/playfair-display/600.css";
 import "./globals.css";
 import { LanguageProvider } from "@/components/language-provider";
-
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin", "latin-ext", "cyrillic", "cyrillic-ext"],
-});
-
-const playfair = Playfair_Display({
-  variable: "--font-playfair",
-  subsets: ["latin", "latin-ext", "cyrillic"],
-  weight: ["400", "500", "600"],
-});
 
 export const metadata: Metadata = {
   title: "LAVANDA — handcrafted log homes since 1995",
@@ -27,7 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="uk" className="scroll-smooth">
-      <body className={`${inter.variable} ${playfair.variable} bg-[#0F0F0F] font-sans text-[#EAE7E1] antialiased`}>
+      <body className="bg-[#0F0F0F] font-sans text-[#EAE7E1] antialiased">
         <LanguageProvider>
           {children}
         </LanguageProvider>

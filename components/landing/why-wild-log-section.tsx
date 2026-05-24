@@ -56,7 +56,7 @@ export function WhyWildLogSection() {
         </h2>
 
         <ul className="mt-14 grid list-none gap-4 sm:grid-cols-2 sm:gap-5 lg:mt-16 lg:grid-cols-4 lg:gap-5">
-          {pillars.map((p, i) => (
+          {pillars.map((p) => (
             <li key={p.title} className="min-w-0">
               <article
                 className={[

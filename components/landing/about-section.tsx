@@ -63,8 +63,8 @@ export function AboutSection() {
                 years and older with the densest outer layer (sapwood), which ensures exceptional strength,
                 stability, and durability of the structures.
                 <br />
-                <br /> Today, we implement projects throughout Europe — from private residences to signature
-                facilities in the world's most prestigious resorts.
+                <br />                 Today, we implement projects throughout Europe — from private residences to signature
+                facilities in the world&apos;s most prestigious resorts.
               </>
             )}
           </p>
@@ -89,7 +89,7 @@ export function AboutSection() {
           </>
         ) : (
           <>
-            We don't just build houses — we shape the standard of premium wooden architecture.
+            We don&apos;t just build houses — we shape the standard of premium wooden architecture.
             <br /> Combining decades of experience, traditions of working with natural wood, and modern technologies, we create
             spaces that serve for generations.
           </>

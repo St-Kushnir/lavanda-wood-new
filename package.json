@@ -12,6 +12,8 @@
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
+    "@fontsource/inter": "^5.2.8",
+    "@fontsource/playfair-display": "^5.2.8",
     "@radix-ui/react-scroll-area": "^1.2.10",
     "clsx": "^2.1.1",
     "embla-carousel-react": "^8.3.0",
