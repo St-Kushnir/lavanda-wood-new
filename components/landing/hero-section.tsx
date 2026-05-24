@@ -1,11 +1,18 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import { ConsultationCtaButton } from "@/components/landing/consultation-cta-button";
 import { IMG } from "@/lib/site-media";
-
-const heroAlt = "Великий двоповерховий зруб із червоною покрівлею, скульптурою ведмедя та бруківкою на подвір'ї";
+import { useLanguage } from "@/components/language-provider";
 
 export function HeroSection() {
+  const { locale } = useLanguage();
+
+  const heroAlt = locale === "ua"
+    ? "Великий двоповерховий зруб із червоною покрівлею, скульптурою ведмедя та бруківкою на подвір'ї"
+    : "Large two-story log house with a red roof, bear sculpture, and paved courtyard";
+
   return (
     <section className="relative min-h-[100svh] w-full overflow-hidden">
       <Image
@@ -37,23 +44,26 @@ export function HeroSection() {
           LAVANDA
         </h1>
         <p className="mt-6 max-w-xl font-sans text-base leading-relaxed text-[#EAE7E1]/85 sm:text-lg">
-          Будівництво деревʼяних будинків преміум-класу за канадською технологією.
-          <br />
-          Цільний дикий зруб, натуральні матеріали та удосконалена архітектура, яка живе десятиліттями.
+          {locale === "ua" ? (
+            <>
+              Будівництво деревʼяних будинків преміум-класу за канадською технологією.
+              <br />
+              Цільний дикий зруб, натуральні матеріали та удосконалена архітектура, яка живе десятиліттями.
+            </>
+          ) : (
+            <>
+              Construction of premium-class log homes using Canadian technology.
+              <br />
+              Handcrafted solid logs, natural materials, and sophisticated architecture designed to last for decades.
+            </>
+          )}
         </p>
-        {/* <div className="mt-4 max-w-md">
-          <MediaPlaceholder
-            kind="video"
-            description="фонове відео героя (повільний рух, атмосфера)"
-            className="min-h-[72px] rounded-sm py-3"
-          />
-        </div> */}
         <div className="mt-10 flex flex-wrap gap-4">
           <ConsultationCtaButton className="inline-flex items-center justify-center border border-[#C6A36D] bg-[#C6A36D] px-8 py-3.5 text-sm font-medium uppercase tracking-[0.2em] text-[#0F0F0F] transition hover:bg-[#d4b07e]" />
           <Link
             href="#projects"
             className="inline-flex items-center justify-center border border-white/25 bg-transparent px-8 py-3.5 text-sm font-medium uppercase tracking-[0.2em] text-[#EAE7E1] transition hover:border-[#C6A36D]/50 hover:text-[#C6A36D]">
-            Переглянути проєкти
+            {locale === "ua" ? "Переглянути проєкти" : "Discover projects"}
           </Link>
         </div>
       </div>

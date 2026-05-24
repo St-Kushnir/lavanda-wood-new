@@ -3,6 +3,7 @@
 import type { ReactNode } from "react";
 import { useCallback, useEffect, useRef, useState, useSyncExternalStore } from "react";
 import { SITE_CONTACT, SITE_CONTACT_TEL_HREF } from "@/lib/site-contact";
+import { useLanguage } from "@/components/language-provider";
 
 /** Вузький екран — натискання веде на набір номера (як у tresmont-new для телефону). */
 const DIAL_BREAKPOINT = "(max-width: 639.98px)";
@@ -40,11 +41,10 @@ type ConsultationCtaButtonProps = {
 
 type ToastPhase = "off" | "enter" | "visible" | "exit";
 
-function labelWidthProbe(children: ReactNode) {
-  return typeof children === "string" ? children : "Отримати консультацію";
-}
-
-export function ConsultationCtaButton({ className, children = "Отримати консультацію" }: ConsultationCtaButtonProps) {
+export function ConsultationCtaButton({ className, children }: ConsultationCtaButtonProps) {
+  const { locale } = useLanguage();
+  const defaultLabel = locale === "ua" ? "Отримати консультацію" : "Get consultation";
+  const label = children || defaultLabel;
   const preferDial = usePreferPhoneDial();
   const [showPhoneOnButton, setShowPhoneOnButton] = useState(false);
   const [toastPhase, setToastPhase] = useState<ToastPhase>("off");
@@ -108,7 +108,7 @@ export function ConsultationCtaButton({ className, children = "Отримати 
         ? "translate-y-0 opacity-100"
         : "";
 
-  const probeLabel = labelWidthProbe(children);
+  const probeLabel = typeof label === "string" ? label : "Отримати консультацію";
 
   return (
     <span className="relative inline-flex shrink-0 align-top">
@@ -131,13 +131,13 @@ export function ConsultationCtaButton({ className, children = "Отримати 
           {showPhoneOnButton ? (
             <span className=" ">{SITE_CONTACT.phoneDisplay}</span>
           ) : (
-            children
+            label
           )}
         </span>
       </a>
       {toastPhase !== "off" ? (
         <span role="status" aria-live="polite" className={[toastBase, toastMotion].filter(Boolean).join(" ")}>
-          Скопійовано
+          {locale === "ua" ? "Скопійовано" : "Copied"}
         </span>
       ) : null}
     </span>

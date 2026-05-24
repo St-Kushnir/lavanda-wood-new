@@ -1,29 +1,58 @@
-const pillars = [
-  {
-    title: "Натуральність",
-    text: "Жодного клею чи штучних замінників — лише цільна колода.",
-  },
-  {
-    title: "Довговічність",
-    text: "Прийоми, перевірені століттями, і канадська інженерія.",
-  },
-  {
-    title: "Унікальність",
-    text: "Кожен будинок індивідуальний — без повторюваних шаблонів.",
-  },
-  {
-    title: "Статус",
-    text: "Преміум-сегмент, який неможливо відтворити дешевими імітаціями.",
-  },
-];
+"use client";
+
+import { useLanguage } from "@/components/language-provider";
+
+const pillarsTranslations = {
+  ua: [
+    {
+      title: "Натуральність",
+      text: "Жодного клею чи штучних замінників — лише цільна колода.",
+    },
+    {
+      title: "Довговічність",
+      text: "Прийоми, перевірені століттями, і канадська інженерія.",
+    },
+    {
+      title: "Унікальність",
+      text: "Кожен будинок індивідуальний — без повторюваних шаблонів.",
+    },
+    {
+      title: "Статус",
+      text: "Преміум-сегмент, який неможливо відтворити дешевими імітаціями.",
+    },
+  ],
+  en: [
+    {
+      title: "Naturality",
+      text: "No glue or artificial substitutes — only solid round logs.",
+    },
+    {
+      title: "Durability",
+      text: "Time-tested techniques coupled with Canadian engineering.",
+    },
+    {
+      title: "Uniqueness",
+      text: "Each home is custom-crafted, with no replicated templates.",
+    },
+    {
+      title: "Status",
+      text: "A premium segment that cannot be replicated by cheap imitations.",
+    },
+  ],
+};
 
 export function WhyWildLogSection() {
+  const { locale } = useLanguage();
+  const pillars = pillarsTranslations[locale];
+
   return (
     <section id="why" className="scroll-mt-20 bg-[#0F0F0F] py-20 sm:py-28">
       <div className="reveal-item mx-auto max-w-[1440px] px-5 sm:px-8">
-        <p className="font-mono text-[12px] uppercase tracking-[0.35em] text-[#C6A36D]/90">Чому саме дикий зруб</p>
+        <p className="font-mono text-[12px] uppercase tracking-[0.35em] text-[#C6A36D]/90">
+          {locale === "ua" ? "Чому саме дикий зруб" : "Why Handcrafted Logs"}
+        </p>
         <h2 className="mt-3 max-w-3xl font-serif text-3xl font-normal leading-tight tracking-tight text-[#EAE7E1] sm:text-4xl md:text-5xl">
-          Справжня архітектура з цільного дерева
+          {locale === "ua" ? "Справжня архітектура з цільного дерева" : "Authentic Solid Wood Architecture"}
         </h2>
 
         <ul className="mt-14 grid list-none gap-4 sm:grid-cols-2 sm:gap-5 lg:mt-16 lg:grid-cols-4 lg:gap-5">

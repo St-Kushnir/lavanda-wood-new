@@ -1,39 +1,79 @@
-import Image from "next/image";
+"use client";
 
-const steps = [
-  {
-    step: "01",
-    title: "Концепція та архітектура",
-    text: "План простору, стиль, прив’язка до рельєфу.",
-    iconSrc: "/architecture.svg",
-  },
-  {
-    step: "02",
-    title: "Заготівля та підбір деревини",
-    text: "Зимова заготівля, сушка, відбір колод.",
-    iconSrc: "/log-wood.svg",
-  },
-  {
-    step: "03",
-    title: "Ручна рубка",
-    text: "Канадська чаша, підгонка, контроль геометрії.",
-    iconSrc: "/axe.svg",
-  },
-  {
-    step: "04",
-    title: "Монтаж на ділянці",
-    text: "Збірка клітки зрубу, техніка та бригада.",
-    iconSrc: "/construction.svg",
-  },
-  {
-    step: "05",
-    title: "Інженерія та оздоблення",
-    text: "Комунікації, вікна, фінішні поверхні.",
-    iconSrc: "/windows.svg",
-  },
-];
+import Image from "next/image";
+import { useLanguage } from "@/components/language-provider";
+
+const stepsTranslations = {
+  ua: [
+    {
+      step: "01",
+      title: "Концепція та архітектура",
+      text: "План простору, стиль, прив’язка до рельєфу.",
+      iconSrc: "/architecture.svg",
+    },
+    {
+      step: "02",
+      title: "Заготівля та підбір деревини",
+      text: "Зимова заготівля, сушка, відбір колод.",
+      iconSrc: "/log-wood.svg",
+    },
+    {
+      step: "03",
+      title: "Ручна рубка",
+      text: "Канадська чаша, підгонка, контроль геометрії.",
+      iconSrc: "/axe.svg",
+    },
+    {
+      step: "04",
+      title: "Монтаж на ділянці",
+      text: "Збірка клітки зрубу, техніка та бригада.",
+      iconSrc: "/construction.svg",
+    },
+    {
+      step: "05",
+      title: "Інженерія та оздоблення",
+      text: "Комунікації, вікна, фінішні поверхні.",
+      iconSrc: "/windows.svg",
+    },
+  ],
+  en: [
+    {
+      step: "01",
+      title: "Concept & Architecture",
+      text: "Space planning, styling, matching with the landscape.",
+      iconSrc: "/architecture.svg",
+    },
+    {
+      step: "02",
+      title: "Timber Harvesting & Selection",
+      text: "Winter harvesting, drying, and log sorting.",
+      iconSrc: "/log-wood.svg",
+    },
+    {
+      step: "03",
+      title: "Handcrafted Cutting",
+      text: "Canadian notch, fitting, and geometry control.",
+      iconSrc: "/axe.svg",
+    },
+    {
+      step: "04",
+      title: "On-site Assembly",
+      text: "Assembling the log structure, equipment, and crew.",
+      iconSrc: "/construction.svg",
+    },
+    {
+      step: "05",
+      title: "Engineering & Finishing",
+      text: "Utilities, window installation, and final surfaces.",
+      iconSrc: "/windows.svg",
+    },
+  ],
+};
 
 export function ProcessSection() {
+  const { locale } = useLanguage();
+  const steps = stepsTranslations[locale];
+
   return (
     <section
       id="process"
@@ -41,12 +81,16 @@ export function ProcessSection() {
     >
       <div className="mx-auto max-w-[1440px] px-5 sm:px-8">
         <div className="reveal-item max-w-2xl">
-          <p className="font-mono text-[12px] uppercase tracking-[0.35em] text-[#C6A36D]/90">Процес</p>
+          <p className="font-mono text-[12px] uppercase tracking-[0.35em] text-[#C6A36D]/90">
+            {locale === "ua" ? "Процес" : "Process"}
+          </p>
           <h2 className="mt-2 font-serif text-3xl font-normal tracking-tight text-[#EAE7E1] sm:text-4xl md:text-5xl">
-            Повний цикл будівництва
+            {locale === "ua" ? "Повний цикл будівництва" : "Full Construction Cycle"}
           </h2>
           <p className="mt-5 text-sm leading-relaxed text-[#8B7355] sm:text-base">
-            П’ять етапів — від ідеї до здачі. Контроль якості на кожному кроці.
+            {locale === "ua"
+              ? "П’ять етапів — від ідеї до здачі. Контроль якості на кожному кроці."
+              : "Five stages — from idea to completion. Quality control at every step."}
           </p>
         </div>
 

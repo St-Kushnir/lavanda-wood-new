@@ -5,16 +5,24 @@ import { useCallback, useEffect, useState } from "react";
 import { SITE_CONTACT, SITE_CONTACT_MAILTO_HREF, SITE_CONTACT_TEL_HREF } from "@/lib/site-contact";
 import { useLanguage } from "@/components/language-provider";
 
-const links = [
-  { href: "#about", label: "Про нас" },
-  { href: "#why", label: "Дерев'яні будинки" },
-  { href: "#technology", label: "Технологія" },
-  { href: "#projects", label: "Проєкти" },
-  { href: "#process", label: "Процес" },
-  { href: "#contact", label: "Контакти" },
-];
-
-const mobileDrawerLinks = links.filter((l) => l.href !== "#contact");
+const linksTranslations = {
+  ua: [
+    { href: "#about", label: "Про нас" },
+    // { href: "#why", label: "Дерев'яні будинки" },
+    { href: "#technology", label: "Технологія" },
+    { href: "#projects", label: "Проєкти" },
+    { href: "#process", label: "Процес" },
+    { href: "#contact", label: "Контакти" },
+  ],
+  en: [
+    { href: "#about", label: "About" },
+    // { href: "#why", label: "Log Homes" },
+    { href: "#technology", label: "Technology" },
+    { href: "#projects", label: "Projects" },
+    { href: "#process", label: "Process" },
+    { href: "#contact", label: "Contact" },
+  ],
+};
 
 function MenuIcon({ open }: { open: boolean }) {
   return (
@@ -44,6 +52,9 @@ function MenuIcon({ open }: { open: boolean }) {
 export function SiteHeader() {
   const [menuOpen, setMenuOpen] = useState(false);
   const { locale, setLocale } = useLanguage();
+
+  const links = linksTranslations[locale];
+  const mobileDrawerLinks = links.filter((l) => l.href !== "#contact");
 
   const closeMenu = useCallback(() => setMenuOpen(false), []);
 
@@ -106,7 +117,7 @@ export function SiteHeader() {
             href="#contact"
             className="rounded-sm border border-[#C6A36D]/60 bg-[#C6A36D]/10 px-4 py-2 text-xs font-medium uppercase tracking-wider text-[#C6A36D] transition hover:bg-[#C6A36D]/20"
           >
-            Консультація
+            {locale === "ua" ? "Консультація" : "Consultation"}
           </Link>
         </div>
 
@@ -115,7 +126,7 @@ export function SiteHeader() {
           className="flex items-center justify-center rounded-sm p-2 text-[#EAE7E1] transition hover:bg-white/5 hover:text-[#C6A36D] md:hidden"
           aria-expanded={menuOpen}
           aria-controls="mobile-drawer"
-          aria-label={menuOpen ? "Закрити меню" : "Відкрити меню"}
+          aria-label={menuOpen ? (locale === "ua" ? "Закрити меню" : "Close menu") : (locale === "ua" ? "Відкрити меню" : "Open menu")}
           onClick={() => setMenuOpen((o) => !o)}
         >
           <MenuIcon open={menuOpen} />
@@ -136,7 +147,7 @@ export function SiteHeader() {
             "absolute inset-0 bg-black/65 backdrop-blur-[2px] transition-opacity duration-300",
             menuOpen ? "opacity-100" : "opacity-0",
           ].join(" ")}
-          aria-label="Закрити меню"
+          aria-label={locale === "ua" ? "Закрити меню" : "Close menu"}
           tabIndex={menuOpen ? 0 : -1}
           onClick={closeMenu}
         />
@@ -173,7 +184,7 @@ export function SiteHeader() {
             <button
               type="button"
               className="ml-auto rounded-sm p-2 text-[#EAE7E1]/70 transition hover:bg-white/5 hover:text-[#EAE7E1]"
-              aria-label="Закрити меню"
+              aria-label={locale === "ua" ? "Закрити меню" : "Close menu"}
               onClick={closeMenu}
             >
               <span className="block text-xl leading-none">&times;</span>
@@ -220,7 +231,7 @@ export function SiteHeader() {
               className="flex w-full items-center justify-center rounded-sm border border-[#C6A36D] bg-[#C6A36D] px-4 py-3.5 text-center text-xs font-medium uppercase tracking-[0.2em] text-[#0F0F0F] transition hover:bg-[#d4b07e]"
               onClick={closeMenu}
             >
-              Консультація
+              {locale === "ua" ? "Консультація" : "Consultation"}
             </Link>
           </div>
         </aside>

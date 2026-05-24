@@ -301,7 +301,7 @@ export function PortfolioGallery() {
                   <button
                     type="button"
                     className="absolute inset-0 z-20 cursor-pointer focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#C6A36D]"
-                    aria-label={`Відкрити деталі проєкту: ${projectTitle}`}
+                    aria-label={locale === "ua" ? `Відкрити деталі проєкту: ${projectTitle}` : `Open project details: ${projectTitle}`}
                     onClick={() => handleOpenProject(p)}
                   />
                 </article>

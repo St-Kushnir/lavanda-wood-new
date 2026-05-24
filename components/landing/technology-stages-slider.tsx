@@ -9,6 +9,7 @@ import useEmblaCarousel from "embla-carousel-react";
 import type { EmblaCarouselType } from "embla-carousel";
 import Image from "next/image";
 import { useCallback, useEffect, useId, useState, type KeyboardEvent, type ReactNode } from "react";
+import { useLanguage } from "@/components/language-provider";
 
 export type TechnologyStageCard = {
   title: string;
@@ -24,6 +25,7 @@ type TechnologyStagesSliderProps = {
 export function TechnologyStagesSlider({ cards }: TechnologyStagesSliderProps) {
   const uid = useId().replace(/:/g, "");
   const [active, setActive] = useState(0);
+  const { locale } = useLanguage();
 
   const [emblaRef, emblaApi] = useEmblaCarousel({
     loop: false,
@@ -78,7 +80,9 @@ export function TechnologyStagesSlider({ cards }: TechnologyStagesSliderProps) {
     }
   };
 
-  const regionLabel = "Етапи канадської технології — горизонтальна карусель";
+  const regionLabel = locale === "ua"
+    ? "Етапи канадської технології — горизонтальна карусель"
+    : "Canadian technology stages — horizontal carousel";
 
   return (
     <div className="relative mt-14">
@@ -94,6 +98,10 @@ export function TechnologyStagesSlider({ cards }: TechnologyStagesSliderProps) {
         <div className="flex gap-4 sm:gap-5">
           {cards.map((c, i) => {
             const step = String(i + 1).padStart(2, "0");
+            const slideAriaLabel = locale === "ua"
+              ? `${step} з ${String(cards.length).padStart(2, "0")}: ${c.title}`
+              : `${step} of ${String(cards.length).padStart(2, "0")}: ${c.title}`;
+
             return (
               <div
                 key={c.title}
@@ -106,7 +114,7 @@ export function TechnologyStagesSlider({ cards }: TechnologyStagesSliderProps) {
                   id={`${uid}-tech-stage-${i}`}
                   role="group"
                   aria-roledescription="slide"
-                  aria-label={`${step} з ${String(cards.length).padStart(2, "0")}: ${c.title}`}
+                  aria-label={slideAriaLabel}
                   className={[
                     "group relative flex h-full min-h-0 flex-col overflow-hidden rounded-2xl sm:rounded-3xl",
                     "bg-[#0c0c0c] ring-1 ring-white/[0.07] ring-inset",
@@ -165,7 +173,7 @@ export function TechnologyStagesSlider({ cards }: TechnologyStagesSliderProps) {
       </div>
 
       <div className="mt-5 flex justify-center sm:mt-6">
-        <div className="flex flex-wrap items-center justify-center gap-2" role="group" aria-label="Обрати етап">
+        <div className="flex flex-wrap items-center justify-center gap-2" role="group" aria-label={locale === "ua" ? "Обрати етап" : "Select stage"}>
           {cards.map((c, i) => (
             <button
               key={c.title}
@@ -178,14 +186,14 @@ export function TechnologyStagesSlider({ cards }: TechnologyStagesSliderProps) {
                 "focus:outline-none focus-visible:ring-2 focus-visible:ring-[#C6A36D]/50 focus-visible:ring-offset-2 focus-visible:ring-offset-[#121212]",
                 i === active ? "w-8 bg-[#C6A36D]" : "w-2 bg-white/20 hover:bg-white/35",
               ].join(" ")}
-              aria-label={`Етап ${i + 1}: ${c.title}`}
+              aria-label={locale === "ua" ? `Етап ${i + 1}: ${c.title}` : `Stage ${i + 1}: ${c.title}`}
             />
           ))}
         </div>
       </div>
 
       <p className="sr-only" aria-live="polite" aria-atomic="true">
-        {cards[active] ? `Активний слайд: ${cards[active].title}` : ""}
+        {cards[active] ? (locale === "ua" ? `Активний слайд: ${cards[active].title}` : `Active slide: ${cards[active].title}`) : ""}
       </p>
     </div>
   );
