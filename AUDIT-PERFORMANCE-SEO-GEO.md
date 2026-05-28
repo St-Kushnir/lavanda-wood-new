@@ -188,11 +188,22 @@ GEO = щоб **ChatGPT/Perplexity/Google AI Overviews/Gemini** легко зчи
 
 > Перевірено: `tsc --noEmit` ✅, ESLint ✅, `next build` ✅ (First Load JS `/` ≈ 178 КБ — зменшення JSON-бандла заплановано в Етапі 2).
 
-### Етап 2 — Архітектура рендеру (SSR + GEO)
-6. Винести контент-секції у Server Components; локаль через маршрут/`searchParams`.
-7. `<html lang>` динамічний + hreflang `alternates`.
-8. JSON-LD на сервері: Organization + WebSite + FAQPage + BreadcrumbList.
-9. `projects-data.json` — серверне джерело, передача пропсами; розбити `portfolio-gallery.tsx`, модалку/lightbox через `next/dynamic`.
+### Етап 2 — Архітектура рендеру (SSR + GEO) — ✅ ВИКОНАНО (рішення: єдиний URL)
+**Рішення замовника:** локаль НЕ виноситься в URL. Лишається **тільки** `https://lavanda-wood.com/`; мова — клієнтський перемикач на тій самій сторінці (як було). Тому маршрути `/ua` та `/en` прибрано.
+6. ◻️ Локаль через маршрут — **скасовано за рішенням замовника** (єдиний URL). Контент SSR-иться українською (дефолт), EN — через клієнтський перемикач.
+7. ◻️ Динамічний `<html lang>`/hreflang — **не застосовно** для одного URL (`<html lang="uk">`, один canonical `/`, без hreflang).
+8. ✅ **Серверний JSON-LD** (`components/seo/structured-data.tsx`, рендериться в HTML): `WebSite` + `FAQPage` (5 Q&A) + `BreadcrumbList` (українською). `Organization`/`HomeAndConstructionBusiness` лишився у футері (не чіпали).
+9. ✅ **Етап 2b — виконано**:
+   - ✅ `projects-data.json` винесено з **клієнтського JS-бандла** — імпорт у `app/page.tsx` (сервер), дані передаються пропсом у `ProjectsSection` → `PortfolioGallery`.
+   - ✅ Модалку проєкту та lightbox винесено в `components/landing/portfolio-overlays.tsx` і підключено через `next/dynamic({ ssr:false })` — важкий інтерактив (zoom/pan/свайп) вантажиться лише при кліку на проєкт. Спільні іконки — `components/landing/portfolio-icons.tsx`.
+   - **First Load JS `/`: 178 КБ → 156 КБ → 153 КБ** (сторінка 76 → 51 КБ).
+   - ⏳ Потрібна ручна QA інтерактиву (zoom/pan/свайп/клавіатура) у браузері.
+
+Додатково ✅ **повні метадані** (`app/layout.tsx`): OG, Twitter, canonical `/`, robots, keywords.
+
+**Міграція старого сайту** (`redirects()` у `next.config.ts`): `/ua*` → `/`, `/ru*` → `/` (308). Точкові 301 зі старих URL розділів — додамо за реальним списком URL / Search Console.
+
+> Перевірено `next build` ✅ + рантайм (`next start`): `/`=200 `lang=uk` + FAQPage JSON-LD + canonical; `/en`=404; `/ua`&`/ru`=308→`/`; `sitemap.xml` лише `/`.
 
 ### Етап 3 — Полірування
 10. Спільний IntersectionObserver; `prefers-reduced-motion`.

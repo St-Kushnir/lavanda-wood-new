@@ -5,10 +5,14 @@ import { HeroSection } from "@/components/landing/hero-section";
 import { InternationalSection } from "@/components/landing/international-section";
 import { ProcessSection } from "@/components/landing/process-section";
 import { ProjectsSection } from "@/components/landing/projects-section";
+import { type Project } from "@/components/landing/portfolio-gallery";
 import { SiteFooter } from "@/components/landing/site-footer";
 import { SiteHeader } from "@/components/landing/site-header";
 import { WhyWildLogSection } from "@/components/landing/why-wild-log-section";
 import { RevealOnScroll } from "@/components/reveal-on-scroll";
+import projectsData from "@/projects-data.json";
+
+const projects = (projectsData.projects as unknown as Project[]) || [];
 
 export default function Home() {
   return (
@@ -28,7 +32,7 @@ export default function Home() {
           <CanadianTechSection />
         </RevealOnScroll>
         <RevealOnScroll>
-          <ProjectsSection />
+          <ProjectsSection projects={projects} />
         </RevealOnScroll>
         <RevealOnScroll>
           <ProcessSection />

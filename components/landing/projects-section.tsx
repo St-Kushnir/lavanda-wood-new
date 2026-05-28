@@ -1,9 +1,9 @@
 "use client";
 
-import { PortfolioGallery } from "@/components/landing/portfolio-gallery";
+import { PortfolioGallery, type Project } from "@/components/landing/portfolio-gallery";
 import { useLanguage } from "@/components/language-provider";
 
-export function ProjectsSection() {
+export function ProjectsSection({ projects }: { projects: Project[] }) {
   const { locale } = useLanguage();
 
   return (
@@ -20,7 +20,7 @@ export function ProjectsSection() {
           </p>
         </div>
 
-        <PortfolioGallery />
+        <PortfolioGallery projects={projects} />
       </div>
     </section>
   );

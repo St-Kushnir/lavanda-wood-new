@@ -1,14 +1,11 @@
 import type { MetadataRoute } from "next";
-
-const SITE_URL = "https://lavanda-wood.com";
+import { SITE_URL } from "@/lib/i18n";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const lastModified = new Date();
-
   return [
     {
-      url: SITE_URL,
-      lastModified,
+      url: `${SITE_URL}/`,
+      lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 1,
     },

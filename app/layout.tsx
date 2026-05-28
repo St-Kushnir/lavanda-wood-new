@@ -16,17 +16,16 @@ import "@fontsource/playfair-display/cyrillic-500.css";
 import "@fontsource/playfair-display/cyrillic-600.css";
 import "./globals.css";
 import { LanguageProvider } from "@/components/language-provider";
-
-const SITE_URL = "https://lavanda-wood.com";
+import { StructuredData } from "@/components/seo/structured-data";
+import { SITE_URL, localeMeta } from "@/lib/i18n";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "LAVANDA — handcrafted log homes since 1995",
+    default: localeMeta.ua.title,
     template: "%s · LAVANDA",
   },
-  description:
-    "Будівництво будинків із дикого зрубу за канадською технологією. Преміальні резиденції з натурального дерева в Україні та Європі від COMPANY VASYNA / LAVANDA.",
+  description: localeMeta.ua.description,
   applicationName: "LAVANDA",
   authors: [{ name: "LAVANDA / COMPANY VASYNA" }],
   creator: "LAVANDA / COMPANY VASYNA",
@@ -59,9 +58,8 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     siteName: "LAVANDA",
-    title: "LAVANDA — handcrafted log homes since 1995",
-    description:
-      "Преміальні будинки з дикого зрубу за канадською технологією. Україна та Європа.",
+    title: localeMeta.ua.title,
+    description: localeMeta.ua.description,
     url: SITE_URL,
     locale: "uk_UA",
     alternateLocale: ["en_US"],
@@ -74,14 +72,11 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "LAVANDA — handcrafted log homes since 1995",
-    description:
-      "Преміальні будинки з дикого зрубу за канадською технологією. Україна та Європа.",
+    title: localeMeta.ua.title,
+    description: localeMeta.ua.description,
     images: ["/white-log-house-at-night.jpg"],
   },
-  icons: {
-    icon: "/favicon.ico",
-  },
+  icons: { icon: "/favicon.ico" },
 };
 
 export default function RootLayout({
@@ -92,6 +87,7 @@ export default function RootLayout({
   return (
     <html lang="uk" className="scroll-smooth">
       <body className="bg-[#0F0F0F] font-sans text-[#EAE7E1] antialiased">
+        <StructuredData locale="ua" />
         <LanguageProvider>{children}</LanguageProvider>
       </body>
     </html>

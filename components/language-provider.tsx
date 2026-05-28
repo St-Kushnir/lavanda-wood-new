@@ -10,8 +10,14 @@ interface LanguageContextType {
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
-export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [locale, setLocale] = useState<ProjectLocale>("ua");
+export function LanguageProvider({
+  children,
+  initialLocale = "ua",
+}: {
+  children: ReactNode;
+  initialLocale?: ProjectLocale;
+}) {
+  const [locale, setLocale] = useState<ProjectLocale>(initialLocale);
 
   return (
     <LanguageContext.Provider value={{ locale, setLocale }}>

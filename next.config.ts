@@ -19,6 +19,15 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  // Міграція зі старого сайту: легасі мовні префікси віддаємо на корінь (єдиний URL).
+  async redirects() {
+    return [
+      { source: "/ua", destination: "/", permanent: true },
+      { source: "/ua/:path*", destination: "/", permanent: true },
+      { source: "/ru", destination: "/", permanent: true },
+      { source: "/ru/:path*", destination: "/", permanent: true },
+    ];
+  },
 };
 
 export default nextConfig;
