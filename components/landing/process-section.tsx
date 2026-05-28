@@ -29,7 +29,7 @@ const stepsTranslations = {
     {
       step: "04",
       title: "Монтаж на ділянці",
-      text: "Збірка клітки зрубу, техніка та бригада.",
+      text: "Збірка дерев’яної конструкції на ділянці із залученням техніки та бригад",
       iconSrc: "/construction.svg",
     },
     {
@@ -61,7 +61,7 @@ const stepsTranslations = {
     {
       step: "04",
       title: "On-site Assembly",
-      text: "Assembling the log structure, equipment, and crew.",
+      text: "On-site assembly of the timber structure with equipment and crews involved.",
       iconSrc: "/construction.svg",
     },
     {
@@ -149,11 +149,11 @@ export function ProcessSection() {
               </div>
               <div className="flex flex-col gap-3">
                 <div className="flex min-h-9 items-center">
-                  <span className="inline-flex w-fit items-center rounded-sm bg-[#C6A36D]/12 px-2.5 py-1 font-mono text-[14px] font-medium uppercase tracking-[0.28em] text-[#C6A36D]">
+                  <span className="inline-flex w-fit items-center rounded-sm bg-[#C6A36D]/12 px-2.5 py-1 font-mono text-[14px] font-medium uppercase tracking-[0.28em] text-[#8B7355]">
                     {s.step}
                   </span>
                 </div>
-                <h3 className="min-h-[3.25rem] font-serif text-xl leading-snug text-[#EAE7E1] sm:min-h-[3.625rem] sm:text-[1.35rem]">
+                <h3 className="min-h-[3.25rem] font-serif text-xl leading-snug text-[#C6A36D] sm:min-h-[3.625rem] sm:text-[1.35rem]">
                   {s.title}
                 </h3>
                 <p className="text-sm leading-relaxed text-[#EAE7E1]/58 sm:text-[14px] sm:leading-relaxed">{s.text}</p>
@@ -190,7 +190,7 @@ export function ProcessSection() {
                     </div>
                     
                     <div className="mt-8 flex flex-col gap-3">
-                      <h3 className="font-serif text-xl leading-snug text-[#EAE7E1]">
+                      <h3 className="font-serif text-xl leading-snug text-[#C6A36D]">
                         {s.title}
                       </h3>
                       <p className="text-sm leading-relaxed text-[#EAE7E1]/58">{s.text}</p>

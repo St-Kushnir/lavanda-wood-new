@@ -1,6 +1,7 @@
 "use client";
 
 import type { ReactNode } from "react";
+import { SliderDashedList } from "@/components/landing/slider-dashed-list";
 import { TechnologyStagesSlider } from "@/components/landing/technology-stages-slider";
 import { TECHNOLOGY_SECTION_STAGES } from "@/lib/site-media";
 import { useLanguage } from "@/components/language-provider";
@@ -52,16 +53,18 @@ export function CanadianTechSection() {
       body: (
         <>
           <p>
-            У будівництві мы використовуємо класичну технологію канадської чаші — одну з найнадійніших систем
+            У будівництві ми використовуємо класичну технологію канадської чаші — одну з найнадійніших систем
             з’єднання колод у світі.
           </p>
           <p>Завдяки особливій формі замків:</p>
-          <p className="mt-6 whitespace-pre-line">
-            {`- будинок стає максимально теплим;
-- колоди щільно сідають під час усадки;
-- мінімізуються щілини та продування;
-- конструкція отримує високу міцність та довговічність.`}
-          </p>
+          <SliderDashedList
+            items={[
+              "будинок стає максимально теплим;",
+              "колоди щільно сідають під час усадки;",
+              "мінімізуються щілини та продування;",
+              "конструкція отримує високу міцність та довговічність.",
+            ]}
+          />
         </>
       ),
     },
@@ -88,12 +91,14 @@ export function CanadianTechSection() {
           <p>
             Точна геометрія та професійна підгонка забезпечують щільну посадку колод без зазорів та продування.
           </p>
-          <p>Між колодами використовується натуральна юта, яка:</p>
-          <p className="mt-6 whitespace-pre-line">
-            {`покращує теплоізоляцію;
-дозволяє дереву «дихати»;
-створює комфортний мікроклімат у будинку.`}
-          </p>
+          <p>Між колодами використовуються натуральний льон та технічна конопля, які:</p>
+          <SliderDashedList
+            items={[
+              "покращують теплоізоляцію;",
+              "дозволяють дереву «дихати»;",
+              "створюють комфортний мікроклімат у будинку.",
+            ]}
+          />
         </>
       ),
     },
@@ -108,12 +113,14 @@ export function CanadianTechSection() {
             проєктування.
           </p>
           <p>Завдяки правильній технології:</p>
-          <p className="mt-6 whitespace-pre-line">
-            {`будинок рівномірно сідає;
-зберігається геометрія конструкції;
-мінімізуються тепловтрати;
-підтримується стабільний комфортний мікроклімат у будь-яку пору року.`}
-          </p>
+          <SliderDashedList
+            items={[
+              "будинок рівномірно сідає;",
+              "зберігається геометрія конструкції;",
+              "мінімізуються тепловтрати;",
+              "підтримується стабільний комфортний мікроклімат у будь-яку пору року.",
+            ]}
+          />
         </>
       ),
     },
@@ -156,12 +163,14 @@ export function CanadianTechSection() {
             In our construction, we utilize the classic Canadian notch technology — one of the most reliable log joint systems in the world.
           </p>
           <p>Thanks to the unique shape of the interlocking notches:</p>
-          <p className="mt-6 whitespace-pre-line">
-            {`- the house becomes exceptionally warm;
-- logs settle tightly together during shrinkage;
-- gaps and air leakage are minimized;
-- the structure gains high strength and durability.`}
-          </p>
+          <SliderDashedList
+            items={[
+              "the house becomes exceptionally warm;",
+              "logs settle tightly together during shrinkage;",
+              "gaps and air leakage are minimized;",
+              "the structure gains high strength and durability.",
+            ]}
+          />
         </>
       ),
     },
@@ -188,12 +197,14 @@ export function CanadianTechSection() {
           <p>
             Precise geometry and professional fitting ensure a tight fit of logs without gaps or drafts.
           </p>
-          <p>Natural jute is placed between the logs, which:</p>
-          <p className="mt-6 whitespace-pre-line">
-            {`improves thermal insulation;
-allows the wood to "breathe";
-creates a comfortable microclimate in the house.`}
-          </p>
+          <p>Natural linen and technical hemp are used between the logs, which:</p>
+          <SliderDashedList
+            items={[
+              "improve thermal insulation;",
+              'allow the wood to "breathe";',
+              "create a comfortable microclimate in the house.",
+            ]}
+          />
         </>
       ),
     },
@@ -207,12 +218,14 @@ creates a comfortable microclimate in the house.`}
             We account for all peculiarities of natural wood behavior and control the shrinkage process starting from the design stage.
           </p>
           <p>Thanks to the correct technology:</p>
-          <p className="mt-6 whitespace-pre-line">
-            {`the house settles evenly;
-the geometry of the structure is preserved;
-heat loss is minimized;
-a stable and comfortable microclimate is maintained in any season.`}
-          </p>
+          <SliderDashedList
+            items={[
+              "the house settles evenly;",
+              "the geometry of the structure is preserved;",
+              "heat loss is minimized;",
+              "a stable and comfortable microclimate is maintained in any season.",
+            ]}
+          />
         </>
       ),
     },
