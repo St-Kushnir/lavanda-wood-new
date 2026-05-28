@@ -241,12 +241,12 @@ export function PortfolioGallery() {
                   className="group relative aspect-[4/5] overflow-hidden bg-[#141414] rounded-sm sm:aspect-[3/4] shadow-md ring-1 ring-white/5 hover:ring-white/10 transition-all duration-500"
                 >
                   <div className="absolute inset-0 z-0">
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
+                    <Image
                       src={coverImage}
                       alt={projectTitle}
-                      loading="lazy"
-                      className="absolute inset-y-0 left-1/2 -translate-x-1/2 h-full w-auto max-w-none object-cover will-change-transform transition duration-700 group-hover:scale-[1.03]"
+                      fill
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      className="object-cover will-change-transform transition duration-700 group-hover:scale-[1.03]"
                     />
                     {/* Dark gradient overlay stretched horizontally along the bottom to ensure text readability */}
                     <div className="absolute inset-0 bg-[radial-gradient(180%_65%_at_bottom_left,rgba(0,0,0,0.95)_0%,rgba(0,0,0,0.75)_30%,rgba(0,0,0,0.25)_60%,rgba(0,0,0,0)_100%)] opacity-95 transition duration-500 group-hover:opacity-100" />
@@ -812,11 +812,12 @@ function ProjectDetailModal({
                       className="group relative aspect-[4/3] rounded-sm border border-white/10 bg-white p-3 transition-all duration-300 cursor-zoom-in flex items-center justify-center overflow-hidden"
                     >
                       <div className="relative w-full h-full">
-                        {/* eslint-disable-next-line @next/next/no-img-element */}
-                        <img
+                        <Image
                           src={schemaUrl}
                           alt={`Plan ${index + 1}`}
-                          className="w-full h-full object-contain filter-none opacity-90 group-hover:opacity-100 transition-opacity duration-300"
+                          fill
+                          sizes="(max-width: 1024px) 45vw, 18vw"
+                          className="object-contain filter-none opacity-90 group-hover:opacity-100 transition-opacity duration-300"
                         />
                       </div>
                       <div className="absolute inset-0 bg-black/55 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">

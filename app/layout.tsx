@@ -1,18 +1,87 @@
 import type { Metadata } from "next";
-import "@fontsource/inter/400.css";
-import "@fontsource/inter/500.css";
-import "@fontsource/inter/600.css";
-import "@fontsource/inter/700.css";
-import "@fontsource/playfair-display/400.css";
-import "@fontsource/playfair-display/500.css";
-import "@fontsource/playfair-display/600.css";
+// Self-hosted fonts (offline-friendly). Latin + Cyrillic subsets for UA text.
+import "@fontsource/inter/latin-400.css";
+import "@fontsource/inter/latin-500.css";
+import "@fontsource/inter/latin-600.css";
+import "@fontsource/inter/latin-700.css";
+import "@fontsource/inter/cyrillic-400.css";
+import "@fontsource/inter/cyrillic-500.css";
+import "@fontsource/inter/cyrillic-600.css";
+import "@fontsource/inter/cyrillic-700.css";
+import "@fontsource/playfair-display/latin-400.css";
+import "@fontsource/playfair-display/latin-500.css";
+import "@fontsource/playfair-display/latin-600.css";
+import "@fontsource/playfair-display/cyrillic-400.css";
+import "@fontsource/playfair-display/cyrillic-500.css";
+import "@fontsource/playfair-display/cyrillic-600.css";
 import "./globals.css";
 import { LanguageProvider } from "@/components/language-provider";
 
+const SITE_URL = "https://lavanda-wood.com";
+
 export const metadata: Metadata = {
-  title: "LAVANDA — handcrafted log homes since 1995",
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: "LAVANDA — handcrafted log homes since 1995",
+    template: "%s · LAVANDA",
+  },
   description:
-    "Будівництво будинків із дикого зрубу за канадською технологією. Преміальні резиденції в Україні та Європі.",
+    "Будівництво будинків із дикого зрубу за канадською технологією. Преміальні резиденції з натурального дерева в Україні та Європі від COMPANY VASYNA / LAVANDA.",
+  applicationName: "LAVANDA",
+  authors: [{ name: "LAVANDA / COMPANY VASYNA" }],
+  creator: "LAVANDA / COMPANY VASYNA",
+  publisher: "LAVANDA / COMPANY VASYNA",
+  keywords: [
+    "дикий зруб",
+    "будинки з дерева",
+    "канадська технологія",
+    "log homes",
+    "handcrafted log homes",
+    "дерев'яні будинки преміум",
+    "LAVANDA",
+    "HolzbauRustikal",
+    "Naturstammhaus",
+  ],
+  alternates: {
+    canonical: "/",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
+  openGraph: {
+    type: "website",
+    siteName: "LAVANDA",
+    title: "LAVANDA — handcrafted log homes since 1995",
+    description:
+      "Преміальні будинки з дикого зрубу за канадською технологією. Україна та Європа.",
+    url: SITE_URL,
+    locale: "uk_UA",
+    alternateLocale: ["en_US"],
+    images: [
+      {
+        url: "/white-log-house-at-night.jpg",
+        alt: "Дерев'яний зруб LAVANDA з архітектурним підсвічуванням уночі",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "LAVANDA — handcrafted log homes since 1995",
+    description:
+      "Преміальні будинки з дикого зрубу за канадською технологією. Україна та Європа.",
+    images: ["/white-log-house-at-night.jpg"],
+  },
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({
@@ -23,9 +92,7 @@ export default function RootLayout({
   return (
     <html lang="uk" className="scroll-smooth">
       <body className="bg-[#0F0F0F] font-sans text-[#EAE7E1] antialiased">
-        <LanguageProvider>
-          {children}
-        </LanguageProvider>
+        <LanguageProvider>{children}</LanguageProvider>
       </body>
     </html>
   );

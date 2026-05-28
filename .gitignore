@@ -38,3 +38,6 @@ yarn-error.log*
 
 # typescript
 *.tsbuildinfo
+
+# image optimization backups (scripts/optimize-images.mjs)
+/.image-backup/
