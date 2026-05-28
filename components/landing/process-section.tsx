@@ -164,7 +164,7 @@ export function ProcessSection() {
 
         {/* Mobile Slider (visible only on mobile) */}
         <div className="block sm:hidden mt-14">
-          <div ref={emblaRef} className="overflow-hidden pb-4">
+          <div ref={emblaRef} className="lavanda-embla overflow-hidden pb-4">
             <div className="flex gap-4">
               {steps.map((s) => (
                 <div

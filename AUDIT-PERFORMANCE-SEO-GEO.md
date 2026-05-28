@@ -205,11 +205,13 @@ GEO = щоб **ChatGPT/Perplexity/Google AI Overviews/Gemini** легко зчи
 
 > Перевірено `next build` ✅ + рантайм (`next start`): `/`=200 `lang=uk` + FAQPage JSON-LD + canonical; `/en`=404; `/ua`&`/ru`=308→`/`; `sitemap.xml` лише `/`.
 
-### Етап 3 — Полірування
-10. Спільний IntersectionObserver; `prefers-reduced-motion`.
-11. Focus-trap у lightbox/модалці; контраст підписів.
-12. `reactStrictMode: true`; `app/manifest.ts` + іконки; `opengraph-image`.
-13. Заміри Lighthouse/Web Vitals до і після.
+### Етап 3 — Полірування — ✅ ВИКОНАНО (окрім п.13 і свідомо відкладеного)
+10. ✅ **Спільний IntersectionObserver** для всіх `RevealOnScroll` (один на сторінку замість N) + **`prefers-reduced-motion`** (CSS: контент показується одразу, без анімації; JS-фолбек теж показує контент, якщо IO недоступний).
+11. ✅ **Focus-trap + повернення фокуса** у модалці проєкту та lightbox (`useFocusTrap` у `portfolio-overlays.tsx`): Tab/Shift+Tab крутяться всередині оверлею, після закриття фокус повертається на елемент-тригер; додано `role="dialog"`/`aria-modal`/`aria-label`.
+    - 🟡 **Контраст підписів** (`#8B7355` на темному) — **відкладено**: зміна брендового токена впливає на дизайн усього сайту, тож потребує погодження. Рекомендація: для дрібного тексту використати світліший відтінок (напр. `#A8916F`) лише в підписах, не чіпаючи акценти.
+12. ✅ **`reactStrictMode: true`**; ✅ **`app/manifest.ts`** (PWA-маніфест, `/manifest.webmanifest`) + ✅ **`app/icon.svg`** (брендова іконка/favicon, прибрано битий `/favicon.ico`).
+    - 🟡 **`opengraph-image` (динамічна)** — **свідомо відкладено**: лишено преміальне фото `white-log-house-at-night.jpg` як OG/Twitter-картинку (на бренді), додано точні `width/height/type`. Згенерована текстова OG-картка програє якісному фото для luxury-бренду; до того ж `ImageResponse` потребує шрифтів при білді (ризик у цьому середовищі).
+13. ⏳ **Заміри Lighthouse/Web Vitals** до/після — ручний крок у браузері (рекомендую прогнати на проді/`next start`).
 
 ---
 

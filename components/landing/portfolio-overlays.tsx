@@ -12,6 +12,54 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import { ArrowIcon, CloseIcon } from "@/components/landing/portfolio-icons";
 import type { Project } from "@/components/landing/portfolio-gallery";
 
+const FOCUSABLE =
+  'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])';
+
+// Тримає фокус усередині оверлею (Tab/Shift+Tab) і повертає його на тригер після закриття.
+function useFocusTrap(containerRef: React.RefObject<HTMLElement | null>) {
+  useEffect(() => {
+    const previouslyFocused = document.activeElement as HTMLElement | null;
+    const container = containerRef.current;
+
+    const focusFirst = () => {
+      if (!container) return;
+      const focusables = container.querySelectorAll<HTMLElement>(FOCUSABLE);
+      (focusables[0] ?? container).focus({ preventScroll: true });
+    };
+    focusFirst();
+
+    const handleTab = (e: KeyboardEvent) => {
+      if (e.key !== "Tab") return;
+      const node = containerRef.current;
+      if (!node) return;
+      const focusables = Array.from(
+        node.querySelectorAll<HTMLElement>(FOCUSABLE),
+      ).filter((el) => el.offsetParent !== null || el === node);
+      if (focusables.length === 0) {
+        e.preventDefault();
+        node.focus({ preventScroll: true });
+        return;
+      }
+      const first = focusables[0];
+      const last = focusables[focusables.length - 1];
+      const active = document.activeElement;
+      if (e.shiftKey && (active === first || active === node)) {
+        e.preventDefault();
+        last.focus({ preventScroll: true });
+      } else if (!e.shiftKey && active === last) {
+        e.preventDefault();
+        first.focus({ preventScroll: true });
+      }
+    };
+
+    document.addEventListener("keydown", handleTab);
+    return () => {
+      document.removeEventListener("keydown", handleTab);
+      previouslyFocused?.focus?.({ preventScroll: true });
+    };
+  }, [containerRef]);
+}
+
 // ----------------------------------------------------
 // IMAGE WITH PULSING LAVANDA LOGO LOADER
 // ----------------------------------------------------
@@ -82,6 +130,9 @@ export function ProjectDetailModal({
   onFilterTag,
   activeTag,
 }: ProjectDetailModalProps) {
+  const dialogRef = useRef<HTMLDivElement>(null);
+  useFocusTrap(dialogRef);
+
   // Disable body scroll when modal is active
   useEffect(() => {
     document.documentElement.classList.add("no-scroll");
@@ -121,9 +172,12 @@ export function ProjectDetailModal({
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#050506]/90 backdrop-blur-md transition-opacity duration-300"
+      ref={dialogRef}
+      tabIndex={-1}
+      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#050506]/90 backdrop-blur-md transition-opacity duration-300 outline-none"
       role="dialog"
       aria-modal="true"
+      aria-label={projectTitle}
     >
       {/* Click outside to close (backdrop) */}
       <div className="absolute inset-0" onClick={onClose} />
@@ -434,6 +488,8 @@ export function LightboxGallery({ images, initialIndex, onClose }: LightboxGalle
     };
   }, []);
 
+  useFocusTrap(containerRef);
+
   // Keyboard support: Escape closes zoom, Arrows navigate
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -644,7 +700,11 @@ export function LightboxGallery({ images, initialIndex, onClose }: LightboxGalle
       onPointerUp={handlePointerUp}
       onPointerCancel={handlePointerUp}
       onDoubleClick={handleDoubleClick}
-      className="fixed inset-0 z-[100] flex items-center justify-center bg-black/95 select-none touch-none transition-all duration-300"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Перегляд зображення на повний екран"
+      tabIndex={-1}
+      className="fixed inset-0 z-[100] flex items-center justify-center bg-black/95 select-none touch-none transition-all duration-300 outline-none"
       style={{ cursor: scale > 1 ? "grab" : "default" }}
     >
       {/* Close button */}

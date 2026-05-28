@@ -93,7 +93,7 @@ export function TechnologyStagesSlider({ cards }: TechnologyStagesSliderProps) {
         aria-label={regionLabel}
         tabIndex={0}
         onKeyDown={onKeyDown}
-        className="overflow-hidden pb-3 pt-1 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#C6A36D]/40 focus-visible:ring-offset-2 focus-visible:ring-offset-[#121212]"
+        className="lavanda-embla overflow-hidden pb-3 pt-1 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#C6A36D]/40 focus-visible:ring-offset-2 focus-visible:ring-offset-[#121212]"
       >
         <div className="flex gap-4 sm:gap-5">
           {cards.map((c, i) => {

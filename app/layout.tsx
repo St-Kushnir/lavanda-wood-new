@@ -66,6 +66,9 @@ export const metadata: Metadata = {
     images: [
       {
         url: "/white-log-house-at-night.jpg",
+        width: 1280,
+        height: 960,
+        type: "image/jpeg",
         alt: "Дерев'яний зруб LAVANDA з архітектурним підсвічуванням уночі",
       },
     ],
@@ -76,7 +79,6 @@ export const metadata: Metadata = {
     description: localeMeta.ua.description,
     images: ["/white-log-house-at-night.jpg"],
   },
-  icons: { icon: "/favicon.ico" },
 };
 
 export default function RootLayout({

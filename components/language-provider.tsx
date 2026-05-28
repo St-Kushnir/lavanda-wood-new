@@ -1,7 +1,17 @@
 "use client";
 
-import React, { createContext, useContext, useState, ReactNode } from "react";
+import React, {
+  createContext,
+  useCallback,
+  useContext,
+  useEffect,
+  useState,
+  type ReactNode,
+} from "react";
+import { isLocale } from "@/lib/i18n";
 import { ProjectLocale } from "@/lib/projects-i18n";
+
+const LOCALE_STORAGE_KEY = "lavanda-locale";
 
 interface LanguageContextType {
   locale: ProjectLocale;
@@ -10,6 +20,16 @@ interface LanguageContextType {
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
+function readStoredLocale(): ProjectLocale | null {
+  if (typeof window === "undefined") return null;
+  try {
+    const stored = localStorage.getItem(LOCALE_STORAGE_KEY);
+    return stored && isLocale(stored) ? stored : null;
+  } catch {
+    return null;
+  }
+}
+
 export function LanguageProvider({
   children,
   initialLocale = "ua",
@@ -17,7 +37,21 @@ export function LanguageProvider({
   children: ReactNode;
   initialLocale?: ProjectLocale;
 }) {
-  const [locale, setLocale] = useState<ProjectLocale>(initialLocale);
+  const [locale, setLocaleState] = useState<ProjectLocale>(initialLocale);
+
+  useEffect(() => {
+    const stored = readStoredLocale();
+    if (stored) setLocaleState(stored);
+  }, []);
+
+  const setLocale = useCallback((next: ProjectLocale) => {
+    setLocaleState(next);
+    try {
+      localStorage.setItem(LOCALE_STORAGE_KEY, next);
+    } catch {
+      // private mode / quota — ігноруємо
+    }
+  }, []);
 
   return (
     <LanguageContext.Provider value={{ locale, setLocale }}>
