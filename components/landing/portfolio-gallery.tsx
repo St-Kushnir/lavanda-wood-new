@@ -53,12 +53,13 @@ function CloseIcon() {
 }
 
 // Arrow icon for slides
-function ArrowIcon({ dir }: { dir: "prev" | "next" }) {
+function ArrowIcon({ dir, className }: { dir: "prev" | "next"; className?: string }) {
   return (
     <svg
       width="20"
       height="20"
       viewBox="0 0 24 24"
+      className={className}
       fill="none"
       stroke="currentColor"
       strokeWidth="2"
@@ -872,12 +873,6 @@ function LightboxGallery({ images, initialIndex, onClose }: LightboxGalleryProps
   const positionStartRef = useRef({ x: 0, y: 0 });
   const containerRef = useRef<HTMLDivElement>(null);
 
-  // Reset scale and position when changing images
-  useEffect(() => {
-    setScale(1);
-    setPosition({ x: 0, y: 0 });
-  }, [currentIndex]);
-
   const handlePrev = useCallback(() => {
     setCurrentIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
   }, [images.length]);
@@ -885,6 +880,43 @@ function LightboxGallery({ images, initialIndex, onClose }: LightboxGalleryProps
   const handleNext = useCallback(() => {
     setCurrentIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
   }, [images.length]);
+
+  // Touch gesture states
+  const isPinchingRef = useRef(false);
+  const isSwipingRef = useRef(false);
+  const swipeStartRef = useRef({ x: 0, y: 0 });
+  const currentSwipeDxRef = useRef(0);
+  const initialTouchDistanceRef = useRef(0);
+  const initialTouchScaleRef = useRef(1);
+
+  // React state refs to avoid tearing down/re-registering touch listeners on every frame
+  const scaleRef = useRef(scale);
+  const positionRef = useRef(position);
+  const handlePrevRef = useRef(handlePrev);
+  const handleNextRef = useRef(handleNext);
+
+  // Keep refs up-to-date
+  useEffect(() => {
+    scaleRef.current = scale;
+  }, [scale]);
+
+  useEffect(() => {
+    positionRef.current = position;
+  }, [position]);
+
+  useEffect(() => {
+    handlePrevRef.current = handlePrev;
+  }, [handlePrev]);
+
+  useEffect(() => {
+    handleNextRef.current = handleNext;
+  }, [handleNext]);
+
+  // Reset scale and position when changing images
+  useEffect(() => {
+    setScale(1);
+    setPosition({ x: 0, y: 0 });
+  }, [currentIndex]);
 
   // Disable body scroll when lightbox is open
   useEffect(() => {
@@ -918,8 +950,9 @@ function LightboxGallery({ images, initialIndex, onClose }: LightboxGalleryProps
     setScale(newScale);
   }, [scale]);
 
-  // Handle Drag Start
+  // Pointer drag events for Desktop/Mouse dragging
   const handlePointerDown = useCallback((e: React.PointerEvent) => {
+    if (e.pointerType === "touch") return; // Let touch events handle mobile gestures
     if (scale <= 1) return;
     isDraggingRef.current = true;
     dragStartRef.current = { x: e.clientX, y: e.clientY };
@@ -929,7 +962,6 @@ function LightboxGallery({ images, initialIndex, onClose }: LightboxGalleryProps
     }
   }, [scale, position]);
 
-  // Handle Drag Move
   const handlePointerMove = useCallback((e: React.PointerEvent) => {
     if (!isDraggingRef.current) return;
     const dx = e.clientX - dragStartRef.current.x;
@@ -940,13 +972,152 @@ function LightboxGallery({ images, initialIndex, onClose }: LightboxGalleryProps
     });
   }, []);
 
-  // Handle Drag Stop
   const handlePointerUp = useCallback(() => {
     isDraggingRef.current = false;
     if (containerRef.current) {
       containerRef.current.style.cursor = scale > 1 ? "grab" : "default";
     }
   }, [scale]);
+
+  // Native touch event listeners with passive: false to block browser-level page scrolling and zooming
+  useEffect(() => {
+    const container = containerRef.current;
+    if (!container) return;
+
+    const onTouchStart = (e: TouchEvent) => {
+      const currentScale = scaleRef.current;
+      const currentPosition = positionRef.current;
+
+      if (e.touches.length === 1) {
+        const touch = e.touches[0];
+        swipeStartRef.current = { x: touch.clientX, y: touch.clientY };
+        currentSwipeDxRef.current = 0;
+        isSwipingRef.current = currentScale === 1; // Swipe if not zoomed
+
+        if (currentScale > 1) {
+          isDraggingRef.current = true;
+          dragStartRef.current = { x: touch.clientX, y: touch.clientY };
+          positionStartRef.current = { x: currentPosition.x, y: currentPosition.y };
+        }
+      } else if (e.touches.length === 2) {
+        // Prevent default browser viewport pinch-zoom on touchstart
+        if (e.cancelable) {
+          e.preventDefault();
+        }
+        // Pinch started
+        isPinchingRef.current = true;
+        isSwipingRef.current = false;
+        isDraggingRef.current = false;
+
+        const t1 = e.touches[0];
+        const t2 = e.touches[1];
+        const dist = Math.hypot(t1.clientX - t2.clientX, t1.clientY - t2.clientY);
+
+        initialTouchDistanceRef.current = dist;
+        initialTouchScaleRef.current = currentScale;
+
+        // Track midpoint for panning during pinch
+        dragStartRef.current = {
+          x: (t1.clientX + t2.clientX) / 2,
+          y: (t1.clientY + t2.clientY) / 2,
+        };
+        positionStartRef.current = { x: currentPosition.x, y: currentPosition.y };
+      }
+    };
+
+    const onTouchMove = (e: TouchEvent) => {
+      // Completely block browser page scrolling, default elastic bounce, or browser pinch-zoom
+      if (e.cancelable) {
+        e.preventDefault();
+      }
+
+      const currentScale = scaleRef.current;
+
+      if (isPinchingRef.current && e.touches.length === 2) {
+        const t1 = e.touches[0];
+        const t2 = e.touches[1];
+        const dist = Math.hypot(t1.clientX - t2.clientX, t1.clientY - t2.clientY);
+
+        if (initialTouchDistanceRef.current > 0) {
+          const factor = dist / initialTouchDistanceRef.current;
+          const newScale = Math.max(1, Math.min(6, initialTouchScaleRef.current * factor));
+
+          const midX = (t1.clientX + t2.clientX) / 2;
+          const midY = (t1.clientY + t2.clientY) / 2;
+          const dx = midX - dragStartRef.current.x;
+          const dy = midY - dragStartRef.current.y;
+
+          setScale(newScale);
+          if (newScale > 1) {
+            setPosition({
+              x: positionStartRef.current.x + dx,
+              y: positionStartRef.current.y + dy,
+            });
+          } else {
+            setPosition({ x: 0, y: 0 });
+          }
+        }
+      } else if (e.touches.length === 1) {
+        const touch = e.touches[0];
+        if (isDraggingRef.current && currentScale > 1) {
+          const dx = touch.clientX - dragStartRef.current.x;
+          const dy = touch.clientY - dragStartRef.current.y;
+          setPosition({
+            x: positionStartRef.current.x + dx,
+            y: positionStartRef.current.y + dy,
+          });
+        } else if (isSwipingRef.current && currentScale === 1) {
+          const dx = touch.clientX - swipeStartRef.current.x;
+          currentSwipeDxRef.current = dx;
+          // Drag horizontally for swipe feedback
+          setPosition({ x: dx, y: 0 });
+        }
+      }
+    };
+
+    const onTouchEnd = (e: TouchEvent) => {
+      if (isPinchingRef.current) {
+        if (e.touches.length < 2) {
+          isPinchingRef.current = false;
+          initialTouchDistanceRef.current = 0;
+        }
+      } else if (isSwipingRef.current) {
+        isSwipingRef.current = false;
+        const dx = currentSwipeDxRef.current;
+        currentSwipeDxRef.current = 0;
+        setPosition({ x: 0, y: 0 }); // Snap back
+
+        const threshold = window.innerWidth * 0.15; // 15% of viewport width
+        if (dx > threshold) {
+          handlePrevRef.current();
+        } else if (dx < -threshold) {
+          handleNextRef.current();
+        }
+      } else if (isDraggingRef.current) {
+        isDraggingRef.current = false;
+      }
+    };
+
+    const onGestureStart = (e: Event) => {
+      e.preventDefault();
+    };
+
+    container.addEventListener("touchstart", onTouchStart, { passive: false });
+    container.addEventListener("touchmove", onTouchMove, { passive: false });
+    container.addEventListener("touchend", onTouchEnd, { passive: false });
+    container.addEventListener("touchcancel", onTouchEnd, { passive: false });
+    container.addEventListener("gesturestart", onGestureStart, { passive: false });
+    container.addEventListener("gesturechange", onGestureStart, { passive: false });
+
+    return () => {
+      container.removeEventListener("touchstart", onTouchStart);
+      container.removeEventListener("touchmove", onTouchMove);
+      container.removeEventListener("touchend", onTouchEnd);
+      container.removeEventListener("touchcancel", onTouchEnd);
+      container.removeEventListener("gesturestart", onGestureStart);
+      container.removeEventListener("gesturechange", onGestureStart);
+    };
+  }, []);
 
   // Handle Double Click to Zoom in/out
   const handleDoubleClick = useCallback(() => {
@@ -970,20 +1141,17 @@ function LightboxGallery({ images, initialIndex, onClose }: LightboxGalleryProps
       className="fixed inset-0 z-[100] flex items-center justify-center bg-black/95 select-none touch-none transition-all duration-300"
       style={{ cursor: scale > 1 ? "grab" : "default" }}
     >
-      {/* Lightbox Backdrop Click to close */}
-      <div className="absolute inset-0 z-0" onClick={onClose} />
-
       {/* Close button */}
       <button
         type="button"
         onClick={onClose}
-        className="absolute top-6 right-6 z-10 p-2.5 text-white/70 hover:text-white bg-black/60 hover:bg-black border border-white/10 rounded-full transition-all duration-300"
+        className="absolute top-4 right-4 sm:top-6 sm:right-6 z-30 p-2 sm:p-2.5 text-white/70 hover:text-white bg-black/60 hover:bg-black border border-white/10 rounded-full transition-all duration-300"
         aria-label="Закрити збільшення"
       >
         <CloseIcon />
       </button>
 
-      {/* Navigation Arrows */}
+      {/* Navigation Arrows (Fixed size, smaller on mobile, highly visible) */}
       {images.length > 1 && (
         <>
           <button
@@ -992,10 +1160,10 @@ function LightboxGallery({ images, initialIndex, onClose }: LightboxGalleryProps
               e.stopPropagation();
               handlePrev();
             }}
-            className="absolute left-6 top-1/2 -translate-y-1/2 z-20 p-3 rounded-full bg-black/40 hover:bg-black/80 text-[#EAE7E1] hover:text-white border border-white/5 transition-all duration-300"
+            className="absolute left-3 sm:left-8 top-1/2 -translate-y-1/2 z-20 w-10 h-10 sm:w-16 sm:h-16 flex items-center justify-center rounded-full bg-black/60 hover:bg-black/90 text-[#EAE7E1] hover:text-white border border-white/10 hover:border-white/20 transition-all duration-300 shadow-xl"
             aria-label="Попередній кадр"
           >
-            <ArrowIcon dir="prev" />
+            <ArrowIcon dir="prev" className="w-5 h-5 sm:w-8 sm:h-8" />
           </button>
           <button
             type="button"
@@ -1003,10 +1171,10 @@ function LightboxGallery({ images, initialIndex, onClose }: LightboxGalleryProps
               e.stopPropagation();
               handleNext();
             }}
-            className="absolute right-6 top-1/2 -translate-y-1/2 z-20 p-3 rounded-full bg-black/40 hover:bg-black/80 text-[#EAE7E1] hover:text-white border border-white/5 transition-all duration-300"
+            className="absolute right-3 sm:right-8 top-1/2 -translate-y-1/2 z-20 w-10 h-10 sm:w-16 sm:h-16 flex items-center justify-center rounded-full bg-black/60 hover:bg-black/90 text-[#EAE7E1] hover:text-white border border-white/10 hover:border-white/20 transition-all duration-300 shadow-xl"
             aria-label="Наступний кадр"
           >
-            <ArrowIcon dir="next" />
+            <ArrowIcon dir="next" className="w-5 h-5 sm:w-8 sm:h-8" />
           </button>
         </>
       )}
@@ -1037,7 +1205,7 @@ function LightboxGallery({ images, initialIndex, onClose }: LightboxGalleryProps
       {/* Touch instructions or subtle indicator */}
       {scale === 1 && (
         <div className="absolute bottom-6 left-1/2 -translate-x-1/2 px-4 py-1.5 bg-black/60 border border-white/5 rounded-full text-[10px] uppercase tracking-widest text-[#EAE7E1]/50 pointer-events-none select-none text-center">
-          Double click or wheel to zoom
+          Pinch to zoom, swipe or tap arrows
         </div>
       )}
     </div>
