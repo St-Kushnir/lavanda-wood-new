@@ -61,50 +61,6 @@ function useFocusTrap(containerRef: React.RefObject<HTMLElement | null>) {
 }
 
 // ----------------------------------------------------
-// IMAGE WITH PULSING LAVANDA LOGO LOADER
-// ----------------------------------------------------
-function ImageWithLoader({
-  src,
-  alt,
-  className,
-  fill,
-  sizes,
-  onClick,
-}: {
-  src: string;
-  alt: string;
-  className?: string;
-  fill?: boolean;
-  sizes?: string;
-  onClick?: () => void;
-}) {
-  const [loading, setLoading] = useState(true);
-
-  return (
-    <div className="relative w-full h-full">
-      {/* Lavanda pulsating backdrop loader */}
-      {loading && (
-        <div className="absolute inset-0 z-10 flex items-center justify-center bg-[#070708]">
-          <span className="font-serif text-lg tracking-[0.25em] text-[#C6A36D] animate-pulse-fade">
-            LAVANDA
-          </span>
-        </div>
-      )}
-      <Image
-        src={src}
-        alt={alt}
-        fill={fill}
-        className={className}
-        sizes={sizes}
-        onClick={onClick}
-        onLoad={() => setLoading(false)}
-        priority
-      />
-    </div>
-  );
-}
-
-// ----------------------------------------------------
 // DETAILED MODAL COMPONENT
 // ----------------------------------------------------
 interface ProjectDetailModalProps {
@@ -132,6 +88,12 @@ export function ProjectDetailModal({
 }: ProjectDetailModalProps) {
   const dialogRef = useRef<HTMLDivElement>(null);
   useFocusTrap(dialogRef);
+
+  // Кадри, що вже завантажені (щоб не показувати лоадер повторно й перемикати миттєво).
+  const [loadedSlides, setLoadedSlides] = useState<Record<number, true>>({});
+  const markSlideLoaded = useCallback((index: number) => {
+    setLoadedSlides((prev) => (prev[index] ? prev : { ...prev, [index]: true }));
+  }, []);
 
   // Disable body scroll when modal is active
   useEffect(() => {
@@ -170,6 +132,19 @@ export function ProjectDetailModal({
   const projectDescription =
     locale === "ua" ? project["description-ua"] : project["description-en"];
 
+  // Передвантажуємо поточний + сусідні кадри (миттєве перемикання вперед/назад).
+  const totalSlides = project.images?.length ?? 0;
+  const preloadWindow =
+    totalSlides <= 1
+      ? [activeSlideIndex]
+      : Array.from(
+          new Set([
+            (activeSlideIndex - 1 + totalSlides) % totalSlides,
+            activeSlideIndex,
+            (activeSlideIndex + 1) % totalSlides,
+          ]),
+        );
+
   return (
     <div
       ref={dialogRef}
@@ -198,15 +173,39 @@ export function ProjectDetailModal({
         <div className="w-full lg:w-3/5 bg-black flex flex-col relative border-b border-white/5 lg:border-b-0 lg:border-r">
           {/* Main Slide Viewer */}
           <div className="relative flex-1 flex items-center justify-center aspect-[16/10] sm:aspect-[3/2] lg:aspect-auto lg:h-[calc(85vh-120px)] overflow-hidden">
-            {project.images && project.images[activeSlideIndex] ? (
-              <ImageWithLoader
-                src={project.images[activeSlideIndex]}
-                alt={`${projectTitle} — ${activeSlideIndex + 1}`}
-                fill
-                className="object-cover cursor-zoom-in transition-all duration-500"
-                onClick={() => onZoomImage(activeSlideIndex)}
-                sizes="(max-width: 1024px) 100vw, 60vw"
-              />
+            {totalSlides > 0 ? (
+              <>
+                {/* Лоадер лише поки активний кадр ще не завантажено */}
+                {!loadedSlides[activeSlideIndex] && (
+                  <div className="absolute inset-0 z-20 flex items-center justify-center bg-[#070708]">
+                    <span className="font-serif text-lg tracking-[0.25em] text-[#C6A36D] animate-pulse-fade">
+                      LAVANDA
+                    </span>
+                  </div>
+                )}
+                {/* Стек із поточного + сусідніх кадрів: кросфейд + передвантаження */}
+                {preloadWindow.map((idx) => (
+                  <Image
+                    key={idx}
+                    src={project.images[idx]}
+                    alt={`${projectTitle} — ${idx + 1}`}
+                    fill
+                    className={`object-cover transition-opacity duration-300 ${
+                      idx === activeSlideIndex
+                        ? "z-10 opacity-100 cursor-zoom-in"
+                        : "z-0 opacity-0 pointer-events-none"
+                    }`}
+                    sizes="(max-width: 1024px) 100vw, 60vw"
+                    priority={idx === activeSlideIndex}
+                    onClick={
+                      idx === activeSlideIndex
+                        ? () => onZoomImage(activeSlideIndex)
+                        : undefined
+                    }
+                    onLoad={() => markSlideLoaded(idx)}
+                  />
+                ))}
+              </>
             ) : (
               <div className="text-white/40 text-sm">
                 {locale === "ua" ? "Зображення недоступне" : "No image available"}
