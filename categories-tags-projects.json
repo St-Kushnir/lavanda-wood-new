@@ -19,6 +19,14 @@
     "residential-log-houses": {
       "ua": "Житлові зруби",
       "en": "Residential log houses"
+    },
+    "log-house-villas": {
+      "ua": "Зрубні вілли",
+      "en": "Log house villas"
+    },
+    "block-plank-houses": {
+      "ua": "Будинки з брусу",
+      "en": "Block-plank houses"
     }
   },
 

@@ -2,8 +2,8 @@
   "projects": [
     {
       "id": 1,
-      "name-ua": "Будинок із натурального дерева на озері Констанц",
-      "name-en": "Natural log house Lake Constance",
+      "name-ua": "Будинок із натурального дерева «Бодензеє»",
+      "name-en": "Bodensee Natural Log House",
       "description-ua": "Наша модель зрубу «Бодензеє» ідеально підходить для орендодавців, які спеціалізуються на апартаментах для відпочинку. Обидві квартири абсолютно ідентичні та пропонують площу близько 75 м² кожна, чого достатньо для комфортного відпочинку. Бунгало розташоване на одному рівні, тому може бути побудоване безбар'єрно. Криті тераси на внутрішньому дворі запрошують до релаксації та спільних трапез на свіжому повітрі. Традиційний зруб з натуральних колод із пологим вальмовим дахом чудово вписується в сільські курортні регіони та особливо підходить для місцевостей із сильним вітром. Крім того, вальмовий дах завдяки своїй великій площі може бути використаний для сонячних батарей. Широкі звіси даху також захищають будинок від атмосферних впливів.",
       "description-en": "Our log house model 'Bodensee' is ideal for landlords specializing in holiday apartments. Both apartments are absolutely identical and offer an area of approx. 75 m² each, which is sufficient for a relaxing holiday. The bungalow is single-storey, so it can be built barrier-free. Covered terraces on the inner courtyard invite you to relax and dine together in the fresh air. The traditional natural log house with a flat hip roof blends perfectly into rural holiday regions and is particularly suitable for areas with strong wind loads. In addition, the hip roof, due to its large area, can be used for solar panels. The wide roof overhangs also protect the house from the weather influences.",
       "parameters": {
@@ -21,8 +21,7 @@
         "multi-family-home",
         "terrace",
         "hip-roof",
-        "residential-building",
-        "log-cabin"
+        "residential-building"
       ],
       "images": [
         "/projects-gallery/project-1/image-1.jpg",
@@ -77,8 +76,7 @@
         "single-house",
         "bestsellers",
         "residential-building",
-        "two-storey",
-        "log-cabin"
+        "two-storey"
       ],
       "images": [
         "/projects-gallery/project-2/image-1.jpg",
@@ -99,8 +97,7 @@
       "original-url": "https://holzbaurustikal.de/naturstammhaus-zossen/",
       "categories": [
         "log-houses",
-        "residential-log-houses",
-        "holiday-log-cabins"
+        "residential-log-houses"
       ]
     },
     {
@@ -164,12 +161,6 @@
         "diameter": "380 mm"
       },
       "tags": [
-        "barrier-free",
-        "single-storey",
-        "holiday-home",
-        "residential-building",
-        "terrace",
-        "log-cabin"
       ],
       "images": [
         "/projects-gallery/project-4/image-1.jpg",
@@ -308,7 +299,7 @@
         "barrier-free",
         "log-cabin",
         "attic",
-        "single-house",
+        "single-storey",
         "holiday-home",
         "garden-house",
         "gable-roof",
@@ -361,6 +352,7 @@
       ],
       "categories": [
         "log-houses",
+        "log-house-villas",
         "residential-log-houses"
       ],
       "images": [
@@ -465,7 +457,7 @@
       ],
       "original-url": "https://holzbaurustikal.de/blockbohlenhaus-lausitz/",
       "categories": [
-        "log-houses"
+        "block-plank-houses"
       ]
     },
     {
@@ -486,6 +478,7 @@
       "tags": [
         "single-family-home",
         "gable-roof",
+        "pitched-roof",
         "terrace",
         "residential-building",
         "two-storey"
@@ -543,6 +536,7 @@
       ],
       "categories": [
         "log-houses",
+        "log-house-villas",
         "residential-log-houses"
       ],
       "images": [
@@ -630,8 +624,7 @@
         "holiday-home",
         "single-house",
         "terrace",
-        "residential-building",
-        "log-cabin"
+        "residential-building"
       ],
       "images": [
         "/projects-gallery/project-14/image-1.jpg",
@@ -681,8 +674,7 @@
         "single-house",
         "terrace",
         "residential-building",
-        "two-storey",
-        "log-cabin"
+        "two-storey"
       ],
       "images": [
         "/projects-gallery/project-15/image-1.jpg",
@@ -704,8 +696,7 @@
       ],
       "original-url": "https://holzbaurustikal.de/naturstammhaus-spreewald/",
       "categories": [
-        "log-houses",
-        "holiday-log-cabins"
+        "log-houses"
       ]
     },
     {
@@ -991,14 +982,12 @@
         "diameter": "300 mm"
       },
       "tags": [
-        "barrier-free",
         "bungalow",
         "single-storey",
         "holiday-home",
         "single-house",
         "terrace",
-        "residential-building",
-        "log-cabin"
+        "residential-building"
       ],
       "images": [
         "/projects-gallery/project-22/image-1.jpg",
@@ -1011,8 +1000,7 @@
       ],
       "original-url": "https://holzbaurustikal.de/naturstammhaus-niederlausitz/",
       "categories": [
-        "log-houses",
-        "holiday-log-cabins"
+        "log-houses"
       ]
     },
     {
@@ -1120,8 +1108,7 @@
         "single-family-home",
         "single-storey",
         "terrace",
-        "residential-building",
-        "log-cabin"
+        "residential-building"
       ],
       "images": [
         "/projects-gallery/project-25/image-1.jpg",
@@ -1277,8 +1264,7 @@
       "tags": [
         "single-family-home",
         "terrace",
-        "two-storey",
-        "garage"
+        "two-storey"
       ],
       "categories": [
         "log-houses",
@@ -1327,6 +1313,7 @@
         "holiday-home",
         "gable-roof",
         "multi-family-home",
+        "pitched-roof",
         "terrace",
         "residential-building",
         "two-storey"
@@ -1372,10 +1359,6 @@
         "diameter": "380 mm"
       },
       "tags": [
-        "single-family-home",
-        "terrace",
-        "residential-building",
-        "single-storey"
       ],
       "categories": [
         "log-houses"
@@ -1417,6 +1400,7 @@
       ],
       "categories": [
         "log-houses",
+        "log-house-villas",
         "residential-log-houses"
       ],
       "images": [
