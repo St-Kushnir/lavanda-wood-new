@@ -73,6 +73,39 @@ body.no-scroll {
   animation: pulse-fade 1.8s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 
+/* Плавне «плавання» елементів колажу (секція «Про компанію») */
+@keyframes lavanda-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-14px);
+  }
+}
+
+.lavanda-float {
+  animation: lavanda-float 7s var(--lavanda-ease) infinite;
+}
+
+.lavanda-float-delayed {
+  animation: lavanda-float 8.5s var(--lavanda-ease) infinite;
+  animation-delay: -2.5s;
+}
+
+.lavanda-float-slow {
+  animation: lavanda-float 10s var(--lavanda-ease) infinite;
+  animation-delay: -4.5s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lavanda-float,
+  .lavanda-float-delayed,
+  .lavanda-float-slow {
+    animation: none;
+  }
+}
+
 /* Lightbox (tresmont-new gallery / style.css) */
 .lightbox {
   position: fixed;
