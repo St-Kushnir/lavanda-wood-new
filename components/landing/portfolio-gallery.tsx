@@ -2,9 +2,9 @@
 
 import Image from "next/image";
 import dynamic from "next/dynamic";
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { createPortal } from "react-dom";
-import { getCategoryLabel, getTagLabel } from "@/lib/projects-i18n";
+import { getCategoryLabel, getTagLabel, getProjectShortName, type ProjectLocale } from "@/lib/projects-i18n";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { useLanguage } from "@/components/language-provider";
 import { CloseIcon } from "@/components/landing/portfolio-icons";
@@ -34,6 +34,131 @@ const LightboxGallery = dynamic(
 );
 
 const PROJECTS_PAGE_SIZE = 6;
+
+/**
+ * На touch-пристроях немає hover, тож «активуємо» картку, коли вона потрапляє
+ * у вузьку центральну смугу вьюпорта. На пристроях з hover ефект лишається на наведенні.
+ */
+function useCenteredActive() {
+  const ref = useRef<HTMLElement>(null);
+  const [active, setActive] = useState(false);
+
+  useEffect(() => {
+    const isTouch =
+      typeof window !== "undefined" &&
+      window.matchMedia("(hover: none), (pointer: coarse)").matches;
+    if (!isTouch) return;
+
+    const el = ref.current;
+    if (!el) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => setActive(entry.isIntersecting),
+      // Тонка смуга по центру екрана: спрацьовує, коли картка в його середині.
+      { rootMargin: "-45% 0px -45% 0px", threshold: 0 },
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
+  return { ref, active };
+}
+
+function ProjectCard({
+  project: p,
+  locale,
+  onOpen,
+}: {
+  project: Project;
+  locale: ProjectLocale;
+  onOpen: (project: Project) => void;
+}) {
+  const { ref, active } = useCenteredActive();
+  const coverImage = p.images && p.images[0] ? p.images[0] : "/placeholder-image.jpg";
+  const projectTitle = locale === "ua" ? p["name-ua"] : p["name-en"];
+  const displayName = getProjectShortName(projectTitle, locale);
+  const primaryCategory = p.categories?.[0];
+
+  return (
+    <article
+      ref={ref}
+      className={`group relative aspect-[4/5] overflow-hidden rounded-sm bg-[#141414] ring-1 ring-white/10 transition-all duration-500 hover:ring-[#C6A36D]/40 sm:aspect-[3/4] ${
+        active ? "is-active ring-[#C6A36D]/40" : ""
+      }`}
+    >
+      {/* Cover image */}
+      <div className="absolute inset-0 z-0">
+        <Image
+          src={coverImage}
+          alt={projectTitle}
+          fill
+          quality={90}
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+          className="object-cover will-change-transform transition-transform duration-[1100ms] ease-out group-hover:scale-105 group-[.is-active]:scale-105"
+        />
+        {/* Focused scrim only behind the text area at the bottom */}
+        <div className="absolute inset-x-0 bottom-0 h-[34%] bg-[linear-gradient(to_top,rgba(0,0,0,0.92)_0%,rgba(0,0,0,0.65)_45%,transparent_100%)]" />
+        {/* Extra depth on hover, still confined to the lower zone */}
+        <div className="absolute inset-x-0 bottom-0 h-[38%] bg-[linear-gradient(to_top,rgba(0,0,0,0.4),transparent)] opacity-0 transition-opacity duration-500 group-hover:opacity-100 group-[.is-active]:opacity-100" />
+      </div>
+
+      {/* Editorial index */}
+      <span className="absolute left-5 top-5 z-10 font-serif text-[11px] tracking-[0.3em] text-white/45 [text-shadow:_0_1px_3px_rgba(0,0,0,0.55)]">
+        {String(p.id).padStart(2, "0")}
+      </span>
+
+      {/* Hover action cue */}
+      <span className="absolute right-4 top-4 z-10 flex h-9 w-9 -translate-y-1 items-center justify-center rounded-full border border-white/15 bg-black/20 text-white/80 opacity-0 backdrop-blur-sm transition-all duration-500 group-hover:translate-y-0 group-hover:border-[#C6A36D]/60 group-hover:text-[#C6A36D] group-hover:opacity-100 group-[.is-active]:translate-y-0 group-[.is-active]:border-[#C6A36D]/60 group-[.is-active]:text-[#C6A36D] group-[.is-active]:opacity-100">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <line x1="7" y1="17" x2="17" y2="7" />
+          <polyline points="7 7 17 7 17 17" />
+        </svg>
+      </span>
+
+      {/* Bottom content */}
+      <div className="absolute inset-x-0 bottom-0 z-10 p-5">
+        {primaryCategory && (
+          <span className="block text-[10px] font-semibold uppercase tracking-[0.25em] text-[#C6A36D]">
+            {getCategoryLabel(primaryCategory, locale)}
+          </span>
+        )}
+
+        <h3 className="mt-2 font-serif text-2xl leading-tight tracking-wide text-[#EAE7E1] transition-colors duration-300 group-hover:text-white group-[.is-active]:text-white">
+          {displayName}
+        </h3>
+
+        {/* Animated accent line */}
+        <span className="mt-3 block h-px w-9 bg-[#C6A36D]/70 transition-all duration-500 ease-out group-hover:w-16 group-[.is-active]:w-16" />
+
+        {/* Tags reveal on hover */}
+        {p.tags.length > 0 && (
+          <div className="grid grid-rows-[0fr] opacity-0 transition-all duration-500 ease-out group-hover:mt-3 group-hover:grid-rows-[1fr] group-hover:opacity-100 group-[.is-active]:mt-3 group-[.is-active]:grid-rows-[1fr] group-[.is-active]:opacity-100">
+            <div className="overflow-hidden">
+              <div className="flex flex-wrap gap-x-3 gap-y-1">
+                {p.tags.slice(0, 3).map((tagSlug) => (
+                  <span
+                    key={tagSlug}
+                    className="text-[10px] uppercase tracking-wider text-[#EAE7E1]/55"
+                  >
+                    {getTagLabel(tagSlug, locale)}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        )}
+      </div>
+
+      {/* Full-card action */}
+      <button
+        type="button"
+        className="absolute inset-0 z-20 cursor-pointer focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#C6A36D]"
+        aria-label={locale === "ua" ? `Відкрити деталі проєкту: ${projectTitle}` : `Open project details: ${projectTitle}`}
+        onClick={() => onOpen(p)}
+      />
+    </article>
+  );
+}
 
 export function PortfolioGallery({ projects: projectsInput }: { projects: Project[] }) {
   const { locale } = useLanguage();
@@ -186,84 +311,10 @@ export function PortfolioGallery({ projects: projectsInput }: { projects: Projec
 
         {/* Projects Grid */}
         {displayedProjects.length > 0 ? (
-          <div className="mt-6 grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
-            {displayedProjects.map((p) => {
-              const coverImage = p.images && p.images[0] ? p.images[0] : "/placeholder-image.jpg";
-              const projectTitle = locale === "ua" ? p["name-ua"] : p["name-en"];
-
-              return (
-                <article
-                  key={p.id}
-                  className="group relative aspect-[4/5] overflow-hidden bg-[#141414] rounded-sm sm:aspect-[3/4] shadow-md ring-1 ring-white/5 hover:ring-white/10 transition-all duration-500"
-                >
-                  <div className="absolute inset-0 z-0">
-                    <Image
-                      src={coverImage}
-                      alt={projectTitle}
-                      fill
-                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                      className="object-cover will-change-transform transition duration-700 group-hover:scale-[1.03]"
-                    />
-                    {/* Dark gradient overlay stretched horizontally along the bottom to ensure text readability */}
-                    <div className="absolute inset-0 bg-[radial-gradient(180%_65%_at_bottom_left,rgba(0,0,0,0.95)_0%,rgba(0,0,0,0.75)_30%,rgba(0,0,0,0.25)_60%,rgba(0,0,0,0)_100%)] opacity-95 transition duration-500 group-hover:opacity-100" />
-                  </div>
-
-                  {/* Content Overlay */}
-                  <div className="absolute inset-0 z-10 flex flex-col justify-end p-5">
-                    <div className="will-change-transform translate-y-3 transition-transform duration-500 ease-out group-hover:translate-y-0">
-                      {/* Category list stack (shown vertically on card) */}
-                      <div className="flex flex-col gap-0.5 mb-1.5">
-                        {p.categories.map((catSlug) => (
-                          <button
-                            key={catSlug}
-                            onClick={(e) => {
-                              e.stopPropagation();
-                              handleCategoryClick(catSlug);
-                            }}
-                            className="text-[9px] uppercase tracking-[0.2em] text-[#C6A36D] hover:text-white transition-colors duration-300 text-left font-semibold"
-                          >
-                            {getCategoryLabel(catSlug, locale)}
-                          </button>
-                        ))}
-                      </div>
-
-                      {/* Title */}
-                      <h3 className="font-serif text-lg text-[#EAE7E1] line-clamp-2 leading-snug tracking-wide group-hover:text-white transition duration-300">
-                        {projectTitle}
-                      </h3>
-
-                      {/* Tags (clickable inside hover) */}
-                      <div className="mt-3 flex flex-wrap gap-1 opacity-70 transition-opacity duration-300 group-hover:opacity-100">
-                        {p.tags.slice(0, 3).map((tagSlug) => (
-                          <button
-                            key={tagSlug}
-                            onClick={(e) => {
-                              e.stopPropagation();
-                              handleTagClick(tagSlug);
-                            }}
-                            className={`rounded-full border px-2 py-0.5 text-[9px] transition-all duration-300 ${
-                              activeTag === tagSlug
-                                ? "border-[#C6A36D] bg-[#C6A36D]/20 text-[#C6A36D]"
-                                : "border-white/10 bg-white/5 text-[#EAE7E1]/80 hover:border-[#C6A36D] hover:text-[#C6A36D]"
-                            }`}
-                          >
-                            #{getTagLabel(tagSlug, locale)}
-                          </button>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Main Card Action Click Overlay */}
-                  <button
-                    type="button"
-                    className="absolute inset-0 z-20 cursor-pointer focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#C6A36D]"
-                    aria-label={locale === "ua" ? `Відкрити деталі проєкту: ${projectTitle}` : `Open project details: ${projectTitle}`}
-                    onClick={() => handleOpenProject(p)}
-                  />
-                </article>
-              );
-            })}
+          <div className="mt-6 grid gap-3 sm:grid-cols-2 sm:gap-4 lg:grid-cols-3">
+            {displayedProjects.map((p) => (
+              <ProjectCard key={p.id} project={p} locale={locale} onOpen={handleOpenProject} />
+            ))}
           </div>
         ) : (
           /* Empty results state */

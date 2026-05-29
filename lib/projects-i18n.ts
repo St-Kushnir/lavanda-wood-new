@@ -46,3 +46,21 @@ export function getCategoryLabels(keys: readonly string[], locale: ProjectLocale
 export function getTagLabels(keys: readonly string[], locale: ProjectLocale): string[] {
   return keys.map((key) => getTagLabel(key, locale)).filter(Boolean);
 }
+
+const EN_TYPE_SUFFIX = /\s+(natural\s+log\s+house|log\s+house|post\s*&\s*beam\s+house|house)$/i;
+
+/**
+ * Коротка (брендова) назва моделі без повторюваного типу будинку.
+ * UA: бере текст у лапках «...» (напр. «Бодензеє»); EN: прибирає суфікс типу
+ * (напр. "Bodensee Natural Log House" → "Bodensee"). Фолбек — повна назва.
+ */
+export function getProjectShortName(fullName: string, locale: ProjectLocale): string {
+  if (!fullName) return "";
+  const quoted = fullName.match(/[«»"„“]([^«»"„“]+)[«»"„“]/);
+  if (quoted?.[1]) return quoted[1].trim();
+  if (locale === "en") {
+    const stripped = fullName.replace(EN_TYPE_SUFFIX, "").trim();
+    return stripped || fullName;
+  }
+  return fullName;
+}
